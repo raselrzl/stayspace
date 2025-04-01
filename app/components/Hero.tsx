@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 sm:px-12 w-full">
         {/* Main Text Box */}
 
-        <div className="lg:mr-[200px] max-w-md mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-auto">
+        <div className="lg:mr-[200px] max-w-md mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[600px] ">
           <h1 className="text-4xl sm:text-3xl font-bold leading-tight mb-6 text-left">
          {/*  <House className="text-[#fd6d15] font-extrabold" style={{ fontSize: '300px' }} /> */}
 
