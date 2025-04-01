@@ -37,25 +37,25 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6">
           <Link
             href="/"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/")}`}
+            className={`px-4 py-2  ${isActiveLink("/")}`}
           >
             Home
           </Link>
           <Link
             href="/services"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/services")}`}
+            className={`px-4 py-2 ${isActiveLink("/services")}`}
           >
             Our Services
           </Link>
           <Link
             href="/contactus"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/contactus")}`}
+            className={`px-4 py-2  ${isActiveLink("/contactus")}`}
           >
             Contact Us
           </Link>
           <Link
             href="/partner"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/partner")}`}
+            className={`px-4 py-2 ${isActiveLink("/partner")}`}
           >
             Become a Partner
           </Link>
@@ -90,28 +90,28 @@ export default function Navbar() {
         <div className="flex flex-col justify-center items-center space-y-6">
           <Link
             href="/"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/")}`}
+            className={`px-4 py-2 ${isActiveLink("/")}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/services"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/services")}`}
+            className={`px-4 py-2 ${isActiveLink("/services")}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Our Services
           </Link>
           <Link
             href="/contactus"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/contactus")}`}
+            className={`px-4 py-2 ${isActiveLink("/contactus")}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us
           </Link>
           <Link
             href="/partner"
-            className={`px-4 py-2 rounded-lg ${isActiveLink("/partner")}`}
+            className={`px-4 py-2 ${isActiveLink("/partner")}`}
             onClick={() => setIsMenuOpen(false)}
           >
             Become a Partner
