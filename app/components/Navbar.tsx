@@ -64,12 +64,12 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger Menu for mobile */}
-        <button
+        <p
           onClick={toggleMenu}
           className="md:hidden text-amber-800 focus:outline-none text-3xl"
         >
           <SquareMenu className="text-2xl" />
-        </button>
+        </p>
       </div>
 
       {/* Mobile Drawer Menu (Slide from top to bottom with animation) */}
