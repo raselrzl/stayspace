@@ -28,7 +28,7 @@ export default function Home() {
           </div>
 
           {/* Right Section */}
-          <div className="w-full sm:w-1/2 flex flex-col justify-between border-l-4 pl-4">
+          <div className="w-full sm:w-1/2 flex flex-col justify-between ">
             <div className="h-full flex flex-col justify-between">
               <div className="mb-8">
                 <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
@@ -112,12 +112,12 @@ export default function Home() {
           {/* Right Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between  lg:py-16 px-4 sm:px-12">
             <div className="h-full flex flex-col justify-between">
-              <div className="mb-1 border-b-4 border-t-4">
+              <div className="mb-1">
                 <p className="text-[#7B5B4C] uppercase text-2xl font-semibold">
                   Why Choose StaySpace?
                 </p>
               </div>
-              <div className="mb-8 border-b-4">
+              <div className="mb-8">
                 <p className="text-[#7B5B4C] uppercase text-2xl font-semibold">
                   We are here for you?
                 </p>
