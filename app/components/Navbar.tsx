@@ -25,11 +25,13 @@ export default function Navbar() {
     <nav className="bg-gray-100 p-4">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo on the left */}
-        <div className="flex items-center">
+        <div className="flex items-center py-1">
           <Link href="/">
-            <h1 className="font-medium text-[#7B5B4C] text-3xl py-2 lg:text-5xl tracking-wider">
-              stayspace
-            </h1>
+            <img
+              src="/stayspace.png"
+              alt="Support Logo"
+              className="w-[70%] h-8 md:w-full md:h-15" // Adjust the size as needed
+            />
           </Link>
         </div>
 
