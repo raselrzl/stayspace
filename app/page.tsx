@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -87,16 +88,14 @@ export default function Home() {
           {/* Left Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between mb-8 sm:mb-0  py-16 px-4 sm:px-12">
             {/* First Image - Logo */}
-            <div className="mb-8">
-              {/* <img 
-          src="/her1.jpg" 
-          alt="Logo Image" 
-          className="w-full h-auto" 
-        /> */}
-
-              <p className="text-[#7B5B4C] uppercase text-2xl font-semibold text-center">
-                StaySpace Logo
-              </p>
+            <div className="mb-8 self-center">
+            <Link href="/">
+            <img
+              src="/stayspace.png"
+              alt="Support Logo"
+              className="w-[150px] h-auto md:w-full md:h-15" // Adjust the size as needed
+            />
+          </Link>
             </div>
 
             {/* Second Image - Bed Image */}

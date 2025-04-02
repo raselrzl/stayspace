@@ -30,7 +30,7 @@ export default function Navbar() {
             <img
               src="/stayspace.png"
               alt="Support Logo"
-              className="w-[70%] h-8 md:w-full md:h-15" // Adjust the size as needed
+              className="w-[150px] h-auto md:w-full md:h-15" // Adjust the size as needed
             />
           </Link>
         </div>
