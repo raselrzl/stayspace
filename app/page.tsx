@@ -4,6 +4,8 @@ import {
   Cog,
   Component,
   MapPinPlusInside,
+  MessageCircleQuestion,
+  RedoDot,
 } from "lucide-react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -93,13 +95,13 @@ export default function Home() {
             <img
               src="/stayspace.png"
               alt="Support Logo"
-              className="w-[150px] h-auto md:w-full md:h-15" // Adjust the size as needed
+              className="w-[150px] h-auto md:w-[200px] md:h-10" // Adjust the size as needed
             />
           </Link>
             </div>
 
             {/* Second Image - Bed Image */}
-            <div className="mb-8 lg:pr-8">
+            <div className="">
               <img
                 src="/bed1.jpg"
                 alt="Bed Image"
@@ -112,39 +114,34 @@ export default function Home() {
           <div className="w-full sm:w-1/2 flex flex-col justify-between  lg:py-16 px-4 sm:px-12">
             <div className="h-full flex flex-col justify-between">
               <div className="mb-1">
-                <p className="text-[#7B5B4C] uppercase text-2xl font-semibold">
-                  Why Choose StaySpace?
+                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex flex-row">
+                <MessageCircleQuestion className="mr-4"/>Why Choose StaySpace?
                 </p>
               </div>
-              <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-2xl font-semibold">
-                  We are here for you?
-                </p>
-              </div>
-              <div className="mb-8">
-                <p className="text-[#7B5B4C]  text-xl font-semibold">
-                  Tailored support and solutions adapted to your needs.
+              <div className="mb-2">
+                <p className="text-[#7B5B4C]  text-md md:text-lg font-semibold flex flex-row">
+                <RedoDot className="mr-4"/>Tailored support and solutions adapted to your needs.
                 </p>
                 {/* <p className="text-lg sm:text-xl text-[#7B5B4C]">
             Smooth and hassle-free experience from start to finish.
           </p> */}
               </div>
-              <div className="mb-8">
-                <p className="text-[#7B5B4C]  text-xl font-semibold">
-                  Smooth and hassle-free experience from start to the End.
+              <div className="mb-2">
+                <p className="text-[#7B5B4C]  text-md md:text-lg font-semibold flex flex-row">
+                <RedoDot className="mr-4"/>Smooth and hassle-free experience from start to the End.
                 </p>
               </div>
-              <div className="mb-8">
-                <p className="text-[#7B5B4C]  text-xl font-semibold">
-                  Fast and reliable service at every step of the process
+              <div className="mb-2">
+                <p className="text-[#7B5B4C]  text-md md:text-lg font-semibold flex flex-row">
+                <RedoDot className="mr-4"/>Fast and reliable service at every step of the process.
                 </p>
                 {/*   <p className="text-lg sm:text-xl text-[#7B5B4C]">
             Fast and efficient service, ensuring quick resolutions.
           </p> */}
               </div>
-              <div className="mb-8">
-                <p className="text-[#7B5B4C]  text-xl font-semibold">
-                  24/7 support to ensure we are always here when you need us
+              <div className="mb-2">
+                <p className="text-[#7B5B4C]  text-md md:text-lg font-semibold flex flex-row">
+                <RedoDot className="mr-4"/>24/7 support to ensure we are always here when you need us.
                 </p>
                 {/* <p className="text-lg sm:text-xl text-[#7B5B4C]">
             Our team is available 24/7 to support you, whenever needed.
