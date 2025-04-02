@@ -22,7 +22,7 @@ export default function Home() {
               alt="Support Logo"
               className="w-20 h-20 mr-6" // Adjust the size as needed
             />
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#fd6d15] mb-6 lg:mt-3">
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#fd6d15] mb-6 lg:mt-3">
               How We Support You?
             </h2>
           </div>
