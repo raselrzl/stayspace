@@ -3,13 +3,19 @@ import {
   BookCheck,
   Cog,
   Component,
+  MapPin,
   MapPinPlusInside,
   MessageCircleQuestion,
+  Phone,
   RedoDot,
+  Search,
+  Smile,
+  User,
 } from "lucide-react";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default function Home() {
   return (
@@ -151,6 +157,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
