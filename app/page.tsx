@@ -22,7 +22,7 @@ export default function Home() {
               alt="Support Logo"
               className="w-20 h-20 mr-6" // Adjust the size as needed
             />
-            <h2 className="text-3xl sm:text-5xl font-bold text-[#fd6d15] mb-6 lg:mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fd6d15] mb-6 lg:mt-3">
               How We Support You?
             </h2>
           </div>
@@ -31,49 +31,49 @@ export default function Home() {
           <div className="w-full sm:w-1/2 flex flex-col justify-between border-l-4 pl-4">
             <div className="h-full flex flex-col justify-between">
               <div className="mb-8">
-                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex">
+                <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
                   <Component className="mr-4" /> For companies
                 </p>
-                <p className="text-lg sm:text-xl text-[#7B5B4C]">
+                <p className="text-md sm:text-xl text-[#7B5B4C]">
                   Tailor-made accommodation solutions.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex">
+                <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
                   {" "}
                   <MapPinPlusInside className="mr-4" />
                   location
                 </p>
-                <p className="text-lg sm:text-xl text-[#7B5B4C]">
+                <p className="text-md sm:text-xl text-[#7B5B4C]">
                   Operating all over Sweden - Always close to you regardless of
                   boundaries.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex">
+                <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
                   {" "}
                   <BookCheck className="mr-4" /> Trusted
                 </p>
-                <p className="text-lg sm:text-xl text-[#7B5B4C]">
+                <p className="text-md sm:text-xl text-[#7B5B4C]">
                   Worry-free handling - We handle all contact, agreements &
                   invoicing.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex">
+                <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
                   {" "}
                   <ArrowDownAZ className="mr-4" /> All in one
                 </p>
-                <p className="text-lg sm:text-xl text-[#7B5B4C]">
+                <p className="text-md sm:text-xl text-[#7B5B4C]">
                   One contact for accommodation throughout Sweden.
                 </p>
               </div>
               <div className="">
-                <p className="text-[#fd6d15] uppercase text-2xl font-semibold flex">
+                <p className="text-[#fd6d15] uppercase text-xl sm:text-2xl font-semibold flex">
                   {" "}
                   <Cog className="mr-4" /> Gurantee
                 </p>
-                <p className="text-lg sm:text-xl text-[#7B5B4C]">
+                <p className="text-md sm:text-xl text-[#7B5B4C]">
                   Safe & Reliable Accommodation.
                 </p>
               </div>
