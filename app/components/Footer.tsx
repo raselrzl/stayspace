@@ -23,7 +23,7 @@ export default function Footer() {
             {/*   <h3 className="text-xl font-bold mt-2">Company Name</h3> */}
             </div>
             <div className="text-center">
-              <p>OPERATED BY CENTRALIS GROUP INVEST AB</p>
+              <p>Operated By CENTRALIS GROUP INVEST AB</p>
               <p>Org No. 5591389597</p>
             </div>
           </div>
