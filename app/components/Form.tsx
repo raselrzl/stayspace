@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import { MailIcon } from "lucide-react";
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -71,7 +72,7 @@ export default function ContactForm() {
 
   return (
     <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 ">
-        <h1 className="text-lg text-center font-bold mb-6">Contact Us</h1>
+        <h1 className="text-lg text-center font-bold mb-4 flex justify-center uppercase">  Contact Us</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Field */}
@@ -194,7 +195,7 @@ export default function ContactForm() {
           />
 
           <Button type="submit" className="w-full sm:w-auto bg-[#fd6d15]">
-            Send
+          <MailIcon className="mr-2"/> Send
           </Button>
         </form>
       </Form>
