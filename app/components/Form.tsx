@@ -70,10 +70,10 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-4 sm:px-6 lg:px-10 md:shadow-2xl m-10">
-        <h1 className="text-lg">Contact Us</h1>
+    <div className="max-w-xl mx-auto p-4 sm:px-6 lg:px-10 ">
+        <h1 className="text-lg text-center font-bold mb-6">Contact Us</h1>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Field */}
           <FormField
             control={form.control}
@@ -85,7 +85,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="John Doe"
                     {...field}
-                    className="w-full p-2 border border-gray-300 focus:border-2 focus:outline-none"
+                    className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
                 </FormControl>
                 <FormMessage />
@@ -104,7 +104,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="Your Business"
                     {...field}
-                    className="w-full p-2 border border-gray-300 focus:border-2 focus:outline-none"
+                    className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
                 </FormControl>
                 <FormMessage />
@@ -123,7 +123,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="example@mail.com"
                     {...field}
-                    className="w-full p-2 border border-gray-300 focus:border-2 focus:outline-none"
+                    className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
                 </FormControl>
                 <FormMessage />
@@ -142,7 +142,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="123-456-7890"
                     {...field}
-                    className="w-full p-2 border border-gray-300 focus:border-2 focus:outline-none"
+                    className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
                 </FormControl>
                 <FormMessage />
@@ -159,7 +159,7 @@ export default function ContactForm() {
                 <FormLabel>Message *</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="w-full p-2 border border-gray-300 focus:border-2 focus:outline-none"
+                    className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                     placeholder="Your message"
                     {...field}
                   />
@@ -181,6 +181,7 @@ export default function ContactForm() {
                       id="consent"
                       checked={field.value === true} // Only checked if value is true
                       onCheckedChange={(checked: boolean) => field.onChange(checked)} // Correct onChange handler
+                      className="rounded-none"
                     />
                     <FormLabel htmlFor="consent" className="text-sm text-justify">
                       I hereby consent to this data being stored and processed for the purpose of establishing contact. I am aware that I can withdraw my consent at any time.
