@@ -1,24 +1,24 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
+import { useForm, FormProvider } from "react-hook-form" // Use FormProvider from react-hook-form
 import { z } from "zod"
 import { toast } from "sonner"; // Use Sonner's toast
 
 import { Button } from "@/components/ui/button"
 import {
-  Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
+} from "@/components/ui/form" // Custom Form components
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { MailIcon } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
+import { MailIcon } from "lucide-react"
 
+// Validation schema with zod
 const FormSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -72,8 +72,10 @@ export default function PartnerContactForm() {
 
   return (
     <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C]">
-        <h1 className="text-lg text-center font-bold mb-4 flex justify-center uppercase">  Contact Us</h1>
-      <Form {...form}>
+      <h1 className="lg text-center font-bold mb-4 flex justify-center uppercase">Contact Us</h1>
+
+      {/* Use FormProvider to wrap your form to give it context */}
+      <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Field */}
           <FormField
@@ -184,7 +186,7 @@ export default function PartnerContactForm() {
                       onCheckedChange={(checked: boolean) => field.onChange(checked)} // Correct onChange handler
                       className="rounded-none"
                     />
-                    <FormLabel htmlFor="consent" className="text-sm text-justify">
+                    <FormLabel htmlFor="consent" className="text-xs text-justify">
                       I hereby consent to this data being stored and processed for the purpose of establishing contact. I am aware that I can withdraw my consent at any time.
                     </FormLabel>
                   </div>
@@ -194,11 +196,11 @@ export default function PartnerContactForm() {
             )}
           />
 
-          <Button type="submit" className="w-full sm:w-auto bg-[#fd6d15]">
-          <MailIcon className="mr-2"/> Send
+          <Button type="submit" className="w-full sm:w-auto bg-[#fd6d15] rounded-none">
+            <MailIcon className="mr-2"/> Send
           </Button>
         </form>
-      </Form>
+      </FormProvider>
     </div>
   )
 }

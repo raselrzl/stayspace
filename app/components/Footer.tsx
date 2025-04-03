@@ -10,6 +10,7 @@ export default function Footer() {
             <a href="/legalinfo" className="underline hover:text-gray-400">Legal Info</a>
             <a href="/privacy" className="underline hover:text-gray-400">Privacy Policy</a>
             <a href="/contactus" className="underline hover:text-gray-400">Contact</a>
+            <a href="/partner" className="underline hover:text-gray-400">Become a partner</a>
           </div>
 
           {/* Middle Div: Company Information */}

@@ -1,5 +1,6 @@
 "use client"
 
+import ContactForm from "../components/Form";
 import PartnerContactForm from "../components/PartnerContactForm";
 
 const BecomePartner = () => {
@@ -31,35 +32,41 @@ const BecomePartner = () => {
       {/* Main Content Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-12 lg:px-32">
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-8">
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4">
             {/* First Div with Image */}
             <div className="flex-1">
               <img
                 src="/contact2.jpg"
                 alt="Partner Image"
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-auto object-cover"
               />
             </div>
 
             {/* Second Div with Heading and Text */}
-            <div className="flex-1 p-6 rounded-lg shadow-md">
+            <div className="flex-1 p-6 shadow-md">
               <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">Become our Partner</h2>
-              <p className="text-lg text-[#7B5B4C] mb-4">
+              <p className="text-md text-[#7B5B4C] mb-4">
                 At StaySpace, we are looking for housing options such as apartments, hostels, or other solutions to meet companies' needs for temporary housing. As a partner, you will receive:
               </p>
-              <ul className="list-disc pl-5 text-[#7B5B4C]">
+              <ul className="list-disc pl-5 text-[#7B5B4C] text-sm">
                 <li>Exposure to companies looking for accommodation for employees</li>
                 <li>A simple registration process and management</li>
                 <li>Flexible contracts for short and long periods</li>
               </ul>
-              <p className="text-lg text-[#7B5B4C] mt-4">
+              <p className="text-md text-[#7B5B4C] mt-4">
                 Do you want to become part of our network? Register your home with us today!
               </p>
+              <img
+                src="/stayspace.png"
+                alt="Partner Image"
+                className="w-[150px] h-auto object-cover mt-10 self-center ml-5"
+              />
             </div>
+            
 
             {/* Third Div with the Form */}
-            <div className="flex-1 p-6 rounded-lg shadow-md">
-              <PartnerContactForm /> {/* Using the PartnerContactForm component here */}
+            <div className="flex-1 shadow-md">
+              <PartnerContactForm />
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Hero = () => {
           </p>
           <div className="text-center mt-6">
             <Link
-              href="/contact"
+              href="/contactus"
               className="px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all"
             >
               Contact Us
