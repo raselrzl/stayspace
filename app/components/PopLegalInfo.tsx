@@ -22,7 +22,7 @@ export function PopLegalInfo() {
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-2 right-2 text-[#7B5B4C] cursor-pointer text-xl"
+            className="absolute top-2 right-2 text-[#7B5B4C] cursor-pointer text-xl p-1"
           >
             X
           </button>

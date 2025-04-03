@@ -24,7 +24,7 @@ export function PopPrivacyPolicy() {
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-2 right-2 text-white text-xl cursor-pointer"
+            className="absolute top-2 right-2 text-white text-xl cursor-pointer p-1"
           >
             X
           </button>
