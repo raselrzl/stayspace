@@ -1,4 +1,6 @@
 import { Facebook, Linkedin, Mail } from 'lucide-react';
+import { PopPrivacyPolicy } from './PopPrivacy';
+import { PopLegalInfo } from './PopLegalInfo';
 
 export default function Footer() {
   return (
@@ -7,8 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* First Div: Links */}
           <div className="flex flex-col space-y-4 mt-12">
-            <a href="/legalinfo" className="underline hover:text-gray-400">Legal Info</a>
-            <a href="/privacy" className="underline hover:text-gray-400">Privacy Policy</a>
+            <PopLegalInfo />
+            <PopPrivacyPolicy />
             <a href="/contactus" className="underline hover:text-gray-400">Contact</a>
             <a href="/partner" className="underline hover:text-gray-400">Become a partner</a>
           </div>
