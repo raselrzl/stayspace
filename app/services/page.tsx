@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <>
       <section
-        className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-white overflow-hidden"
+        className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
         style={{ backgroundImage: "url('/her3.jpg')" }}
       >
         <div className="lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
@@ -26,7 +26,7 @@ const Services = () => {
           <div className="text-center mt-6">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-white font-semibold transition-all"
+              className="px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all"
             >
               Contact Us
             </Link>

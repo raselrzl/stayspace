@@ -30,7 +30,7 @@ export default function FooterCard({ heading, details, image }: FooterCardProps)
       {/* Right side: Heading and Details */}
       <div className="flex flex-col w-full">
         <h3
-          className="flex justify-between items-center text-xl font-semibold text-white cursor-pointer"
+          className="flex justify-between items-center text-xl font-semibold text-[#7B5B4C] cursor-pointer"
           onClick={toggleExpansion}
         >
           <span>{heading}</span>

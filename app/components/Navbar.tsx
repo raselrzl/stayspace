@@ -16,9 +16,9 @@ export default function Navbar() {
   const isActiveLink = (href: string) => {
     // For the homepage link, check for both "/" and "/home"
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#fd6d15] text-white"; // Active state for home
+      return "bg-[#fd6d15] e"; // Active state for home
     }
-    return pathname === href ? "bg-[#fd6d15] text-white" : "text-[#fd6d15] hover:text-white"; // Active state for other links
+    return pathname === href ? "bg-[#fd6d15] text-[#7B5B4C]" : "text-[#fd6d15] hover:text-[#7B5B4C]"; // Active state for other links
   };
 
   return (

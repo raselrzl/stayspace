@@ -52,25 +52,25 @@ export function DrawerNav() {
           >
             <Link
               href="#"
-              className="text-white hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
+              className="text-[#7B5B4C] hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
             >
               Home
             </Link>
             <Link
               href="#"
-              className="text-white hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
+              className="text-[#7B5B4C] hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
             >
               Our Services
             </Link>
             <Link
               href="#"
-              className="text-white hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
+              className="text-[#7B5B4C] hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
             >
               Contact Us
             </Link>
             <Link
               href="#"
-              className="text-white hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
+              className="text-[#7B5B4C] hover:text-gray-300 bg-[#7B5B4C] px-4 py-2 rounded-lg"
             >
               Become a Partner
             </Link>
