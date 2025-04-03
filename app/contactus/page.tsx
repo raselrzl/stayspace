@@ -28,7 +28,7 @@ const ContactUs = () => {
       </section>
 
       {/* Main Contact Section */}
-      <div className="flex flex-col lg:flex-row mx-auto p-10 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row mx-auto p-5 sm:px-6 lg:px-8">
         {/* Left Side: Contact Form */}
         <div className="lg:w-1/2 w-full mb-8 lg:mb-0 shadow-2xl">
           <ContactForm />
