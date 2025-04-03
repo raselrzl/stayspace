@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright Text */}
-        <div className="text-sm text-center mt-8 border-t-1">
+        <div className="text-xs text-center mt-8 border-t-1">
           <p>©Copyright. All rights reserved.</p>
         </div>
       </div>
