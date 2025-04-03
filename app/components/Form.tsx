@@ -70,7 +70,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-10 sm:px-6 lg:px-8 shadow-2xl m-10">
+    <div className="max-w-xl mx-auto p-4 sm:px-6 lg:px-10 md:shadow-2xl m-10">
+        <h1 className="text-lg">Contact Us</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           {/* Name Field */}
