@@ -1,6 +1,10 @@
-"use client"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { SquareMenu, X } from "lucide-react";
+"use client";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Facebook, Linkedin, Mail, SquareMenu, X } from "lucide-react";
 import { useState } from "react"; // Import useState hook
 import Link from "next/link"; // Import Link for navigation
 import { usePathname } from "next/navigation"; // To get the current route
@@ -19,7 +23,9 @@ export function Navlink() {
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
       return "bg-[#fd6d15] text-[#7B5B4C]"; // Active state for home
     }
-    return pathname === href ? "bg-[#fd6d15] text-[#7B5B4C]" : "text-[#7B5B4C] hover:text-[#7B5B4C]"; // Active state for other links
+    return pathname === href
+      ? "bg-[#fd6d15] text-[#7B5B4C]"
+      : "text-[#7B5B4C] hover:text-[#7B5B4C]"; // Active state for other links
   };
 
   return (
@@ -27,7 +33,10 @@ export function Navlink() {
       {/* Trigger */}
       <Popover open={isPopoverVisible} onOpenChange={setPopoverVisible}>
         <PopoverTrigger asChild>
-          <button onClick={() => setPopoverVisible(true)} className="text-[#7B5B4C]">
+          <button
+            onClick={() => setPopoverVisible(true)}
+            className="text-[#7B5B4C]"
+          >
             <SquareMenu className="text-2xl" />
           </button>
         </PopoverTrigger>
@@ -43,23 +52,48 @@ export function Navlink() {
 
           {/* Nav Links */}
           <div className="flex flex-col justify-center items-center space-y-6 ">
-            <Link href="/" className={`px-4 py-2 ${isActiveLink("/")}`}>
+            <Link href="/" className={`px-2 py-1 ${isActiveLink("/")}`}>
               Home
             </Link>
-            <Link href="/services" className={`px-4 py-2 ${isActiveLink("/services")}`}>
+            <Link
+              href="/services"
+              className={`px-2 py-1 ${isActiveLink("/services")}`}
+            >
               Our Services
             </Link>
-            <Link href="/contactus" className={`px-4 py-2 ${isActiveLink("/contactus")}`}>
+            <Link
+              href="/contactus"
+              className={`px-2 py-1 ${isActiveLink("/contactus")}`}
+            >
               Contact Us
             </Link>
-            <Link href="/partner" className={`px-4 py-2 ${isActiveLink("/partner")}`}>
+            <Link
+              href="/partner"
+              className={`px-2 py-1 ${isActiveLink("/partner")}`}
+            >
               Become a Partner
             </Link>
 
-            <div className="flex text-center mt-10">
-              <h1 className="font-medium text-[#7B5B4C] text-3xl py-2 lg:text-5xl tracking-wider">
-                stayspace
-              </h1>
+            <div className="flex text-center flex-row mt-8">
+              <div className="flex justify-center space-x-4 items-center">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/stay-space-034978358/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+                </a>
+                <a href="mailto:kontakt@stayspace.se">
+                  <Mail className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+                </a>
+              </div>
             </div>
           </div>
         </PopoverContent>
