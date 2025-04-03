@@ -24,9 +24,9 @@ export function PopPrivacyPolicy() {
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-2 right-2 text-[#7B5B4C] text-xl"
+            className="absolute top-2 right-2 text-white text-xl"
           >
-            &times; {/* Unicode for the "×" symbol */}
+            X
           </button>
 
           <div className="w-full text-xs">
@@ -76,7 +76,7 @@ export function PopPrivacyPolicy() {
             <h3 className="font-semibold">Contact</h3>
             <p>
               If you have any questions about our privacy policy or how we handle your personal data, please contact us at{" "}
-              <a href="mailto:kontakt@stayspace.se" className="text-blue-500 underline">
+              <a href="mailto:kontakt@stayspace.se" className="text-amber-500 underline">
                 kontakt@stayspace.se
               </a>.
             </p>
