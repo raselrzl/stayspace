@@ -24,7 +24,7 @@ export function PopPrivacyPolicy() {
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-2 right-2 text-white text-xl"
+            className="absolute top-2 right-2 text-[#7B5B4C] text-xl"
           >
             &times; {/* Unicode for the "×" symbol */}
           </button>
