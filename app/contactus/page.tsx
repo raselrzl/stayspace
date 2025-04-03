@@ -9,10 +9,10 @@ const ContactUs = () => {
     <div className="text-[#7B5B4C]">
       <section
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
-        style={{ backgroundImage: "url('/her3.jpg')" }}
+        style={{ backgroundImage: "url('/contact.jpg')" }}
       >
-        <div className="lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
-          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
+        <div className="lg:mr-[400px] md:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
+        {/*   <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
             Where
             <br />
             Business
@@ -26,7 +26,7 @@ const ContactUs = () => {
           <p className="text-md md:text-lg mb-6 text-left">
             Is your company looking for accommodation for a longer construction
             project or a shorter assignment?
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -83,12 +83,7 @@ const ContactUs = () => {
           {/* Map Section (Currently a placeholder image) */}
           <div className="mt-8">
 
-            <div className="relative w-full h-64 rounded-lg overflow-hidden">
-             {/*  <img
-                src="/her4.jpg"
-                alt="Map location"
-                className="object-cover w-full h-full"
-              /> */}
+            <div className="relative w-full h-64 overflow-hidden">
               <EmbeddedMap />
             </div>
           </div>
