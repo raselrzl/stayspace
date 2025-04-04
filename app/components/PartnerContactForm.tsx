@@ -214,7 +214,7 @@ export default function PartnerContactForm() {
           <div className="flex justify-center items-center">
             <Button
               type="submit"
-              className="bg-[#fd6d15] rounded-none cursor-pointer w-[150px]"
+              className="bg-[#fd6d15] rounded-[20px] cursor-pointer w-[150px]"
             >
               <MailIcon className="mr-2" />Send
             </Button>

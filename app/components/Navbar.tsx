@@ -1,12 +1,13 @@
 "use client";
 import { SquareMenu } from "lucide-react"; // Import the cross icon
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; // To get the current route
 import { Navlink } from "./Navlink"; // Import the Navlink component for popover
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // State to track if scrolled
   const pathname = usePathname(); // Get the current path to highlight the active link
 
   const toggleMenu = () => {
@@ -20,11 +21,31 @@ export default function Navbar() {
     }
     return pathname === href
       ? "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]" // Active state for other links with rounded corners
-      : "text-[#7B5B4C] hover:text-[#fd6d15] hover:border-b-4 hover:border-[#fd6d15]"; // Regular state for other links with hover underline
+      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#fd6d15]"; // Regular state for other links with hover underline
   };
 
+  // Listen for scroll events to toggle the navbar height
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true); // Set isScrolled to true when user scrolls down
+      } else {
+        setIsScrolled(false); // Set isScrolled to false when at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll); // Add scroll event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Cleanup event listener
+    };
+  }, []);
+
   return (
-    <nav className="bg-gray-100 p-4">
+    <nav
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 ${
+        isScrolled ? "py-2" : "py-4"
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo on the left */}
         <div className="flex items-center py-1">
@@ -67,7 +88,7 @@ export default function Navbar() {
           onClick={toggleMenu}
           className="sm:hidden bg-gray-100 focus:outline-none text-3xl"
         >
-              <Navlink />
+          <Navlink />
         </div>
       </div>
     </nav>

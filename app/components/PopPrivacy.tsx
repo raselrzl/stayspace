@@ -20,11 +20,11 @@ export function PopPrivacyPolicy() {
           <p className="underline cursor-pointer">Privacy Policy</p>
         </PopoverTrigger>
 
-        <PopoverContent className="w-[300px] h-[500px] bg-black overflow-scroll text-justify relative">
+        <PopoverContent className="w-[300px] h-[500px] bg-white overflow-scroll text-justify relative">
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-2 right-2 text-white text-xl cursor-pointer p-1"
+            className="absolute top-2 right-2 text-black text-xl cursor-pointer p-1"
           >
             X
           </button>

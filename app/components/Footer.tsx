@@ -37,13 +37,13 @@ export default function Footer() {
           {/* Third Div: Social Media Icons */}
           <div className="flex justify-center space-x-6 items-center">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+              <Facebook className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
             </a>
             <a href="https://www.linkedin.com/in/stay-space-034978358/" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+              <Linkedin className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
             </a>
             <a href="mailto:kontakt@stayspace.se">
-              <Mail className="w-6 h-6 cursor-pointer text-[#fd6d15] hover:text-[#7B5B4C]" />
+              <Mail className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
             </a>
           </div>
         </div>

@@ -77,14 +77,14 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C]">
+    <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C] rounded-lg">
       <h1 className="lg text-center font-bold mb-4 flex justify-center uppercase">
         Contact Us
       </h1>
 
       {/* Use FormProvider to wrap your form to give it context */}
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 rounded-lg">
           {/* Name Field */}
           <FormField
             control={form.control}
@@ -214,7 +214,7 @@ export default function ContactForm() {
           <div className="flex justify-center items-center">
             <Button
               type="submit"
-              className=" bg-[#fd6d15] rounded-none cursor-pointer w-[150px]"
+              className=" bg-[#fd6d15] rounded-[20px] cursor-pointer w-[150px]"
             >
               <MailIcon className="mr-2" />Send
             </Button>

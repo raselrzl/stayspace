@@ -7,8 +7,8 @@ const Services = () => {
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
         style={{ backgroundImage: "url('/ser.jpg')" }}
       >
-        <div className="lg:mr-[300px] w-[280px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[350px] sm:h-[484px]">
-          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
+        <div className=" rounded-lg lg:mr-[300px] w-[280px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[350px] sm:h-[484px]">
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left ">
             Looking for
             <br />
             Flexible,
@@ -25,7 +25,7 @@ const Services = () => {
           <div className="text-center mt-6">
             <Link
               href="/contactus"
-              className="px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all"
+              className="px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all rounded-[20px]"
             >
               Contact Us
             </Link>

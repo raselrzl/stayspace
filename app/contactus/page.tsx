@@ -13,7 +13,7 @@ const ContactUs = () => {
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
         style={{ backgroundImage: "url('/contact.jpg')" }}
       >
-        <div className="lg:mr-[400px] md:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
+        <div className="rounded-lg lg:mr-[400px] md:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
             <p className="text-[#7B5B4C]">
               Call
@@ -33,7 +33,7 @@ const ContactUs = () => {
           </h1>
 
           <div className="text-center mt-10">
-            <p className="uppercase px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all">
+            <p className="uppercase px-6 py-3 hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all">
               Or fill up the form bellow
             </p>
           </div>
