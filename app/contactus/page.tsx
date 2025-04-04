@@ -23,12 +23,12 @@ const ContactUs = () => {
               </a>
             </p>
             <p className="flex items-center mb-4">
-              <p className="text-[#7B5B4C] mt-10">
+              <span className="text-[#7B5B4C] mt-10">
                 Email <br />
                 <a href="mailto:kontakt@stayspace.se" className="underline">
                   kontakt@stayspace.se
                 </a>
-              </p>
+              </span>
             </p>
           </h1>
 
