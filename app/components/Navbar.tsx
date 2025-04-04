@@ -17,7 +17,7 @@ export default function Navbar() {
   // Function to check if the link is active
   const isActiveLink = (href: string) => {
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#7b5b4c] text-white rounded-[20px]"; // Active state for home with rounded corners
+      return "bg-[#7B5B4C] text-white rounded-[20px]"; // Active state for home with rounded corners
     }
     return pathname === href
       ? "bg-[#7B5B4C] text-white rounded-[20px]" // Active state for other links with rounded corners
@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase  ${
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase ${
         isScrolled ? "py-1" : "py-4"
       }`}
       style={{
@@ -74,16 +74,22 @@ export default function Navbar() {
             Our Services
           </Link>
           <Link
-            href="/contactus"
-            className={`px-4 py-2 ${isActiveLink("/contactus")}`}
+            href="/aboutus"
+            className={`px-4 py-2 ${isActiveLink("/aboutus")}`}
           >
-            Contact Us
+            About Us
           </Link>
           <Link
             href="/partner"
             className={`px-4 py-2 ${isActiveLink("/partner")}`}
           >
             Become a Partner
+          </Link>
+          <Link
+            href="/tenant"
+            className={`px-4 py-2 ${isActiveLink("/tenant")}`}
+          >
+            Tenant
           </Link>
         </div>
 
@@ -95,6 +101,6 @@ export default function Navbar() {
           <Navlink />
         </div>
       </div>
-    </nav> 
+    </nav>
   );
 }

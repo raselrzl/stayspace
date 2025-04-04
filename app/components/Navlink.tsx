@@ -62,16 +62,22 @@ export function Navlink() {
               Our Services
             </Link>
             <Link
-              href="/contactus"
-              className={`px-4 py-1 text-xs ${isActiveLink("/contactus")}`}
+              href="/aboutus"
+              className={`px-4 py-1 text-xs ${isActiveLink("/aboutus")}`} 
             >
-              Contact Us
+              About Us
             </Link>
             <Link
               href="/partner"
               className={`px-4 py-1 text-xs ${isActiveLink("/partner")}`}
             >
               Become a Partner
+            </Link>
+            <Link
+              href="/tenant"
+              className={`px-4 py-1 text-xs ${isActiveLink("/tenant")}`}
+            >
+              Tenant
             </Link>
 
             <div className="flex text-center flex-row mt-8">
