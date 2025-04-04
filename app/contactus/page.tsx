@@ -3,6 +3,7 @@
 import { Phone, Mail, MapPin } from "lucide-react"; // Import icons from lucide-react
 import ContactForm from "../components/Form"; // Assuming you have your ContactForm component in this path
 import EmbeddedMap from "../components/EmbeddedMap";
+import Link from "next/link";
 
 const ContactUs = () => {
   return (
@@ -13,7 +14,29 @@ const ContactUs = () => {
         style={{ backgroundImage: "url('/contact.jpg')" }}
       >
         <div className="lg:mr-[400px] md:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
-          {/* Add your content or heading here if needed */}
+          <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
+            <p className="text-[#7B5B4C]">
+              Call
+              <br />
+              <a href="tel:+46103333536" className="underline">
+                +46 10-333 35 36
+              </a>
+            </p>
+            <p className="flex items-center mb-4">
+              <p className="text-[#7B5B4C] mt-10">
+                Email <br />
+                <a href="mailto:kontakt@stayspace.se" className="underline">
+                  kontakt@stayspace.se
+                </a>
+              </p>
+            </p>
+          </h1>
+
+          <div className="text-center mt-10">
+            <p className="uppercase px-6 py-3 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all">
+              Or fill up the form bellow
+            </p>
+          </div>
         </div>
       </section>
 
