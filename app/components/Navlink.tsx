@@ -51,7 +51,7 @@ export function Navlink() {
           </div>
 
           {/* Nav Links */}
-          <div className="flex flex-col justify-center items-center space-y-6 uppercase">
+          <div className="flex flex-col justify-center items-center space-y-6 uppercase font-bold">
             <Link href="/" className={`px-4 py-1 text-xs ${isActiveLink("/")}`}>
               Home
             </Link>

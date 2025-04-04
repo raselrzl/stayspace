@@ -42,7 +42,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase ${
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase font-bold ${
         isScrolled ? "py-1" : "py-4"
       }`}
     >
