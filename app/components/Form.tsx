@@ -214,7 +214,7 @@ export default function ContactForm() {
           <div className="flex justify-center items-center">
             <Button
               type="submit"
-              className=" bg-[#fd6d15] rounded-[20px] cursor-pointer w-[150px]"
+              className=" bg-[#7B5B4C] hover:bg-[#96705f] text-white  rounded-[20px] cursor-pointer w-[150px]"
             >
               <MailIcon className="mr-2" />Send
             </Button>

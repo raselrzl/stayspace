@@ -56,7 +56,7 @@ export default function Home() {
               alt="Support Logo"
               className="w-20 h-20 mr-6 animate-on-scroll"
             />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#7B5B4C] mb-6 lg:mt-3 animate-on-scroll">
+            <h2 className="uppercase text-xl sm:text-3xl md:text-4xl font-bold text-[#7B5B4C] mb-6 lg:mt-3 animate-on-scroll">
               How We Support You?
             </h2>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="w-full sm:w-1/2 flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-xl sm:text-2xl font-semibold flex animate-on-scroll">
+                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
                   <Component className="mr-4" /> For companies
                 </p>
                 <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
@@ -73,7 +73,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-xl sm:text-2xl font-semibold flex animate-on-scroll">
+                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
                   {" "}
                   <MapPinPlusInside className="mr-4" />
                   location
@@ -84,7 +84,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-xl sm:text-2xl font-semibold flex animate-on-scroll">
+                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
                   {" "}
                   <BookCheck className="mr-4" /> Trusted
                 </p>
@@ -94,7 +94,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-xl sm:text-2xl font-semibold flex animate-on-scroll">
+                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
                   {" "}
                   <ArrowDownAZ className="mr-4" /> All in one
                 </p>
@@ -103,7 +103,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="">
-                <p className="text-[#7B5B4C] uppercase text-xl sm:text-2xl font-semibold flex animate-on-scroll">
+                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
                   {" "}
                   <Cog className="mr-4" /> Gurantee
                 </p>
@@ -177,6 +177,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
     </div>
   );
 }

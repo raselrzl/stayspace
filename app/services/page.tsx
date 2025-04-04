@@ -25,7 +25,7 @@ const Services = () => {
           <div className="text-center mt-6">
             <Link
               href="/contactus"
-              className="px-5 py-2 bg-[#fd6d15] hover:bg-red-400 text-[#7B5B4C] font-semibold transition-all rounded-[20px]"
+              className="uppercase px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white font-semibold transition-all rounded-[20px]"
             >
               Contact Us
             </Link>

@@ -17,11 +17,11 @@ export default function Navbar() {
   // Function to check if the link is active
   const isActiveLink = (href: string) => {
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]"; // Active state for home with rounded corners
+      return "bg-[#7b5b4c] text-white rounded-[20px]"; // Active state for home with rounded corners
     }
     return pathname === href
-      ? "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]" // Active state for other links with rounded corners
-      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#fd6d15]"; // Regular state for other links with hover underline
+      ? "bg-[#7B5B4C] text-white rounded-[20px]" // Active state for other links with rounded corners
+      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#7B5B4C]"; // Regular state for other links with hover underline
   };
 
   // Listen for scroll events to toggle the navbar height
@@ -42,9 +42,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase font-bold ${
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase  ${
         isScrolled ? "py-1" : "py-4"
       }`}
+      style={{
+        boxShadow: "0 4px 4px rgb(123, 91, 76)", // Yellow shadow (rgba(253, 109, 21, 0.6))
+        borderBottom: "4px solid transparent", // Invisible border to hold the shadow
+      }}
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo on the left */}
@@ -59,7 +63,7 @@ export default function Navbar() {
         </div>
 
         {/* Navbar Links (Desktop) */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 font-bold">
           <Link href="/" className={`px-4 py-2 ${isActiveLink("/")}`}>
             Home
           </Link>
@@ -91,6 +95,6 @@ export default function Navbar() {
           <Navlink />
         </div>
       </div>
-    </nav>
+    </nav> 
   );
 }
