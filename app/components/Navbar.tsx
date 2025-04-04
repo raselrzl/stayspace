@@ -42,8 +42,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 ${
-        isScrolled ? "py-2" : "py-4"
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase ${
+        isScrolled ? "py-1" : "py-4"
       }`}
     >
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">

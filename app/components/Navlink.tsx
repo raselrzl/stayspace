@@ -42,7 +42,7 @@ export function Navlink() {
         </PopoverTrigger>
 
         {/* Popover content */}
-        <PopoverContent className="w-[200px] h-auto bg-gray-100 text-[#7B5B4C] text-justify p-4 relative rounded-none">
+        <PopoverContent className="w-[200px] h-auto bg-gray-100 text-[#7B5B4C] text-justify p-4 relative rounded-lg">
           {/* Close Button */}
           <div className="absolute top-2 right-2">
             <button onClick={handleClose}>
@@ -51,25 +51,25 @@ export function Navlink() {
           </div>
 
           {/* Nav Links */}
-          <div className="flex flex-col justify-center items-center space-y-6 ">
-            <Link href="/" className={`px-2 py-1 ${isActiveLink("/")}`}>
+          <div className="flex flex-col justify-center items-center space-y-6 uppercase">
+            <Link href="/" className={`px-4 py-1 text-xs ${isActiveLink("/")}`}>
               Home
             </Link>
             <Link
               href="/services"
-              className={`px-2 py-1 ${isActiveLink("/services")}`}
+              className={`px-4 py-1 text-xs ${isActiveLink("/services")}`}
             >
               Our Services
             </Link>
             <Link
               href="/contactus"
-              className={`px-2 py-1 ${isActiveLink("/contactus")}`}
+              className={`px-4 py-1 text-xs ${isActiveLink("/contactus")}`}
             >
               Contact Us
             </Link>
             <Link
               href="/partner"
-              className={`px-2 py-1 ${isActiveLink("/partner")}`}
+              className={`px-4 py-1 text-xs ${isActiveLink("/partner")}`}
             >
               Become a Partner
             </Link>
