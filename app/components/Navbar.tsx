@@ -16,11 +16,11 @@ export default function Navbar() {
   // Function to check if the link is active
   const isActiveLink = (href: string) => {
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#fd6d15] text-[#7B5B4C]"; // Active state for home
+      return "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]"; // Active state for home with rounded corners
     }
     return pathname === href
-      ? "bg-[#fd6d15] text-[#7B5B4C]"
-      : "text-[#7B5B4C] hover:text-[#7B5B4C]"; // Active state for other links
+      ? "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]" // Active state for other links with rounded corners
+      : "text-[#7B5B4C] hover:text-[#fd6d15] hover:border-b-4 hover:border-[#fd6d15]"; // Regular state for other links with hover underline
   };
 
   return (
@@ -68,7 +68,6 @@ export default function Navbar() {
           className="sm:hidden bg-gray-100 focus:outline-none text-3xl"
         >
               <Navlink />
-  
         </div>
       </div>
     </nav>

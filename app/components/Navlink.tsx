@@ -21,10 +21,10 @@ export function Navlink() {
   const isActiveLink = (href: string) => {
     // For the homepage link, check for both "/" and "/home"
     if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#fd6d15] text-[#7B5B4C]"; // Active state for home
+      return "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]"; // Active state for home
     }
     return pathname === href
-      ? "bg-[#fd6d15] text-[#7B5B4C]"
+      ? "bg-[#fd6d15] text-[#7B5B4C] rounded-[20px]"
       : "text-[#7B5B4C] hover:text-[#7B5B4C]"; // Active state for other links
   };
 
