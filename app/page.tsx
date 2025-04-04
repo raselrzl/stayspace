@@ -116,7 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f8f3f2]">
+      <section className="bg-[#fdfaf5]">
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
           {/* Left Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between mb-8 sm:mb-0  py-16 px-4 sm:px-12">
@@ -178,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      
+
     </div>
   );
 }
