@@ -16,12 +16,10 @@ export default function Navbar() {
 
   // Function to check if the link is active
   const isActiveLink = (href: string) => {
-    if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#7B5B4C] text-white rounded-[20px]"; // Active state for home with rounded corners
-    }
+    // If the link is active, apply the bottom border color
     return pathname === href
-      ? "bg-[#7B5B4C] text-white rounded-[20px]" // Active state for other links with rounded corners
-      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#7B5B4C]"; // Regular state for other links with hover underline
+      ? "text-[#7B5B4C] border-b-4 border-[#7B5B4C]" // Apply the border when active
+      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#7B5B4C]"; // Regular state for hover effect
   };
 
   // Listen for scroll events to toggle the navbar height
@@ -64,30 +62,30 @@ export default function Navbar() {
 
         {/* Navbar Links (Desktop) */}
         <div className="hidden md:flex space-x-6 font-bold">
-          <Link href="/" className={`px-4 py-2 ${isActiveLink("/")}`}>
+          <Link href="/" className={`py-1 ${isActiveLink("/")}`}>
             Home
           </Link>
           <Link
             href="/services"
-            className={`px-4 py-2 ${isActiveLink("/services")}`}
+            className={`py-1 ${isActiveLink("/services")}`}
           >
             Our Services
           </Link>
           <Link
             href="/aboutus"
-            className={`px-4 py-2 ${isActiveLink("/aboutus")}`}
+            className={`py-1 ${isActiveLink("/aboutus")}`}
           >
             About Us
           </Link>
           <Link
             href="/partner"
-            className={`px-4 py-2 ${isActiveLink("/partner")}`}
+            className={`py-1 ${isActiveLink("/partner")}`}
           >
-            Become a Partner
+            Partner
           </Link>
           <Link
             href="/tenant"
-            className={`px-4 py-2 ${isActiveLink("/tenant")}`}
+            className={` py-1 ${isActiveLink("/tenant")}`}
           >
             Tenant
           </Link>

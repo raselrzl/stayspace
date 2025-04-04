@@ -19,13 +19,9 @@ export function Navlink() {
 
   // Function to check if the link is active
   const isActiveLink = (href: string) => {
-    // For the homepage link, check for both "/" and "/home"
-    if (href === "/" && (pathname === "/" || pathname === "/home")) {
-      return "bg-[#7B5B4C] text-white rounded-[20px]"; // Active state for home
-    }
     return pathname === href
-      ? "bg-[#7B5B4C] text-white rounded-[20px]"
-      : "text-[#7B5B4C] hover:text-[#7B5B4C]"; // Active state for other links
+      ? "text-[#7B5B4C] border-b-2 border-[#7B5B4C]" // Active state with border-bottom color
+      : "text-[#7B5B4C] hover:text-[#7B5B4C] hover:border-b-4 hover:border-[#7B5B4C]"; // Regular state with hover underline
   };
 
   return (
@@ -52,30 +48,30 @@ export function Navlink() {
 
           {/* Nav Links */}
           <div className="flex flex-col justify-center items-center space-y-6 uppercase font-bold">
-            <Link href="/" className={`px-4 py-1 text-xs ${isActiveLink("/")}`}>
+            <Link href="/" className={`py-1 text-xs ${isActiveLink("/")}`}>
               Home
             </Link>
             <Link
               href="/services"
-              className={`px-4 py-1 text-xs ${isActiveLink("/services")}`}
+              className={`py-1 text-xs ${isActiveLink("/services")}`}
             >
               Our Services
             </Link>
             <Link
               href="/aboutus"
-              className={`px-4 py-1 text-xs ${isActiveLink("/aboutus")}`} 
+              className={`py-1 text-xs ${isActiveLink("/aboutus")}`}
             >
               About Us
             </Link>
             <Link
               href="/partner"
-              className={`px-4 py-1 text-xs ${isActiveLink("/partner")}`}
+              className={`py-1 text-xs ${isActiveLink("/partner")}`}
             >
               Become a Partner
             </Link>
             <Link
               href="/tenant"
-              className={`px-4 py-1 text-xs ${isActiveLink("/tenant")}`}
+              className={`py-1 text-xs ${isActiveLink("/tenant")}`}
             >
               Tenant
             </Link>
