@@ -49,7 +49,7 @@ interface CustomAlertProps {
 function CustomAlert({ message, onClose }: CustomAlertProps) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+      <div className="bg-gray-200 p-6 rounded-sm shadow-lg text-center w-[320px] md:w-[400px]">
         <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
         <p className="text-lg text-[#7B5B4C]">{message}</p>
         <div className="mt-4">
