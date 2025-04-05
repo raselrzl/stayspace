@@ -40,6 +40,28 @@ const FormSchema = z.object({
     .optional(),
 });
 
+// Custom Modal component to show the success message and logo
+
+interface CustomAlertProps {
+  message: string;
+  onClose: () => void;
+}
+function CustomAlert({ message, onClose }: CustomAlertProps) {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+        <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
+        <p className="text-lg text-[#7B5B4C]">{message}</p>
+        <div className="mt-4">
+          <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
+            Close
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function PartnerContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -54,6 +76,8 @@ export default function PartnerContactForm() {
   });
 
   const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [showModal, setShowModal] = useState(false); // To control the modal visibility
+  const [modalMessage, setModalMessage] = useState(""); // Message to show in the modal
 
   // OnSubmit function to send data to API
   async function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -62,7 +86,7 @@ export default function PartnerContactForm() {
 
     try {
       // API call to submit the form data
-      const response = await fetch("/api/sendForm", {
+      const response = await fetch("/api/sendForm", { // Replace this URL with your domain
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,18 +95,21 @@ export default function PartnerContactForm() {
       });
 
       if (response.ok) {
-        // Show a success alert
-        alert("Your message has been submitted successfully! We usually respond within 24 hours.");
+        // Show the custom modal with the success message
+        setModalMessage("Your message has been submitted successfully! We usually respond within 24 hours.");
+        setShowModal(true);
         // Optionally, you can reset the form after success
         form.reset();
       } else {
         // If the response is not OK, show an error message
         const errorData = await response.json();
-        alert(`Error: ${errorData.message || "Failed to send form data."}`);
+        setModalMessage(`Error: ${errorData.message || "Failed to send form data."}`);
+        setShowModal(true);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Something went wrong. Please try again later.");
+      setModalMessage("Something went wrong. Please try again later.");
+      setShowModal(true);
     } finally {
       setIsLoading(false); // Reset loading state after submission attempt
     }
@@ -238,6 +265,9 @@ export default function PartnerContactForm() {
           </div>
         </form>
       </FormProvider>
+
+      {/* Show the custom modal */}
+      {showModal && <CustomAlert message={modalMessage} onClose={() => setShowModal(false)} />}
     </div>
   );
 }
