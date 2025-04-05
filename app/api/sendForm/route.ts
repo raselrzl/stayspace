@@ -27,7 +27,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: 'contact@zirrah.online', // Sender email address
       to: 'contact@zirrah.online', // Recipient email address
-      subject: 'New Contact Form Submission',
+      subject: 'For Bussiness',
       text: `
         Name: ${data.name}
         Business: ${data.business}
