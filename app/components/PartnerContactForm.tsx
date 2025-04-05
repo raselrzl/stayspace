@@ -1,8 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form"; 
 import { z } from "zod";
-import { toast } from "sonner"; // Use Sonner's toast
-
 import { Button } from "@/components/ui/button";
 import {
   FormControl,
@@ -10,11 +8,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"; // Custom Form components
+} from "@/components/ui/form"; 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MailIcon } from "lucide-react";
+import { MailIcon, Loader2 } from "lucide-react"; // Import the Loader2 icon
+import { useState } from "react";
 
 // Validation schema with zod
 const FormSchema = z.object({
@@ -50,12 +49,15 @@ export default function PartnerContactForm() {
       email: "",
       phone: "",
       message: "",
-      consent: false, // Default consent is false (unchecked)
+      consent: false,
     },
   });
 
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+
   // OnSubmit function to send data to API
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setIsLoading(true); // Set loading to true when submission starts
     console.log("Form Data:", data);
 
     try {
@@ -69,34 +71,20 @@ export default function PartnerContactForm() {
       });
 
       if (response.ok) {
-        // If the response is OK, show a success toast
-        toast.success(
-          <div className="bg-slate-950 p-4 rounded-md">
-            <h3 className="text-[#7B5B4C] text-lg font-bold">
-              Form submitted successfully, we will get in touch with you as soon as possible.
-            </h3>
-          </div>
-        );
+        // Show a success alert
+        alert("Your message has been submitted successfully! We usually respond within 24 hours.");
+        // Optionally, you can reset the form after success
+        form.reset();
       } else {
-        // If the response is not OK, show an error toast
+        // If the response is not OK, show an error message
         const errorData = await response.json();
-        toast.error(
-          <div className="bg-slate-950 p-4 rounded-md">
-            <h3 className="text-[#7B5B4C] text-lg font-bold">
-              {errorData.message || "Failed to send form data."}
-            </h3>
-          </div>
-        );
+        alert(`Error: ${errorData.message || "Failed to send form data."}`);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error(
-        <div className="bg-slate-950 p-4 rounded-md">
-          <h3 className="text-[#7B5B4C] text-lg font-bold">
-            Something went wrong. Please try again later.
-          </h3>
-        </div>
-      );
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsLoading(false); // Reset loading state after submission attempt
     }
   }
 
@@ -237,9 +225,15 @@ export default function PartnerContactForm() {
           <div className="flex justify-center items-center">
             <Button
               type="submit"
-              className="bg-[#7B5B4C] hover:bg-[#96705f] text-white  rounded-[20px] cursor-pointer w-[150px]"
+              className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px] cursor-pointer w-[150px]"
+              disabled={isLoading} // Disable the button while loading
             >
-              <MailIcon className="mr-2" />Send
+              {isLoading ? (
+                <Loader2 className="animate-spin mr-2" /> // Show the spinner if loading
+              ) : (
+                <MailIcon className="mr-2" />
+              )}
+              {isLoading ? "Submitting..." : "Send"} {/* Button text changes while loading */}
             </Button>
           </div>
         </form>
