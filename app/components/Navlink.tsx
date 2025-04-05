@@ -67,7 +67,7 @@ export function Navlink() {
               href="/partner"
               className={`py-1 text-xs ${isActiveLink("/partner")}`}
             >
-              Become a Partner
+              Partner
             </Link>
             <Link
               href="/tenant"

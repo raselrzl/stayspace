@@ -1,10 +1,6 @@
-"use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, FormProvider } from "react-hook-form"; // Use FormProvider from react-hook-form
+import { useForm, FormProvider } from "react-hook-form"; 
 import { z } from "zod";
-import { toast } from "sonner"; // Use Sonner's toast
-
 import { Button } from "@/components/ui/button";
 import {
   FormControl,
@@ -12,11 +8,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"; // Custom Form components
+} from "@/components/ui/form"; 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MailIcon } from "lucide-react";
+import { MailIcon, Loader2 } from "lucide-react"; // Import the Loader2 icon
+import { useState } from "react";
 
 // Validation schema with zod
 const FormSchema = z.object({
@@ -43,6 +40,28 @@ const FormSchema = z.object({
     .optional(),
 });
 
+// Custom Modal component to show the success message and logo
+
+interface CustomAlertProps {
+  message: string;
+  onClose: () => void;
+}
+function CustomAlert({ message, onClose }: CustomAlertProps) {
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="bg-gray-200 p-6 rounded-sm shadow-lg text-center w-[320px] md:w-[400px]">
+        <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
+        <p className="text-lg text-[#7B5B4C]">{message}</p>
+        <div className="mt-4">
+          <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
+            Close
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -52,39 +71,58 @@ export default function ContactForm() {
       email: "",
       phone: "",
       message: "",
-      consent: false, // Default consent is false (unchecked)
+      consent: false,
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    // Console log the form data
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [showModal, setShowModal] = useState(false); // To control the modal visibility
+  const [modalMessage, setModalMessage] = useState(""); // Message to show in the modal
+
+  // OnSubmit function to send data to API
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
+    setIsLoading(true); // Set loading to true when submission starts
     console.log("Form Data:", data);
 
-    // Show success toast message
-    toast.success(
-      <div className="bg-slate-950 p-4 rounded-md">
-        <h3 className="text-[#7B5B4C] text-lg font-bold">
-          Form submitted successfully, we will get in touch with you as soon as
-          possible.
-        </h3>
-      </div>
-    );
+    try {
+      // API call to submit the form data
+      const response = await fetch("/api/contactForm", { // Replace this URL with your domain
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    // Reload the page after form submission
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500); // Delay to ensure the toast is visible before reload
+      if (response.ok) {
+        // Show the custom modal with the success message
+        setModalMessage("Thank you for contacting us. We usually respond within 24 hours through your given contact information.");
+        setShowModal(true);
+        // Optionally, you can reset the form after success
+        form.reset();
+      } else {
+        // If the response is not OK, show an error message
+        const errorData = await response.json();
+        setModalMessage(`Error: ${errorData.message || "Failed to send form data."}`);
+        setShowModal(true);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setModalMessage("Something went wrong. Please try again later.");
+      setShowModal(true);
+    } finally {
+      setIsLoading(false); // Reset loading state after submission attempt
+    }
   }
 
   return (
-    <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C] rounded-lg">
+    <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C]">
       <h1 className="lg text-center font-bold mb-4 flex justify-center uppercase">
         Contact Us
       </h1>
 
-      {/* Use FormProvider to wrap your form to give it context */}
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 rounded-lg">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Field */}
           <FormField
             control={form.control}
@@ -214,13 +252,22 @@ export default function ContactForm() {
           <div className="flex justify-center items-center">
             <Button
               type="submit"
-              className=" bg-[#7B5B4C] hover:bg-[#96705f] text-white  rounded-[20px] cursor-pointer w-[150px]"
+              className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px] cursor-pointer w-[150px]"
+              disabled={isLoading} // Disable the button while loading
             >
-              <MailIcon className="mr-2" />Send
+              {isLoading ? (
+                <Loader2 className="animate-spin mr-2" /> // Show the spinner if loading
+              ) : (
+                <MailIcon className="mr-2" />
+              )}
+              {isLoading ? "Submitting..." : "Send"} {/* Button text changes while loading */}
             </Button>
           </div>
         </form>
       </FormProvider>
+
+      {/* Show the custom modal */}
+      {showModal && <CustomAlert message={modalMessage} onClose={() => setShowModal(false)} />}
     </div>
   );
 }
