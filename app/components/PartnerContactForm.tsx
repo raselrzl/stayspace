@@ -1,7 +1,5 @@
-"use client";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, FormProvider } from "react-hook-form"; // Use FormProvider from react-hook-form
+import { useForm, FormProvider } from "react-hook-form"; 
 import { z } from "zod";
 import { toast } from "sonner"; // Use Sonner's toast
 
@@ -56,24 +54,50 @@ export default function PartnerContactForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    // Console log the form data
+  // OnSubmit function to send data to API
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
     console.log("Form Data:", data);
 
-    // Show success toast message
-    toast.success(
-      <div className="bg-slate-950 p-4 rounded-md">
-        <h3 className="text-[#7B5B4C] text-lg font-bold">
-          Form submitted successfully, we will get in touch with you as soon as
-          possible.
-        </h3>
-      </div>
-    );
+    try {
+      // API call to submit the form data
+      const response = await fetch("/api/sendForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    // Reload the page after form submission
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500); // Delay to ensure the toast is visible before reload
+      if (response.ok) {
+        // If the response is OK, show a success toast
+        toast.success(
+          <div className="bg-slate-950 p-4 rounded-md">
+            <h3 className="text-[#7B5B4C] text-lg font-bold">
+              Form submitted successfully, we will get in touch with you as soon as possible.
+            </h3>
+          </div>
+        );
+      } else {
+        // If the response is not OK, show an error toast
+        const errorData = await response.json();
+        toast.error(
+          <div className="bg-slate-950 p-4 rounded-md">
+            <h3 className="text-[#7B5B4C] text-lg font-bold">
+              {errorData.message || "Failed to send form data."}
+            </h3>
+          </div>
+        );
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error(
+        <div className="bg-slate-950 p-4 rounded-md">
+          <h3 className="text-[#7B5B4C] text-lg font-bold">
+            Something went wrong. Please try again later.
+          </h3>
+        </div>
+      );
+    }
   }
 
   return (
@@ -82,7 +106,6 @@ export default function PartnerContactForm() {
         Contact Us
       </h1>
 
-      {/* Use FormProvider to wrap your form to give it context */}
       <FormProvider {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           {/* Name Field */}
