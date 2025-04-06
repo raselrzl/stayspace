@@ -129,7 +129,7 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">Name *</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="John Doe"
@@ -148,7 +148,7 @@ export default function ContactForm() {
             name="business"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Business *</FormLabel>
+                <FormLabel className="uppercase font-bold">Business *</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Your Business"
@@ -167,7 +167,7 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email *</FormLabel>
+                <FormLabel className="uppercase font-bold">Email *</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="example@mail.com"
@@ -186,7 +186,7 @@ export default function ContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Phone *</FormLabel>
+                <FormLabel className="uppercase font-bold">Phone *</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="123-456-7890"
@@ -205,7 +205,7 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message *</FormLabel>
+                <FormLabel className="uppercase font-bold">Message *</FormLabel>
                 <FormControl>
                   <Textarea
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"

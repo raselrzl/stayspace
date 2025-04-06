@@ -123,7 +123,7 @@ export default function PartnerContactForm() {
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="name" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">Name *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="John Doe" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -132,7 +132,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="phone" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Phone *</FormLabel>
+                <FormLabel className="uppercase font-bold">Phone *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="123-456-7890" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -154,7 +154,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="business" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Business *</FormLabel>
+                <FormLabel className="uppercase font-bold">Business *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="Your Business" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -167,7 +167,7 @@ export default function PartnerContactForm() {
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="streetName" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Street Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">Street Name *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="123 Main St" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -176,7 +176,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="zipCode" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Zip Code *</FormLabel>
+                <FormLabel className="uppercase font-bold">Zip Code *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="12345" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -185,7 +185,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="city" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>City *</FormLabel>
+                <FormLabel className="uppercase font-bold">City *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="City Name" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -198,7 +198,7 @@ export default function PartnerContactForm() {
           <div className="grid grid-cols-3 space-x-4">
             <FormField control={form.control} name="toilets" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Toilets *</FormLabel>
+                <FormLabel className="uppercase font-bold">Toilets *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -211,7 +211,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="showers" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Showers *</FormLabel>
+                <FormLabel className="uppercase font-bold">Showers *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none  h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -224,7 +224,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="desiredPrice" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Desired Price (SEK) *</FormLabel>
+                <FormLabel className="uppercase font-bold">Desired Price (SEK) *</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="100" type="number" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -237,7 +237,7 @@ export default function PartnerContactForm() {
           <div className="grid grid-cols-2 md:grid-cols-4 space-x-4">
             <FormField control={form.control} name="bedroom" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Bedroom *</FormLabel>
+                <FormLabel className="uppercase font-bold">Bedroom *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -250,7 +250,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="beds" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Beds *</FormLabel>
+                <FormLabel className="uppercase font-bold">Beds *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -263,7 +263,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="livingRoom" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Living Room *</FormLabel>
+                <FormLabel className="uppercase font-bold">Living Room *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -276,7 +276,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="kitchen" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Kitchen *</FormLabel>
+                <FormLabel className="uppercase font-bold">Kitchen *</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -292,7 +292,7 @@ export default function PartnerContactForm() {
           {/* Type of Accommodation */}
           <FormField control={form.control} name="typeOfAccommodation" render={({ field }) => (
             <FormItem>
-              <FormLabel>Type of Accommodation *</FormLabel>
+              <FormLabel className="uppercase font-bold">Type of Accommodation *</FormLabel>
               <FormControl>
                 <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                   <option value="apartment">Apartment</option>
@@ -308,7 +308,7 @@ export default function PartnerContactForm() {
           {/* Starting Date */}
           <FormField control={form.control} name="startingDate" render={({ field }) => (
             <FormItem>
-              <FormLabel>Starting Date *</FormLabel>
+              <FormLabel className="uppercase font-bold">Starting Date *</FormLabel>
               <FormControl>
                 <Input {...field} type="date" className="w-full border border-gray-300 rounded-none" />
               </FormControl>
@@ -319,7 +319,7 @@ export default function PartnerContactForm() {
           {/* Other Information */}
           <FormField control={form.control} name="otherInformation" render={({ field }) => (
             <FormItem>
-              <FormLabel>Additional Information</FormLabel>
+              <FormLabel className="uppercase font-bold">Additional Information</FormLabel>
               <FormControl>
                 <Textarea {...field} placeholder="Additional information..." className="w-full border border-gray-300 rounded-none" />
               </FormControl>
@@ -333,8 +333,10 @@ export default function PartnerContactForm() {
               <FormControl>
                 <div className="flex items-center space-x-2">
                   <Checkbox checked={field.value === true} onCheckedChange={field.onChange} />
-                  <FormLabel htmlFor="consent" className="text-xs">
-                    I consent to my data being processed for this purpose.
+                  <FormLabel className="text-xs text-justify" htmlFor="consent">
+                  I hereby consent to this data being stored and processed
+                      for the purpose of establishing contact. I am aware that I
+                      can withdraw my consent at any time.
                   </FormLabel>
                 </div>
               </FormControl>
