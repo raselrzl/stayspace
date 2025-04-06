@@ -5,35 +5,68 @@ interface FormData {
   business: string;
   email: string;
   phone: string;
-  message: string;
+  streetName: string;
+  zipCode: string;
+  city: string;
+  bedroom: number;
+  beds: number;
+  livingRoom: number;
+  kitchen: number;
+  toilets: number;
+  showers: number;
+  desiredPrice: number; // Ensure this is a number type
+  accommodationType: string;
+  startingDate: string;
+  otherInformation: string;
+  consent: boolean;
 }
 
 export async function POST(req: Request) {
   try {
     const data: FormData = await req.json(); // Parse the incoming JSON body
 
+    // Ensure desiredPrice is a number
+    const desiredPrice = parseFloat(data.desiredPrice.toString()); // Convert to number if it's not already
+
+    if (isNaN(desiredPrice)) {
+      throw new Error('Invalid desiredPrice value'); // Handle case where desiredPrice is not a valid number
+    }
+
     // Create a Nodemailer transporter using your Hostinger SMTP configuration
     const transporter = nodemailer.createTransport({
       host: 'smtp.hostinger.com',
-      port: 465, // Port for secure email sending
+      port: 465,
       secure: true,
       auth: {
-        user: 'contact@zirrah.online', // Your Hostinger email
-        pass: '100%Rasel', // Your email password or SMTP password
+        user: 'contact@zirrah.online',
+        pass: '100%Rasel',
       },
     });
 
     // Define the email content
     const mailOptions = {
-      from: 'contact@zirrah.online', // Sender email address
-      to: 'contact@zirrah.online', // Recipient email address
-      subject: 'For Bussiness',
+      from: 'contact@zirrah.online',
+      to: 'contact@zirrah.online',
+      subject: 'For Business Inquiry',
       text: `
         Name: ${data.name}
         Business: ${data.business}
         Email: ${data.email}
         Phone: ${data.phone}
-        Message: ${data.message}
+        Street: ${data.streetName}
+        Zip Code: ${data.zipCode}
+        City: ${data.city}
+        Bedroom Count: ${data.bedroom}
+        Beds: ${data.beds}
+        Living Room: ${data.livingRoom}
+        Kitchen: ${data.kitchen}
+        Toilets: ${data.toilets}
+        Showers: ${data.showers}
+        Desired Price: ${desiredPrice.toFixed(2)}
+        Type of Accommodation: ${data.accommodationType}
+        Starting Date: ${data.startingDate}
+        Additional Information: ${data.otherInformation}
+        Consent Given: ${data.consent ? 'Yes' : 'No'}
       `,
     };
 
