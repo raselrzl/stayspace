@@ -119,7 +119,7 @@ export default function PartnerContactForm() {
       </h1>
 
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 p-10">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 p-6 shadow-md max-w-[900px]">
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="name" render={({ field }) => (
               <FormItem className="flex-1">

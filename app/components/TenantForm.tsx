@@ -131,7 +131,7 @@ export default function TenantForm() {
       </h1>
 
       <FormProvider {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 shadow-md max-w-[900px] p-6">
           {/* Full Name Field */}
           <FormField
             control={form.control}

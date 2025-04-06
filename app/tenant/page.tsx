@@ -35,7 +35,7 @@ const Tenant = () => {
       </section>
       <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 mt-8">
         {/* Partner Contact Form */}
-        <div className="flex-1 shadow-md">
+        <div className="flex-1">
           <TenantForm />
         </div>
       </div>
