@@ -103,7 +103,7 @@ const Services = () => {
             {/* Fully Furnished */}
             <div className="text-center">
               <img
-                src="https://www.example.com/fully_furnished_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Fully Furnished"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -113,7 +113,7 @@ const Services = () => {
             {/* Fully Equipped Kitchen */}
             <div className="text-center">
               <img
-                src="https://www.example.com/kitchen_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Fully Equipped Kitchen"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -123,7 +123,7 @@ const Services = () => {
             {/* WiFi */}
             <div className="text-center">
               <img
-                src="https://www.example.com/wifi_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="WiFi"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -133,7 +133,7 @@ const Services = () => {
             {/* 24/7 Service */}
             <div className="text-center">
               <img
-                src="https://www.example.com/24_7_service_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="24/7 Service"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -156,7 +156,7 @@ const Services = () => {
             {/* Cleaning */}
             <div className="text-center">
               <img
-                src="https://www.example.com/cleaning_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Cleaning"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -166,7 +166,7 @@ const Services = () => {
             {/* Flexible Cancellation */}
             <div className="text-center">
               <img
-                src="https://www.example.com/cancellation_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Flexible Cancellation"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -176,7 +176,7 @@ const Services = () => {
             {/* Damage Protection */}
             <div className="text-center">
               <img
-                src="https://www.example.com/damage_protection_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Damage Protection"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -186,7 +186,7 @@ const Services = () => {
             {/* Early Check-in */}
             <div className="text-center">
               <img
-                src="https://www.example.com/early_checkin_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Early Check-in"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -196,7 +196,7 @@ const Services = () => {
             {/* Late Checkout */}
             <div className="text-center">
               <img
-                src="https://www.example.com/late_checkout_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Late Checkout"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -206,7 +206,7 @@ const Services = () => {
             {/* Extra Linen & Towels */}
             <div className="text-center">
               <img
-                src="https://www.example.com/extra_linen_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Extra Linen & Towels"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -216,7 +216,7 @@ const Services = () => {
             {/* Extra Bed */}
             <div className="text-center">
               <img
-                src="https://www.example.com/extra_bed_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Extra Bed"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -226,7 +226,7 @@ const Services = () => {
             {/* Baby Crib */}
             <div className="text-center">
               <img
-                src="https://www.example.com/baby_crib_icon.png" // Replace with real image link
+                src="/stayspace.png" // Replaced with StaySpace image
                 alt="Baby Crib"
                 className="w-20 h-20 mx-auto mb-4"
               />

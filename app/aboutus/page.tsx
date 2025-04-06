@@ -19,6 +19,7 @@ const AboutUs = () => {
           </h1>
         </div>
       </section>
+      
 
       {/* Main About Us Section */}
       <section className="py-16 bg-gray-50">
