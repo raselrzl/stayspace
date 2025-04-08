@@ -26,7 +26,7 @@ const BecomePartner = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-12 lg:px-32">
           {/* Flexbox for responsive two-column layout */}
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4">
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 rounded-2xl">
             {/* First Div with Text */}
             <div className="flex-1 p-6 shadow-md">
               <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
@@ -48,13 +48,13 @@ const BecomePartner = () => {
               <img
                 src="/her3.jpg"
                 alt="StaySpace Logo"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </div>
           </div>
 
           {/* Responsive layout for mobile (image first, then text) */}
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 mt-8">
+          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 mt-8 rounded-2xl">
             {/* Third Div with Text */}
             <div className="flex-1 p-6 shadow-md">
               <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
@@ -73,7 +73,7 @@ const BecomePartner = () => {
               <img
                 src="/contact2.jpg"
                 alt="Property Rental"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover rounded-2xl"
               />
             </div>
           </div>
