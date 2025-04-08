@@ -49,7 +49,7 @@ const Tenant = () => {
             stay comfortable, with everything you need, included.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
             {/* Fully Furnished */}
             <div className="text-center">
               <img
@@ -63,7 +63,7 @@ const Tenant = () => {
             {/* Fully Equipped Kitchen */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/equip.png" // Replaced with StaySpace image
                 alt="Fully Equipped Kitchen"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -75,7 +75,7 @@ const Tenant = () => {
             {/* WiFi */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/wifi.png" // Replaced with StaySpace image
                 alt="WiFi"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -85,7 +85,7 @@ const Tenant = () => {
             {/* 24/7 Service */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/service.png" // Replaced with StaySpace image
                 alt="24/7 Service"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -105,11 +105,11 @@ const Tenant = () => {
             designed for your comfort and convenience.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 justify-center">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
             {/* Cleaning */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/cleaning.png" // Replaced with StaySpace image
                 alt="Cleaning"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -119,7 +119,7 @@ const Tenant = () => {
             {/* Flexible Cancellation */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/cancelletion.png" // Replaced with StaySpace image
                 alt="Flexible Cancellation"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -131,7 +131,7 @@ const Tenant = () => {
             {/* Damage Protection */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/insurance.png" // Replaced with StaySpace image
                 alt="Damage Protection"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -141,7 +141,7 @@ const Tenant = () => {
             {/* Early Check-in */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/checkin.png" // Replaced with StaySpace image
                 alt="Early Check-in"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -151,7 +151,7 @@ const Tenant = () => {
             {/* Late Checkout */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/out.png" // Replaced with StaySpace image
                 alt="Late Checkout"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -161,7 +161,7 @@ const Tenant = () => {
             {/* Extra Linen & Towels */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/towels.png" // Replaced with StaySpace image
                 alt="Extra Linen & Towels"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -173,7 +173,7 @@ const Tenant = () => {
             {/* Extra Bed */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/bed.png" // Replaced with StaySpace image
                 alt="Extra Bed"
                 className="w-20 h-20 mx-auto mb-4"
               />
@@ -183,7 +183,7 @@ const Tenant = () => {
             {/* Baby Crib */}
             <div className="text-center">
               <img
-                src="/furnished.png" // Replaced with StaySpace image
+                src="/kidsbed.png" // Replaced with StaySpace image
                 alt="Baby Crib"
                 className="w-20 h-20 mx-auto mb-4"
               />
