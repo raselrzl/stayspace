@@ -55,7 +55,7 @@ const Tenant = () => {
               <img
                 src="/furnished.png" // Replaced with StaySpace image
                 alt="Fully Furnished"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Fully Furnished</p>
             </div>
@@ -65,7 +65,7 @@ const Tenant = () => {
               <img
                 src="/equip.png" // Replaced with StaySpace image
                 alt="Fully Equipped Kitchen"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">
                 Fully Equipped Kitchen
@@ -77,7 +77,7 @@ const Tenant = () => {
               <img
                 src="/wifi.png" // Replaced with StaySpace image
                 alt="WiFi"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">WiFi</p>
             </div>
@@ -87,7 +87,7 @@ const Tenant = () => {
               <img
                 src="/service.png" // Replaced with StaySpace image
                 alt="24/7 Service"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">24/7 Service</p>
             </div>
@@ -95,7 +95,7 @@ const Tenant = () => {
         </div>
       </section>
 
-      <section className=" py-16 px-4 sm:px-12">
+      <section className=" py-16 px-4 sm:px-12 text-xs md:text-sm">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-xl font-bold text-[#7B5B4C] mb-8">
             Up Your Stay with Our Extra Services
@@ -105,65 +105,65 @@ const Tenant = () => {
             designed for your comfort and convenience.
           </p>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
             {/* Cleaning */}
-            <div className="text-center">
+            <div className="flex flex-col md:flex-row">
               <img
                 src="/cleaning.png" // Replaced with StaySpace image
                 alt="Cleaning"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Cleaning</p>
             </div>
 
             {/* Flexible Cancellation */}
-            <div className="text-center">
+            <div className="flex flex-col md:flex-row">
               <img
                 src="/cancelletion.png" // Replaced with StaySpace image
                 alt="Flexible Cancellation"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
-              <p className="text-[#7B5B4C] font-semibold">
+              <p className="text-[#7B5B4C] font-semibold ">
                 Flexible Cancellation
               </p>
             </div>
 
             {/* Damage Protection */}
-            <div className="text-center">
+            <div className="flex flex-col md:flex-row">
               <img
                 src="/insurance.png" // Replaced with StaySpace image
                 alt="Damage Protection"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Damage Protection</p>
             </div>
 
             {/* Early Check-in */}
-            <div className="text-center">
+            <div className="flex flex-col md:flex-row">
               <img
                 src="/checkin.png" // Replaced with StaySpace image
                 alt="Early Check-in"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Early Check-in</p>
             </div>
 
             {/* Late Checkout */}
-            <div className="text-center">
+            <div className="flex flex-col md:flex-row">
               <img
                 src="/out.png" // Replaced with StaySpace image
                 alt="Late Checkout"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Late Checkout</p>
             </div>
 
             {/* Extra Linen & Towels */}
-            <div className="text-center">
+            <div className=" flex flex-col md:flex-row">
               <img
                 src="/towels.png" // Replaced with StaySpace image
                 alt="Extra Linen & Towels"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">
                 Extra Linen & Towels
@@ -171,21 +171,21 @@ const Tenant = () => {
             </div>
 
             {/* Extra Bed */}
-            <div className="text-center">
+            <div className=" flex flex-col md:flex-row">
               <img
                 src="/bed.png" // Replaced with StaySpace image
                 alt="Extra Bed"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Extra Bed</p>
             </div>
 
             {/* Baby Crib */}
-            <div className="text-center">
+            <div className=" flex flex-col md:flex-row">
               <img
                 src="/kidsbed.png" // Replaced with StaySpace image
                 alt="Baby Crib"
-                className="w-20 h-20 mx-auto mb-4"
+                className="w-10 h-10 mx-auto mb-4"
               />
               <p className="text-[#7B5B4C] font-semibold">Baby Crib</p>
             </div>
