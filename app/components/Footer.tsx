@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Footer() { 
   return (
-    <footer className="bg-[#f8f3f2] text-[#7B5B4C] py-8">
+    <footer className="bg-red-950 text-white py-8">
       <div className="container mx-auto px-6 lg:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* First Div: Links */}
@@ -35,15 +35,15 @@ export default function Footer() {
           </div>
 
           {/* Third Div: Social Media Icons */}
-          <div className="flex justify-center space-x-6 items-center">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Facebook className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
+          <div className="flex justify-center md:justify-end space-x-6 items-center  md:items-end">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='border-2 p-1.5 bg-white'>
+              <Facebook className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
             </a>
-            <a href="https://www.linkedin.com/in/stay-space-034978358/" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
+            <a href="https://www.linkedin.com/in/stay-space-034978358/" target="_blank" rel="noopener noreferrer" className='border-2 p-1.5 bg-white'>
+              <Linkedin className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
             </a>
-            <a href="mailto:kontakt@stayspace.se">
-              <Mail className="w-6 h-6 cursor-pointer text-[#7B5B4C] hover:text-[#7B5B4C]" />
+            <a href="mailto:kontakt@stayspace.se" className='border-2 p-1.5 bg-white'>
+              <Mail className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
             </a>
           </div>
         </div>

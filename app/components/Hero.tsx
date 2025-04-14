@@ -72,7 +72,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-[#f8f3f2] opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
+      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-rose-200 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
         <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
           Where
           <br />
@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="text-center mt-6">
           <Link
             href="/contactus"
-            className="uppercase text-md px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white  font-semibold transition-all rounded-[20px]"
+            className="uppercase text-sm md:text-md px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white  font-semibold transition-all rounded-[20px]"
           >
             Contact Us
           </Link>

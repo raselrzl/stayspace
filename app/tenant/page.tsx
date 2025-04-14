@@ -33,13 +33,8 @@ const Tenant = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 mt-8">
-        {/* Partner Contact Form */}
-        <div className="flex-1">
-          <TenantForm />
-        </div>
-      </div>
-      <section className="py-16 px-4 sm:px-12">
+      
+      <section className="py-20 px-8 sm:px-12 bg-rose-50">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-xl font-bold text-[#7B5B4C] mb-8">
             Always Included in Your Stay
@@ -94,8 +89,13 @@ const Tenant = () => {
           </div>
         </div>
       </section>
-
-      <section className=" py-16 px-4 sm:px-12 text-xs md:text-sm">
+      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 bg-rose-100">
+        {/* Partner Contact Form */}
+        <div className="flex-1">
+          <TenantForm />
+        </div>
+      </div>
+      <section className=" py-16 px-4 sm:px-12 text-xs md:text-sm bg-rose-50">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-xl font-bold text-[#7B5B4C] mb-8">
             Up Your Stay with Our Extra Services

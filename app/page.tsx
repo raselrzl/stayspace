@@ -47,70 +47,70 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <section className="bg-[#fdfaf5] py-16 px-4 sm:px-12">
+      <section className="bg-rose-50 py-16 px-4 sm:px-12">
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
           {/* Left Section */}
           <div className="w-full sm:w-1/2 flex flex-row justify-start mb-8 sm:mb-0">
             {/* Logo Image */}
-            <div>
-            <img
-              src="/support.png"
-              alt="Support Logo"
-              className="w-20 h-20 mr-6 animate-on-scroll"
-            />
-            <h2 className="uppercase text-xl sm:text-3xl md:text-4xl font-bold text-[#7B5B4C] mb-6 lg:mt-3">
-              How We Support You?
-            </h2>
+            <div className="flex flex-row">
+              <img
+                src="/support.png"
+                alt="Support Logo"
+                className="w-20 h-20 mr-6 animate-on-scroll"
+              />
+              <h2 className="uppercase text-md sm:text-3xl md:text-4xl font-bold text-[#7B5B4C] mb-6 lg:mt-3">
+                How We Support You?
+              </h2>
             </div>
-          
-            <div>
-            <ContactForm />
+
+            <div className="hidden sm:block">
+              <ContactForm />
             </div>
-            
           </div>
 
           {/* Right Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex ">
-                  <Component className="mr-4" /> For companies
+                <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex">
+                  <Component className="mr-4 pt-1" /> For companies
                 </p>
-                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
+                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
                   Tailor-made accommodation solutions.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
-                  <MapPinPlusInside className="mr-4" />
+                <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
+                  <MapPinPlusInside className="mr-4 pt-1" />
                   location
                 </p>
-                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
+                <p className="text-sm sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
                   Operating all over Sweden - Always close to you regardless of
                   boundaries.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
-                  <BookCheck className="mr-4" /> Trusted
+                <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
+                  <BookCheck className="mr-4  pt-1" /> Trusted
                 </p>
-                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
-                  Worry-free handling - We handle all contact, agreements & invoicing.
+                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
+                  Worry-free handling - We handle all contact, agreements &
+                  invoicing.
                 </p>
               </div>
               <div className="mb-8">
-                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
-                  <ArrowDownAZ className="mr-4" /> All in one
+                <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
+                  <ArrowDownAZ className="mr-4  pt-1" /> All in one
                 </p>
-                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
+                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
                   One contact for accommodation throughout Sweden.
                 </p>
               </div>
               <div className="">
-                <p className="text-[#7B5B4C] uppercase text-lg sm:text-2xl font-semibold flex animate-on-scroll">
-                  <Cog className="mr-4" /> Gurantee
+                <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
+                  <Cog className="mr-4  pt-1" /> Gurantee
                 </p>
-                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll">
+                <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
                   Safe & Reliable Accommodation.
                 </p>
               </div>
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#fdfaf5]">
+      <section className="bg-rose-100">
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
           {/* Left Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between mb-8 sm:mb-0 py-16 px-4 sm:px-12">
@@ -143,33 +143,37 @@ export default function Home() {
               />
             </div>
           </div>
-
           {/* Right Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between lg:py-16 px-4 sm:px-12">
             <div className="h-full flex flex-col justify-between">
-              <div className="mb-1">
-                <p className="text-[#7B5B4C] uppercase text-2xl font-semibold flex flex-row animate-on-scroll">
-                  <MessageCircleQuestion className="mr-4" />Why Choose StaySpace?
+              <div className="mb-4">
+                <p className="text-[#7B5B4C] uppercase text-md font-bold flex flex-row animate-on-scroll">
+                  <MessageCircleQuestion className="mr-4  pt-1" />
+                  Why Choose StaySpace?
                 </p>
               </div>
-              <div className="mb-2">
-                <p className="text-[#7B5B4C] text-md md:text-lg font-semibold flex flex-row animate-on-scroll">
-                  <RedoDot className="mr-4" />Tailored support and solutions adapted to your needs.
+              <div className="">
+                <p className="text-[#7B5B4C] text-sm md:text-lg font-semibold flex flex-row animate-on-scroll">
+                  <RedoDot className="mr-4" />
+                  Tailored support and solutions adapted to your needs.
                 </p>
               </div>
-              <div className="mb-2">
-                <p className="text-[#7B5B4C] text-md md:text-lg font-semibold flex flex-row animate-on-scroll">
-                  <RedoDot className="mr-4" />Smooth and hassle-free experience from start to the End.
+              <div className="">
+                <p className="text-[#7B5B4C] text-sm md:text-lg font-semibold flex flex-row animate-on-scroll">
+                  <RedoDot className="mr-4" />
+                  Smooth and hassle-free experience from start to the End.
                 </p>
               </div>
-              <div className="mb-2">
-                <p className="text-[#7B5B4C] text-md md:text-lg font-semibold flex flex-row animate-on-scroll">
-                  <RedoDot className="mr-4" />Fast and reliable service at every step of the process.
+              <div className="">
+                <p className="text-[#7B5B4C] text-sm md:text-lg font-semibold flex flex-row animate-on-scroll">
+                  <RedoDot className="mr-4" />
+                  Fast and reliable service at every step of the process.
                 </p>
               </div>
-              <div className="mb-2">
-                <p className="text-[#7B5B4C] text-md md:text-lg font-semibold flex flex-row animate-on-scroll">
-                  <RedoDot className="mr-4" />24/7 support to ensure we are always here when you need us.
+              <div className="">
+                <p className="text-[#7B5B4C] text-sm md:text-lg font-semibold flex flex-row animate-on-scroll">
+                  <RedoDot className="mr-4" />
+                  24/7 support to ensure we are always here when you need us.
                 </p>
               </div>
             </div>
@@ -177,12 +181,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#fdfaf5]">
+      <section className="py-16 bg-rose-50">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-12">
-          
           {/* Card 1 - CHOOSE YOUR PATH */}
           <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4">CHOOSE YOUR PATH</h3>
+            <h3 className="text-xl font-bold text-[#7B5B4C] mb-4 text-center">
+              CHOOSE YOUR PATH
+            </h3>
             <img
               src="/her1.jpg" // Replace with your own image
               alt="Choose Your Path"
@@ -190,17 +195,25 @@ export default function Home() {
             />
             <Link href="/choose-your-path">
               <p className="text-[#7B5B4C] text-sm font-semibold">
-                Become a tenant at StaySpace and enjoy a comfortable accommodation with modern amenities, or become a host and maximize the value of your property's full potential with our experts in real estate management. Choose the path that suits you and start your journey with us today.
+                Become a tenant at StaySpace and enjoy a comfortable
+                accommodation with modern amenities, or become a host and
+                maximize the value of your property's full potential with our
+                experts in real estate management. Choose the path that suits
+                you and start your journey with us today.
               </p>
             </Link>
             <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-lg font-semiboldn underline mt-2">Get in Touch</p>
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
             </Link>
           </div>
 
           {/* Card 2 - SHARE YOUR NEEDS */}
           <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4">SHARE YOUR NEEDS</h3>
+            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
+              SHARE YOUR NEEDS
+            </h3>
             <img
               src="/her1.jpg" // Replace with your own image
               alt="Share Your Needs"
@@ -208,17 +221,25 @@ export default function Home() {
             />
             <Link href="/share-your-needs">
               <p className="text-[#7B5B4C] text-sm font-semibold">
-                Fill out our simple registration form to start your experience with StaySpace. Share your accommodation preferences and requirements, so we can provide the perfect place to stay or improve your property management services tailored to your specific needs.
+                Fill out our simple registration form to start your experience
+                with StaySpace. Share your accommodation preferences and
+                requirements, so we can provide the perfect place to stay or
+                improve your property management services tailored to your
+                specific needs.
               </p>
             </Link>
             <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-lg font-semibold underline mt-2">Get in Touch</p>
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
             </Link>
           </div>
 
           {/* Card 3 - PERSONAL SERVICES */}
           <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4">PERSONAL SERVICES</h3>
+            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
+              PERSONAL SERVICES
+            </h3>
             <img
               src="/her1.jpg" // Replace with your own image
               alt="Personal Services"
@@ -226,23 +247,30 @@ export default function Home() {
             />
             <Link href="/personal-services">
               <p className="text-[#7B5B4C] text-sm font-semibold">
-                Our dedicated team at StaySpace will give you the personal service and tailor-made housing solutions. We will guide you through each step of the process, ensuring a seamless and hassle-free experience, whether you're looking to rent or manage a property.
+                Our dedicated team at StaySpace will give you the personal
+                service and tailor-made housing solutions. We will guide you
+                through each step of the process, ensuring a seamless and
+                hassle-free experience, whether you're looking to rent or manage
+                a property.
               </p>
             </Link>
             <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-lg font-semibold underline mt-2">Get in Touch</p>
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
             </Link>
           </div>
-
         </div>
       </section>
-      <section className="py-16 bg-[#fdfaf5]">
+      <section className="py-16 bg-rose-200">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll">
             Our Trusted Partners
           </h2>
           <p className="text-md text-[#7B5B4C] mb-8 animate-on-scroll">
-            StaySpace works with some of the best companies in the industry to provide seamless accommodation solutions. Our trusted partners help us deliver top-tier service to tenants and hosts alike.
+            StaySpace works with some of the best companies in the industry to
+            provide seamless accommodation solutions. Our trusted partners help
+            us deliver top-tier service to tenants and hosts alike.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 justify-center animate-on-scroll">
