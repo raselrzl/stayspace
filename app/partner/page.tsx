@@ -2,6 +2,8 @@
 
 import ContactForm from "../components/Form";
 import PartnerContactForm from "../components/PartnerContactForm";
+import { CheckCircle, Users, Handshake, PhoneCall } from "lucide-react";
+import { FileText, Image, MessageCircle, Check } from "lucide-react";
 
 const BecomePartner = () => {
   return (
@@ -25,25 +27,47 @@ const BecomePartner = () => {
       {/* Main Content Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-12 lg:px-32">
-          {/* Flexbox for responsive two-column layout */}
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 rounded-2xl">
-            {/* First Div with Text */}
-            <div className="flex-1 p-6 shadow-md">
-              <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
-                Do You Want to Rent Out Your Property?
-              </h2>
-              <p className="text-md text-[#7B5B4C] mb-4">
-                We at StaySpace collaborate with land and property owners to create a thriving community. We are always open to new partnerships.
-              </p>
-              <p className="text-md text-[#7B5B4C] mb-4">
-                We offer homes for a large number of professionals, ensuring the process of renting out your property is safe, easy, and customizable.
-              </p>
-              <p className="text-md text-[#7B5B4C] mt-4">
-                Ready to rent out your property? Contact us today to get started!
-              </p>
-            </div>
+          <div className="flex flex-col-reverse md:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 rounded-2xl">
+          <div className="flex-1 p-6 shadow-md">
+  <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
+    Do You Want to Rent Out Your Property?
+  </h2>
 
-            {/* Second Div with Image */}
+  <ul className="space-y-3 text-[#7B5B4C]">
+    <li className="flex items-start">
+      <Handshake className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        StaySpace collaborates with land and property owners to create a thriving community.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <CheckCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        We are always open to new partnerships.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <Users className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        We offer homes for a large number of professionals.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <CheckCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        Renting your property is safe, easy, and customizable.
+      </span>
+    </li>
+    <li className="flex items-start mt-4">
+      <PhoneCall className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        Ready to rent out your property? Contact us today to get started!
+      </span>
+    </li>
+  </ul>
+</div>
+
+          
             <div className="flex-1">
               <img
                 src="/her3.jpg"
@@ -53,30 +77,49 @@ const BecomePartner = () => {
             </div>
           </div>
 
-          {/* Responsive layout for mobile (image first, then text) */}
-          <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 mt-8 rounded-2xl">
-            {/* Third Div with Text */}
-            <div className="flex-1 p-6 shadow-md">
-              <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
-                How Does the Rental Process Work?
-              </h2>
-              <p className="text-md text-[#7B5B4C] mb-4">
-                The first step is to fill out the "Become a Host" form on our website, where you'll provide information about your property. We'll then publish your property details along with photos for potential tenants to view.
-              </p>
-              <p className="text-md text-[#7B5B4C] mb-4">
-                Once your details are submitted, we'll get in touch with you to discuss rental periods, number of guests, and other relevant details. You will have the final decision on whether or not to rent out your property.
-              </p>
-            </div>
-
-            {/* Fourth Div with Image */}
-            <div className="flex-1">
+          <div className="flex flex-col md:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 rounded-2xl">
+          <div className="flex-1">
               <img
                 src="/contact2.jpg"
                 alt="Property Rental"
                 className="w-full h-auto object-cover rounded-2xl"
               />
             </div>
+            <div className="flex-1 p-6 shadow-md">
+  <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
+    How Does the Rental Process Work?
+  </h2>
+
+  <ul className="space-y-3 text-[#7B5B4C]">
+    <li className="flex items-start">
+      <FileText className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        Fill out the "Become a Host" form on our website with your property details.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <Image className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        We publish your listing along with photos for potential tenants to view.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <MessageCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        We’ll contact you to discuss rental periods, guest count, and other details.
+      </span>
+    </li>
+    <li className="flex items-start">
+      <Check className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
+      <span>
+        You make the final decision on whether to rent out your property.
+      </span>
+    </li>
+  </ul>
+</div>
           </div>
+           
+     
 
        
             {/* Partner Contact Form */}
