@@ -50,55 +50,90 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <section className="py-16">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-12">
+          {/* Card 1 - CHOOSE YOUR PATH */}
+          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
+            <h3 className="text-xl font-bold text-[#7B5B4C] mb-4 text-center">
+              CHOOSE YOUR PATH
+            </h3>
+            <img
+              src="/bed1.jpg" // Replace with your own image
+              alt="Choose Your Path"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <Link href="/aboutus#contactus">
+              <p className="text-[#7B5B4C] text-sm font-semibold">
+                Become a tenant at StaySpace and enjoy a comfortable
+                accommodation with modern amenities, or become a host and
+                maximize the value of your property's full potential with our
+                experts in real estate management. Choose the path that suits
+                you and start your journey with us today.
+              </p>
+            </Link>
+            <Link href="/aboutus#contactus">
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
+            </Link>
+          </div>
+
+          {/* Card 2 - SHARE YOUR NEEDS */}
+          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
+            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
+              SHARE YOUR NEEDS
+            </h3>
+            <img
+              src="/contactimage.jpg" // Replace with your own image
+              alt="Share Your Needs"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <Link href="/aboutus#contactus">
+              <p className="text-[#7B5B4C] text-sm font-semibold">
+                Fill out our simple registration form to start your experience
+                with StaySpace. Share your accommodation preferences and
+                requirements, so we can provide the perfect place to stay or
+                improve your property management services tailored to your
+                specific needs.
+              </p>
+            </Link>
+            <Link href="/aboutus#contactus">
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
+            </Link>
+          </div>
+
+          {/* Card 3 - PERSONAL SERVICES */}
+          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
+            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
+              PERSONAL SERVICES
+            </h3>
+            <img
+              src="/ser1.jpg" // Replace with your own image
+              alt="Personal Services"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <Link href="/personal-services">
+              <p className="text-[#7B5B4C] text-sm font-semibold">
+                Our dedicated team at StaySpace will give you the personal
+                service and tailor-made housing solutions. We will guide you
+                through each step of the process, ensuring a seamless and
+                hassle-free experience, whether you're looking to rent or manage
+                a property.
+              </p>
+            </Link>
+            <Link href="/personal-services">
+              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
+                Get in Touch
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className=" py-16 px-4 sm:px-12">
-     
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row gap-8">
           {/* Left Section */}
-
-          <div className="w-full sm:w-1/2 flex flex-col justify-start mb-8 sm:mb-0">
-            {/* Logo Image and Title */}
-           
-
-            {/* Support Content Boxes */}
-            <div className="flex flex-col space-y-6 w-full">
-              {/* Top Div */}
-              <div className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <MapPin size={32} className="text-[#7B5B4C] mb-4" />
-                <p className="font-semibold text-lg">
-                  9000+ accommodation options in the Nordics & Central Europe
-                </p>
-             {/*    <span className="text-blue-500 underline mt-2 cursor-pointer">
-                  Explore locations
-                </span> */}
-              </div>
-
-              {/* Bottom Divs: Two side-by-side */}
-              <div className="flex flex-col sm:flex-row gap-6">
-                {/* Left */}
-                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                  <Building2 size={32} className="text-[#7B5B4C] mb-4" />
-                  <p className="font-semibold text-lg">
-                    1600 new apartments added to our portfolio yearly
-                  </p>
-                  <a href="/partner#partnerform" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
-                    Rent to Stayspace
-                  </a>
-                </div>
-
-                {/* Right */}
-                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                  <Users size={32} className="text-[#7B5B4C] mb-4" />
-                  <p className="font-semibold text-lg">
-                    400 local experts in 150 cities ready to help arrange
-                    accommodation by request
-                  </p>
-                  <a href="aboutus#contactus" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
-  Contact our experts
-</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Right Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between">
@@ -145,6 +180,55 @@ export default function Home() {
                 <p className="text-md sm:text-xl text-[#7B5B4C] animate-on-scroll pl-10">
                   Safe & Reliable Accommodation.
                 </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full sm:w-1/2 flex flex-col justify-start mb-8 sm:mb-0">
+            {/* Logo Image and Title */}
+
+            {/* Support Content Boxes */}
+            <div className="flex flex-col space-y-6 w-full">
+              {/* Top Div */}
+              <div className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                <MapPin size={32} className="text-[#7B5B4C] mb-4" />
+                <p className="font-semibold text-lg">
+                  9000+ accommodation options in the Nordics & Central Europe
+                </p>
+                {/*    <span className="text-blue-500 underline mt-2 cursor-pointer">
+                  Explore locations
+                </span> */}
+              </div>
+
+              {/* Bottom Divs: Two side-by-side */}
+              <div className="flex flex-col sm:flex-row gap-6">
+                {/* Left */}
+                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                  <Building2 size={32} className="text-[#7B5B4C] mb-4" />
+                  <p className="font-semibold text-lg">
+                    1600 new apartments added to our portfolio yearly
+                  </p>
+                  <a
+                    href="/partner#partnerform"
+                    className="text-[#7B5B4C] underline mt-2 cursor-pointer"
+                  >
+                    Rent to Stayspace
+                  </a>
+                </div>
+
+                {/* Right */}
+                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                  <Users size={32} className="text-[#7B5B4C] mb-4" />
+                  <p className="font-semibold text-lg">
+                    400 local experts in 150 cities ready to help arrange
+                    accommodation by request
+                  </p>
+                  <a
+                    href="aboutus#contactus"
+                    className="text-[#7B5B4C] underline mt-2 cursor-pointer"
+                  >
+                    Contact our experts
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -213,89 +297,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-12">
-          {/* Card 1 - CHOOSE YOUR PATH */}
-          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-xl font-bold text-[#7B5B4C] mb-4 text-center">
-              CHOOSE YOUR PATH
-            </h3>
-            <img
-              src="/her1.jpg" // Replace with your own image
-              alt="Choose Your Path"
-              className="w-full h-48 object-cover rounded-md mb-4"
-            />
-            <Link href="/choose-your-path">
-              <p className="text-[#7B5B4C] text-sm font-semibold">
-                Become a tenant at StaySpace and enjoy a comfortable
-                accommodation with modern amenities, or become a host and
-                maximize the value of your property's full potential with our
-                experts in real estate management. Choose the path that suits
-                you and start your journey with us today.
-              </p>
-            </Link>
-            <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
-                Get in Touch
-              </p>
-            </Link>
-          </div>
-
-          {/* Card 2 - SHARE YOUR NEEDS */}
-          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
-              SHARE YOUR NEEDS
-            </h3>
-            <img
-              src="/her1.jpg" // Replace with your own image
-              alt="Share Your Needs"
-              className="w-full h-48 object-cover rounded-md mb-4"
-            />
-            <Link href="/share-your-needs">
-              <p className="text-[#7B5B4C] text-sm font-semibold">
-                Fill out our simple registration form to start your experience
-                with StaySpace. Share your accommodation preferences and
-                requirements, so we can provide the perfect place to stay or
-                improve your property management services tailored to your
-                specific needs.
-              </p>
-            </Link>
-            <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
-                Get in Touch
-              </p>
-            </Link>
-          </div>
-
-          {/* Card 3 - PERSONAL SERVICES */}
-          <div className="p-6 rounded-lg shadow-md animate-on-scroll">
-            <h3 className="text-2xl font-bold text-[#7B5B4C] mb-4 text-center">
-              PERSONAL SERVICES
-            </h3>
-            <img
-              src="/her1.jpg" // Replace with your own image
-              alt="Personal Services"
-              className="w-full h-48 object-cover rounded-md mb-4"
-            />
-            <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-sm font-semibold">
-                Our dedicated team at StaySpace will give you the personal
-                service and tailor-made housing solutions. We will guide you
-                through each step of the process, ensuring a seamless and
-                hassle-free experience, whether you're looking to rent or manage
-                a property.
-              </p>
-            </Link>
-            <Link href="/personal-services">
-              <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
-                Get in Touch
-              </p>
-            </Link>
-          </div>
-        </div>
-      </section>
       <section className="py-16 border-t-2 border-t-red-50">
-    
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll">
             Our Trusted Partners
@@ -305,14 +307,11 @@ export default function Home() {
             provide seamless accommodation solutions. Our trusted partners help
             us deliver top-tier service to tenants and hosts alike.
           </p>
-          <div className="px-4"><CarouselCompany /></div>
+          <div className="px-4">
+            <CarouselCompany />
+          </div>
         </div>
       </section>
-
-     
-
-
-      
     </div>
   );
 }
