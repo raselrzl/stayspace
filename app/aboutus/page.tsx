@@ -26,13 +26,13 @@ const AboutUs = () => {
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <History className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
-                <span>How it all started</span>
+                <span>How it all started?</span>
               </h2>
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="/contact1.jpg" // Image from the public folder
+                  src="/start.png" // Image from the public folder
                   alt="History Image"
-                  className="w-full sm:w-1/3 h-auto object-cover rounded-lg"
+                  className="w-[300px] sm:w-1/3 h-[200px] object-cover rounded-lg"
                 />
                 <p className="text-sm sm:text-lg mb-6 text-justify sm:w-2/3 border-t-2 border-gray-200">
                   The history of StaySpace started like many other success
@@ -55,13 +55,13 @@ const AboutUs = () => {
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <MapPin className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
-                <span>What we do</span>
+                <span>What we do?</span>
               </h2>
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="/contact1.jpg" // Image from the public folder
+                  src="/wedo.webp" // Image from the public folder
                   alt="What We Do Image"
-                  className="w-full sm:w-1/3 h-auto object-cover rounded-lg"
+                  className="w-[300px] sm:w-1/3 h-[200px] object-cover rounded-lg"
                 />
                 <p className="text-sm sm:text-lg mb-6 text-justify sm:w-2/3 border-t-2 border-gray-200">
                   Today, we are a fast-growing company with hundreds of
@@ -85,13 +85,13 @@ const AboutUs = () => {
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <Users className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
-                <span>How we do it</span>
+                <span>How we do it?</span>
               </h2>
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="/contact1.jpg" // Image from the public folder
+                  src="/how.jpg" // Image from the public folder
                   alt="How We Do It Image"
-                  className="w-full sm:w-1/3 h-auto object-cover rounded-lg"
+                  className="w-[300px] sm:w-1/3 h-[200px] object-cover rounded-lg"
                 />
                 <p className="text-sm sm:text-lg mb-6 text-justify sm:w-2/3 border-t-2 border-gray-200">
                   For us, personal service is the most important thing of all.
@@ -112,9 +112,9 @@ const AboutUs = () => {
               </h2>
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="/contact1.jpg" // Image from the public folder
+                  src="/why.jpg" // Image from the public folder
                   alt="StaySpace Information Image"
-                  className="w-full sm:w-1/3 h-auto object-cover rounded-lg"
+                  className="w-[300px] sm:w-1/3 h-[200px] object-cover rounded-lg"
                 />
                 <p className="text-sm sm:text-lg mb-6 text-justify sm:w-2/3 border-t-2 border-gray-200">
                   At StaySpace, we’re committed to providing flexible,
