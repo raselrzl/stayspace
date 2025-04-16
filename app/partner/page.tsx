@@ -12,16 +12,7 @@ const BecomePartner = () => {
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center overflow-hidden"
         style={{ backgroundImage: "url('/pa1.jpg')" }}
       >
-        <div className="lg:mr-[950px] md:mr-[800px] w-[322px] sm:w-[400px] mx-auto rounded-lg bg-white opacity-72 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px]">
-          {/* Optional Heading */}
-          {/* <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left"> */}
-          {/*     Where */}
-          {/*     <br /> */}
-          {/*     Business */}
-          {/*     <br /> */}
-          {/*     Meets Comfort */}
-          {/* </h1> */}
-        </div>
+        
       </section>
 
       {/* Main Content Section */}

@@ -8,7 +8,7 @@ const Tenant = () => {
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
         style={{ backgroundImage: "url('/ser.jpg')" }}
       >
-        <div className="rounded-lg lg:mr-[300px] w-[280px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[350px] sm:h-[484px]">
+        {/* <div className="rounded-lg lg:mr-[300px] w-[280px] sm:w-[400px] mx-auto bg-white opacity-72 p-8 text-[#7B5B4C] h-[350px] sm:h-[484px]">
           <h1 className="text-xl sm:text-2xl font-bold leading-tight mb-6 text-left">
             Looking for
             <br />
@@ -31,12 +31,12 @@ const Tenant = () => {
               Write to Us
             </Link>
           </div>
-        </div>
+        </div> */}
       </section>
       
-      <section className="py-20 px-8 sm:px-12 bg-rose-50">
+      <section className="py-20 px-8 sm:px-12">
         <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="text-xl font-bold text-[#7B5B4C] mb-8">
+          <h2 className="text-xl font-bold text-[#7B5B4C] mb-8 border-b-2 pb-2 border-gray-100">
             Always Included in Your Stay
           </h2>
           <p className="text-md text-[#7B5B4C] mb-8">
@@ -89,25 +89,25 @@ const Tenant = () => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 bg-rose-100">
+      <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 bg-gray-100">
         {/* Partner Contact Form */}
         <div className="flex-1">
           <TenantForm />
         </div>
       </div>
-      <section className=" py-16 px-4 sm:px-12 text-xs md:text-sm bg-rose-50">
+      <section className=" py-16 px-4 sm:px-12 text-xs md:text-sm">
         <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="text-xl font-bold text-[#7B5B4C] mb-8">
+          <h2 className="text-xl font-bold text-[#7B5B4C] mb-8 border-b-2 pb-2 border-gray-100">
             Up Your Stay with Our Extra Services
           </h2>
-          <p className="text-md text-[#7B5B4C] mb-8">
+          <p className="text-md text-[#7B5B4C] mb-8 ">
             Take your stay to the next level with our additional services,
             designed for your comfort and convenience.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-8 justify-center">
             {/* Cleaning */}
-            <div className="flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/cleaning.png" // Replaced with StaySpace image
                 alt="Cleaning"
@@ -117,7 +117,7 @@ const Tenant = () => {
             </div>
 
             {/* Flexible Cancellation */}
-            <div className="flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/cancelletion.png" // Replaced with StaySpace image
                 alt="Flexible Cancellation"
@@ -129,7 +129,7 @@ const Tenant = () => {
             </div>
 
             {/* Damage Protection */}
-            <div className="flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/insurance.png" // Replaced with StaySpace image
                 alt="Damage Protection"
@@ -139,7 +139,7 @@ const Tenant = () => {
             </div>
 
             {/* Early Check-in */}
-            <div className="flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/checkin.png" // Replaced with StaySpace image
                 alt="Early Check-in"
@@ -149,7 +149,7 @@ const Tenant = () => {
             </div>
 
             {/* Late Checkout */}
-            <div className="flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/out.png" // Replaced with StaySpace image
                 alt="Late Checkout"
@@ -159,7 +159,7 @@ const Tenant = () => {
             </div>
 
             {/* Extra Linen & Towels */}
-            <div className=" flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/towels.png" // Replaced with StaySpace image
                 alt="Extra Linen & Towels"
@@ -171,7 +171,7 @@ const Tenant = () => {
             </div>
 
             {/* Extra Bed */}
-            <div className=" flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/bed.png" // Replaced with StaySpace image
                 alt="Extra Bed"
@@ -181,7 +181,7 @@ const Tenant = () => {
             </div>
 
             {/* Baby Crib */}
-            <div className=" flex flex-col md:flex-row">
+            <div className="">
               <img
                 src="/kidsbed.png" // Replaced with StaySpace image
                 alt="Baby Crib"

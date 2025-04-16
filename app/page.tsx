@@ -21,6 +21,7 @@ import Link from "next/link";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useEffect } from "react";
 import ContactForm from "./components/Form";
+import { CarouselCompany } from "./components/carosuel";
 
 export default function Home() {
   useEffect(() => {
@@ -293,7 +294,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16">
+      <section className="py-16 border-t-2 border-t-red-50">
+    
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll">
             Our Trusted Partners
@@ -303,59 +305,14 @@ export default function Home() {
             provide seamless accommodation solutions. Our trusted partners help
             us deliver top-tier service to tenants and hosts alike.
           </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 justify-center animate-on-scroll">
-            {/* Logo 1 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 1"
-                className="w-24 h-auto"
-              />
-            </div>
-            {/* Logo 2 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 2"
-                className="w-24 h-auto"
-              />
-            </div>
-            {/* Logo 3 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 3"
-                className="w-24 h-auto"
-              />
-            </div>
-            {/* Logo 4 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 4"
-                className="w-24 h-auto"
-              />
-            </div>
-            {/* Logo 5 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 5"
-                className="w-24 h-auto"
-              />
-            </div>
-            {/* Logo 6 */}
-            <div className="flex justify-center">
-              <img
-                src="/stayspace.png" // Your logo
-                alt="Company Logo 6"
-                className="w-24 h-auto"
-              />
-            </div>
-          </div>
+          <div className="px-4"><CarouselCompany /></div>
         </div>
       </section>
+
+     
+
+
+      
     </div>
   );
 }
