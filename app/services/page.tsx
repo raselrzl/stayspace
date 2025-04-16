@@ -69,7 +69,7 @@ const Services = () => {
             {/* First Card */}
             <div className="w-full opacity-80 p-8 text-[#7B5B4C] shadow-sm bg-white rounded-lg">
               <img
-                src="/contact1.jpg" // Image from public folder
+                src="/corp.jpg" // Image from public folder
                 alt="StaySpace Service"
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
@@ -94,7 +94,7 @@ const Services = () => {
             {/* Second Card */}
             <div className="w-full opacity-80 p-8 text-[#7B5B4C] shadow-sm bg-white rounded-lg">
               <img
-                src="/contact1.jpg" // Image from public folder
+                src="/twofl.webp" // Image from public folder
                 alt="StaySpace Service"
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
@@ -120,7 +120,7 @@ const Services = () => {
             {/* Third Card */}
             <div className="w-full opacity-80 p-8 text-[#7B5B4C] shadow-sm bg-white rounded-lg">
               <img
-                src="/contact1.jpg" // Image from public folder
+                src="/24.webp" // Image from public folder
                 alt="StaySpace Service"
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />

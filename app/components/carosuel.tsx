@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -15,56 +14,52 @@ export function CarouselCompany() {
     "/partner/eks.webp",
     "/partner/peab.jpg",
     "/partner/hyres.jpg",
-
     "/partner/peab.jpg",
-
     "/partner/hyres.jpg",
-
     "/partner/peab.jpg",
   ];
 
   return (
-    <div className="max-w-screen-xl mx-auto text-center py-16 border-t-2 border-t-red-50">
-      <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll ">
-            Our Trusted Partners
-          </h2>
-          <p className="text-md text-[#7B5B4C] mb-8 animate-on-scroll">
-            StaySpace works with some of the best companies in the industry to
-            provide seamless accommodation solutions. Our trusted partners help
-            us deliver top-tier service to tenants and hosts alike.
-          </p>
-    
-    <Carousel
-      opts={{ align: "start" }}
-      className="w-full max-w-5xl mx-auto relative px-8"
-    >
-      <CarouselContent>
-        {images.map((src, index) => (
-          <CarouselItem
-            key={index}
-            className="basis-1/2 md:basis-1/3 flex justify-center" // Adjusted basis here
-          >
-            <div className="px-0">
-              {" "}
-              {/* Removed the padding */}
-              <Card className="rounded-none border-none shadow-none">
+    <div className="max-w-screen-xl mx-auto text-center py-16 border-t-2 border-t-red-50 px-4 sm:px-8">
+      {/* Heading */}
+      <h2 className="text-3xl font-bold text-[#7B5B4C] mb-4">
+        Our Trusted Partners
+      </h2>
+      {/* Description */}
+      <p className="text-md text-[#7B5B4C] mb-10 max-w-3xl mx-auto">
+        StaySpace works with some of the best companies in the industry to
+        provide seamless accommodation solutions. Our trusted partners help us
+        deliver top-tier service to tenants and hosts alike.
+      </p>
+
+      {/* Carousel */}
+      <Carousel
+        opts={{ align: "start" }}
+        className="w-full max-w-6xl mx-auto relative px-6"
+      >
+        <CarouselContent>
+          {images.map((src, index) => (
+            <CarouselItem
+              key={index}
+              className="basis-1/2 sm:basis-1/3 md:basis-1/4 flex justify-center"
+            >
+              <Card className="rounded-none border-none shadow-none bg-transparent">
                 <CardContent className="flex items-center justify-center p-2">
                   <img
                     src={src}
                     alt={`Logo ${index + 1}`}
-                    className="h-24 w-[180px] object-contain"
+                    className="h-24 w-[160px] object-contain"
                   />
                 </CardContent>
               </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
 
-      {/* Previous Button */}
-      <CarouselPrevious className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
-      {/* Next Button */}
-      <CarouselNext className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
-    </Carousel></div>
+        {/* Controls */}
+        <CarouselPrevious className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
+        <CarouselNext className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
+      </Carousel>
+    </div>
   );
 }
