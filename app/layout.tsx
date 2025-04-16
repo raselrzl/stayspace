@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Quicksand } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { CarouselCompany } from "./components/carosuel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,11 @@ export default function RootLayout({
         
         {children}
         
-      </div><Footer />
+      </div>
+      <CarouselCompany />
+      
+      
+      <Footer />
       </body>
     </html>
   );

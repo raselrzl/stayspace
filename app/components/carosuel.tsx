@@ -24,6 +24,16 @@ export function CarouselCompany() {
   ];
 
   return (
+    <div className="max-w-screen-xl mx-auto text-center py-16 border-t-2 border-t-red-50">
+      <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll ">
+            Our Trusted Partners
+          </h2>
+          <p className="text-md text-[#7B5B4C] mb-8 animate-on-scroll">
+            StaySpace works with some of the best companies in the industry to
+            provide seamless accommodation solutions. Our trusted partners help
+            us deliver top-tier service to tenants and hosts alike.
+          </p>
+    
     <Carousel
       opts={{ align: "start" }}
       className="w-full max-w-5xl mx-auto relative px-8"
@@ -55,6 +65,6 @@ export function CarouselCompany() {
       <CarouselPrevious className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
       {/* Next Button */}
       <CarouselNext className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 text-white bg-black rounded-full opacity-80 hover:opacity-100 transition-all" />
-    </Carousel>
+    </Carousel></div>
   );
 }

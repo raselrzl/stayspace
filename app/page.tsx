@@ -297,21 +297,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 border-t-2 border-t-red-50">
-        <div className="max-w-screen-xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll">
-            Our Trusted Partners
-          </h2>
-          <p className="text-md text-[#7B5B4C] mb-8 animate-on-scroll">
-            StaySpace works with some of the best companies in the industry to
-            provide seamless accommodation solutions. Our trusted partners help
-            us deliver top-tier service to tenants and hosts alike.
-          </p>
-          <div className="px-4">
-            <CarouselCompany />
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
