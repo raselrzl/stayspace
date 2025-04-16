@@ -11,6 +11,8 @@ import {
   RedoDot,
   Search,
   Smile,
+  Building2,
+  Users,
   User,
 } from "lucide-react";
 import Hero from "./components/Hero";
@@ -47,24 +49,53 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <section className="bg-rose-50 py-16 px-4 sm:px-12">
-        <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
+      <section className=" py-16 px-4 sm:px-12">
+     
+        <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row gap-8">
           {/* Left Section */}
-          <div className="w-full sm:w-1/2 flex flex-row justify-start mb-8 sm:mb-0">
-            {/* Logo Image */}
-            <div className="flex flex-row">
-              <img
-                src="/support.png"
-                alt="Support Logo"
-                className="w-20 h-20 mr-6 animate-on-scroll"
-              />
-              <h2 className="uppercase text-md sm:text-3xl md:text-4xl font-bold text-[#7B5B4C] mb-6 lg:mt-3">
-                How We Support You?
-              </h2>
-            </div>
 
-            <div className="hidden sm:block">
-              <ContactForm />
+          <div className="w-full sm:w-1/2 flex flex-col justify-start mb-8 sm:mb-0">
+            {/* Logo Image and Title */}
+           
+
+            {/* Support Content Boxes */}
+            <div className="flex flex-col space-y-6 w-full">
+              {/* Top Div */}
+              <div className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                <MapPin size={32} className="text-[#7B5B4C] mb-4" />
+                <p className="font-semibold text-lg">
+                  9000+ accommodation options in the Nordics & Central Europe
+                </p>
+             {/*    <span className="text-blue-500 underline mt-2 cursor-pointer">
+                  Explore locations
+                </span> */}
+              </div>
+
+              {/* Bottom Divs: Two side-by-side */}
+              <div className="flex flex-col sm:flex-row gap-6">
+                {/* Left */}
+                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                  <Building2 size={32} className="text-[#7B5B4C] mb-4" />
+                  <p className="font-semibold text-lg">
+                    1600 new apartments added to our portfolio yearly
+                  </p>
+                  <a href="/partner#partnerform" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
+                    Rent to Stayspace
+                  </a>
+                </div>
+
+                {/* Right */}
+                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                  <Users size={32} className="text-[#7B5B4C] mb-4" />
+                  <p className="font-semibold text-lg">
+                    400 local experts in 150 cities ready to help arrange
+                    accommodation by request
+                  </p>
+                  <a href="aboutus#contactus" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
+  Contact our experts
+</a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -119,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-rose-100">
+      <section className="bg-gray-100 py-10">
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
           {/* Left Section */}
           <div className="w-full sm:w-1/2 flex flex-col justify-between mb-8 sm:mb-0 py-16 px-4 sm:px-12">
@@ -181,7 +212,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-rose-50">
+      <section className="py-16">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-12">
           {/* Card 1 - CHOOSE YOUR PATH */}
           <div className="p-6 rounded-lg shadow-md animate-on-scroll">
@@ -262,7 +293,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-rose-200">
+      <section className="py-16">
         <div className="max-w-screen-xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#7B5B4C] mb-8 animate-on-scroll">
             Our Trusted Partners

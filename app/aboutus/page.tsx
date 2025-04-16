@@ -64,7 +64,7 @@ const AboutUs = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50" id="contactus">
         <div className="container mx-auto px-6 sm:px-12 lg:px-32">
           <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8">
             {/* Left Side: Contact Form */}

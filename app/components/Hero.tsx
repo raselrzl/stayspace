@@ -72,7 +72,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-rose-200 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
+      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-rose-100 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
         <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
           Where
           <br />
@@ -80,17 +80,17 @@ const Hero = () => {
           <br />
           Meets Comfort
         </h1>
-        <p className="text-md md:text-lg mb-6 text-left">
+        <p className="text-md md:text-lg mb-6 text-left italic">
           Specialist in customized<br /> accommodation solutions <br />for companies
           throughout Sweden
         </p>
-        <p className="text-md md:text-lg mb-6 text-left">
+        <p className="text-md md:text-lg mb-6 text-left italic">
           Is your company looking for accommodation<br /> for a longer construction
           project <br />or<br /> a shorter assignment?
         </p>
         <div className="text-center mt-6">
           <Link
-            href="/contactus"
+            href="/aboutus#contactus"
             className="uppercase text-sm md:text-md px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white  font-semibold transition-all rounded-[20px]"
           >
             Contact Us

@@ -33,9 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${quicksand.variable} antialiased`}
-      ><Navbar />
+      ><Navbar /><div className="">
+        
         {children}
-        <Footer />
+        
+      </div><Footer />
       </body>
     </html>
   );
