@@ -10,55 +10,41 @@ declare global {
 
 const TranslateWidget = () => {
   useEffect(() => {
-    // Load the Google Translate script
     const script = document.createElement("script");
     script.src =
       "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     script.async = true;
     document.body.appendChild(script);
 
-    // Initialize Google Translate
     window.googleTranslateElementInit = () => {
       new window.google.translate.TranslateElement(
         {
-          pageLanguage: "en", // Default language of your page
-          includedLanguages: "en,sv", // Only English and Swedish languages
+          pageLanguage: "en",
+          includedLanguages: "en,sv,nl,es,pl", // Updated list of supported languages
           layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-          autoDisplay: false, // Do not auto-display the widget
+          autoDisplay: false,
         },
         "google_translate_element"
       );
     };
 
-    // Function to hide unwanted Google UI elements like the banner and tooltip
     const hideGoogleElements = () => {
       const banner = document.querySelector("iframe.goog-te-banner-frame") as HTMLIFrameElement | null;
-      if (banner) banner.style.display = "none"; // Hide the Google Translate banner
+      if (banner) banner.style.display = "none";
 
       const tooltip = document.getElementById("goog-gt-tt") as HTMLDivElement | null;
-      if (tooltip) tooltip.style.display = "none"; // Hide the tooltip
+      if (tooltip) tooltip.style.display = "none";
 
-      const body = document.body;
-      const html = document.documentElement;
-
-      if (body) {
-        body.style.top = "0px"; // Prevent layout shift
-        body.style.position = "static";
-      }
-
-      if (html) {
-        html.style.marginTop = "0px"; // Prevent page jump
-      }
+      document.body.style.top = "0px";
+      document.body.style.position = "static";
+      document.documentElement.style.marginTop = "0px";
     };
 
-    // Observe DOM changes to keep the Google Translate elements hidden
     const observer = new MutationObserver(hideGoogleElements);
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Set up an interval to periodically check and hide the Google elements
     const interval = setInterval(hideGoogleElements, 300);
 
-    // Cleanup listeners when the component unmounts
     return () => {
       observer.disconnect();
       clearInterval(interval);
@@ -66,19 +52,15 @@ const TranslateWidget = () => {
   }, []);
 
   return (
-    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }} >
-      {/* Translate button */}
-      <span style={{ fontSize: "12px", fontWeight: "bold",}} className="text-amber-300">
+    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+      <span style={{ fontSize: "12px", fontWeight: "bold" }} className="text-amber-300">
         Translate
       </span>
-
-      {/* Google Translate element */}
       <div style={{ position: "relative", display: "inline-block" }}>
         <div id="google_translate_element"></div>
       </div>
 
       <style jsx global>{`
-        /* Hide everything from Google branding and banner */
         iframe.goog-te-banner-frame,
         .goog-te-banner-frame,
         #goog-gt-tt,
@@ -98,7 +80,6 @@ const TranslateWidget = () => {
           margin-top: 0px !important;
         }
 
-        /* Hide the Google Translate button and adjust dropdown styles */
         .goog-te-gadget {
           font-size: 0 !important;
         }
