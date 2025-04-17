@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-4 mt-12">
             <PopLegalInfo />
             <PopPrivacyPolicy />
-            <a href="/aboutus" className="underline hover:text-gray-400">Contact</a>
+            <a href="/contact" className="underline hover:text-gray-400">Contact</a>
             <a href="/partner" className="underline hover:text-gray-400">Become a partner</a>
           </div>
 

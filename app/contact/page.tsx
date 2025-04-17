@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, History, Users, Home } from "lucide-react"; // Imp
 import ContactForm from "../components/Form"; // Assuming you have your ContactForm component in this path
 import EmbeddedMap from "../components/EmbeddedMap";
 import Link from "next/link";
-const AboutUs = () => {
+const contact = () => {
   return (
     <div className="text-[#7B5B4C]">
       {/* Background Section */}
@@ -19,10 +19,9 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6 sm:px-12 lg:px-32">
           <div className="space-y-8">
-            {/* History Section */}
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <History className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
@@ -51,7 +50,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* What We Do Section */}
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <MapPin className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
@@ -81,7 +79,6 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* How We Do It Section */}
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <Users className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
@@ -103,8 +100,6 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-
-            {/* StaySpace Information Section */}
             <div>
               <h2 className="text-xl sm:text-2xl font-semibold text-[#7B5B4C] mb-4 text-right">
                 <Home className="w-6 h-6 text-[#7B5B4C] inline-block mr-2" />
@@ -129,7 +124,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-100" id="contactus">
@@ -197,4 +192,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default contact;

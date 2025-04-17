@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CarouselCompany } from "./components/carosuel";
+import TranslateWidget from "./components/TranslateWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,11 +35,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${quicksand.variable} antialiased`}
-      ><Navbar /><div className="">
+      > <div className="bg-gradient-to-r from-white to-gray-600 flex justify-end items-start py-1 md:pr-24">
+      <TranslateWidget />
+    </div>
+    
+        <Navbar />
+       
         
         {children}
         
-      </div>
+ 
       <CarouselCompany />
       
       

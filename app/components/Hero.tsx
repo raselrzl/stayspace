@@ -90,7 +90,7 @@ const Hero = () => {
         </p>
         <div className="text-center mt-6">
           <Link
-            href="/aboutus#contactus"
+            href="/contact#contactus"
             className="uppercase text-sm md:text-md px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white  font-semibold transition-all rounded-[20px]"
           >
             Contact Us

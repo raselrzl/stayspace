@@ -62,7 +62,7 @@ export default function Home() {
               alt="Choose Your Path"
               className="w-full h-48 object-cover rounded-md mb-4"
             />
-            <Link href="/aboutus#contactus">
+            <Link href="/contact#contactus">
               <p className="text-[#7B5B4C] text-sm font-semibold">
                 Become a tenant at StaySpace and enjoy a comfortable
                 accommodation with modern amenities, or become a host and
@@ -71,7 +71,7 @@ export default function Home() {
                 you and start your journey with us today.
               </p>
             </Link>
-            <Link href="/aboutus#contactus">
+            <Link href="/contact#contactus">
               <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
                 Get in Touch
               </p>
@@ -88,7 +88,7 @@ export default function Home() {
               alt="Share Your Needs"
               className="w-full h-48 object-cover rounded-md mb-4"
             />
-            <Link href="/aboutus#contactus">
+            <Link href="/contact#contactus">
               <p className="text-[#7B5B4C] text-sm font-semibold">
                 Fill out our simple registration form to start your experience
                 with StaySpace. Share your accommodation preferences and
@@ -97,7 +97,7 @@ export default function Home() {
                 specific needs.
               </p>
             </Link>
-            <Link href="/aboutus#contactus">
+            <Link href="/contact#contactus">
               <p className="text-[#7B5B4C] text-sm font-bold underline mt-2">
                 Get in Touch
               </p>
@@ -223,7 +223,7 @@ export default function Home() {
                     accommodation by request
                   </p>
                   <a
-                    href="aboutus#contactus"
+                    href="contact#contactus"
                     className="text-[#7B5B4C] underline mt-2 cursor-pointer"
                   >
                     Contact our experts

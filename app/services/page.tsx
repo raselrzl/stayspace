@@ -14,7 +14,7 @@ const Services = () => {
           </h1>
 
           <Link
-            href="/aboutus#contactus"
+            href="/contact#contactus"
             className="uppercase px-6 py-3 bg-[#7B5B4C] hover:bg-[#96705f] text-white font-semibold transition-all rounded-[20px]"
           >
             Contact Us
@@ -40,7 +40,7 @@ const Services = () => {
           <div className="w-full sm:w-1/2 flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-4 sm:space-y-0 border-l-0 sm:border-l-2 sm:border-[#7B5B4C] pl-6">
             {/* Contact Us Button */}
             <a
-              href="/aboutus#contactus"
+              href="/contact#contactus"
               className="w-full sm:w-auto text-center px-6 py-3 text-white bg-[#7B5B4C] rounded-lg shadow-md hover:bg-[#9E7B58] transition-all flex items-center justify-center space-x-2"
             >
               <Mail className="w-5 h-5" />

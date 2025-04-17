@@ -58,10 +58,10 @@ export function Navlink() {
               Our Services
             </Link>
             <Link
-              href="/aboutus"
-              className={`py-1 text-xs ${isActiveLink("/aboutus")}`}
+              href="/contact"
+              className={`py-1 text-xs ${isActiveLink("/contact")}`}
             >
-              About Us
+              contact
             </Link>
             <Link
               href="/partner"

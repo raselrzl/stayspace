@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; // To get the current route
 import { Navlink } from "./Navlink"; // Import the Navlink component for popover
+import TranslateWidget from "./TranslateWidget";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,10 +73,10 @@ export default function Navbar() {
             Our Services
           </Link>
           <Link
-            href="/aboutus"
-            className={`py-1 ${isActiveLink("/aboutus")}`}
+            href="/contact"
+            className={`py-1 ${isActiveLink("/contact")}`}
           >
-            About Us
+            contact
           </Link>
           <Link
             href="/partner"
@@ -90,7 +91,7 @@ export default function Navbar() {
             Tenant
           </Link>
         </div>
-
+      
         {/* Mobile Menu Toggle */}
         <div
           onClick={toggleMenu}
