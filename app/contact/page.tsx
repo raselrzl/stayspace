@@ -14,7 +14,7 @@ const t = useTranslations(); // Access translations
       {/* Background Section */}
       <section
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center text-[#7B5B4C] overflow-hidden"
-        style={{ backgroundImage: "url('/ser1.jpg')" }}
+        style={{ backgroundImage: "url('/bed1.jpg')" }}
       >
         <div className="rounded-lg lg:mr-[400px] md:mr-[300px] w-[322px] sm:w-[400px] mx-auto opacity-72 p-8 text-white h-[450px] sm:h-[484px]">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">

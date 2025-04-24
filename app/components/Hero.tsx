@@ -6,8 +6,10 @@ import { useTranslations } from "next-intl"; // Import useTranslations for multi
 // ImageSlider for changing background image
 const ImageSlider = () => {
   const slides = [
+    { url: 'bed1.jpg' },
     { url: 'her3.jpg' },
     { url: 'her1.jpg' },
+    { url: 'bed2.jpg' },
     { url: 'her2.jpg' },
     { url: 'her4.jpg' },
     { url: 'her5.jpg' },
