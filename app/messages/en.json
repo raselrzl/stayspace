@@ -1,4 +1,4 @@
-{
+{"home":{
   "choose_path_title": "CHOOSE YOUR PATH",
   "choose_path_description": "Become a tenant at StaySpace and enjoy a comfortable accommodation with modern amenities, or become a host and maximize the value of your property's full potential with our experts in real estate management. Choose the path that suits you and start your journey with us today.",
   "get_in_touch": "Get in Touch",
@@ -26,4 +26,36 @@
   "why_choose_points_2": "Smooth and hassle-free experience from start to the End.",
   "why_choose_points_3": "Fast and reliable service at every step of the process.",
   "why_choose_points_4": "24/7 support to ensure we are always here when you need us."
+},
+"footer":{
+  "footer_contact": "Contact",
+  "footer_partner": "Become a partner",
+  "footer_operated_by": "Operated By",
+  "footer_company_name": "CENTRALIS GROUP INVEST AB",
+  "footer_org_no": "Org No. 5591389597",
+  "footer_rights_reserved": "©Copyright. All rights reserved."
+},
+"legalinfo":
+{
+    "legal_info_trigger": "Legal Information",
+    "legal_info_title": "Legal Information",
+  
+    "legal_info_company_title": "Company Name",
+    "legal_info_company_value": "Centralis Group Invest AB",
+  
+    "legal_info_office_title": "Registered Office",
+    "legal_info_office_value": "NORRKÖPING",
+  
+    "legal_info_contact_title": "Contact Details",
+    "legal_info_email_label": "Email",
+    "legal_info_email_value": "contact@staysafe.se",
+    "legal_info_phone_label": "Phone",
+    "legal_info_phone_value": "+46 10 333 3536",
+  
+    "legal_info_org_number_title": "Organization Number",
+    "legal_info_org_number_value": "559138-9597",
+  
+    "legal_info_vat_number_title": "VAT Registration Number",
+    "legal_info_vat_number_value": "SE559138959701"
+  }
 }
