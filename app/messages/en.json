@@ -35,27 +35,20 @@
   "footer_org_no": "Org No. 5591389597",
   "footer_rights_reserved": "©Copyright. All rights reserved."
 },
-"legalinfo":
-{
-    "legal_info_trigger": "Legal Information",
-    "legal_info_title": "Legal Information",
-  
-    "legal_info_company_title": "Company Name",
-    "legal_info_company_value": "Centralis Group Invest AB",
-  
-    "legal_info_office_title": "Registered Office",
-    "legal_info_office_value": "NORRKÖPING",
-  
-    "legal_info_contact_title": "Contact Details",
-    "legal_info_email_label": "Email",
-    "legal_info_email_value": "contact@staysafe.se",
-    "legal_info_phone_label": "Phone",
-    "legal_info_phone_value": "+46 10 333 3536",
-  
-    "legal_info_org_number_title": "Organization Number",
-    "legal_info_org_number_value": "559138-9597",
-  
-    "legal_info_vat_number_title": "VAT Registration Number",
-    "legal_info_vat_number_value": "SE559138959701"
+"legal_info": {
+    "title": "Legal Information",
+    "company_name_title": "Company Name",
+    "company_name": "Centralis Group Invest AB",
+    "registered_office_title": "Registered Office",
+    "registered_office": "NORRKÖPING",
+    "contact_title": "Contact Details",
+    "email_label": "Email",
+    "email_value": "contact@staysafe.se",
+    "phone_label": "Phone",
+    "phone_value": "+46 10 333 3536",
+    "org_number_title": "Organization Number",
+    "org_number_value": "559138-9597",
+    "vat_number_title": "VAT Registration Number",
+    "vat_number_value": "SE559138959701"
   }
 }
