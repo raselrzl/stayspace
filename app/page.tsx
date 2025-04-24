@@ -195,12 +195,12 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row">
           <div className="w-full sm:w-1/2 flex flex-col justify-between mb-8 sm:mb-0 py-16 px-4 sm:px-12">
             <div className="mb-8 self-center animate-on-scroll">
-              <Link href="/">
+             {/*  <Link href="/">
                 <img src="/stayspace.png" alt="StaySpace Logo" className="w-[150px] h-auto md:w-[200px] md:h-10" />
-              </Link>
+              </Link> */}
             </div>
             <div className="animate-on-scroll">
-              <img src="/bed1.jpg" alt="Bed Image" className="w-full h-auto rounded-sm" />
+              <img src="/bed3.jpg" alt="Bed Image" className="w-full h-auto rounded-sm" />
             </div>
           </div>
           <div className="w-full sm:w-1/2 flex flex-col justify-between lg:py-16 px-4 sm:px-12">
