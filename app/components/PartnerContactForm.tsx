@@ -8,26 +8,26 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { MailIcon, Loader2 } from "lucide-react"; // Import the Loader2 icon
 import { useState } from "react";
-
+import { useTranslations } from "next-intl";
 // Validation schema with zod
 const FormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  business: z.string().min(2, { message: "Business name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email." }),
-  phone: z.string().min(10, { message: "Phone number must be at least 10 characters." }),
-  streetName: z.string().min(2, { message: "Street name must be at least 2 characters." }),
-  zipCode: z.string().min(2, { message: "Zip code is required." }),
-  city: z.string().min(2, { message: "City name is required." }),
-  toilets: z.string().min(1).max(10, { message: "Toilets must be between 1 and 10." }),
-  showers: z.string().min(1).max(10, { message: "Showers must be between 1 and 10." }),
-  desiredPrice: z.string().min(1, { message: "Desired price must be a valid number." }),
-  bedroom: z.string().min(1).max(10, { message: "Bedroom count must be between 1 and 10." }),
-  beds: z.string().min(1).max(10, { message: "Beds count must be between 1 and 10." }),
-  livingRoom: z.string().min(1).max(10, { message: "Living Room count must be between 1 and 10." }),
-  kitchen: z.string().min(1).max(10, { message: "Kitchen count must be between 1 and 10." }),
-  typeOfAccommodation: z.string().min(1, { message: "Accommodation type is required." }),
-  startingDate: z.string().min(1, { message: "Starting date is required." }),
-  consent: z.boolean().refine((val) => val === true, { message: "You must consent to the data being stored and processed." }).optional(),
+  name: z.string().min(2, { message: "partnerContactForm.name_validation" }),
+  business: z.string().min(2, { message: "partnerContactForm.business_validation" }),
+  email: z.string().email({ message: "partnerContactForm.email_validation" }),
+  phone: z.string().min(10, { message: "phone_validation" }),
+  streetName: z.string().min(2, { message: "streetName_validation" }),
+  zipCode: z.string().min(2, { message: "zipCode_validation" }),
+  city: z.string().min(2, { message: "city_validation" }),
+  toilets: z.string().min(1).max(10, { message: "toilets_validation" }),
+  showers: z.string().min(1).max(10, { message: "showers_validation" }),
+  desiredPrice: z.string().min(1, { message: "desiredPrice_validation" }),
+  bedroom: z.string().min(1).max(10, { message: "bedroom_validation" }),
+  beds: z.string().min(1).max(10, { message: "beds_validation" }),
+  livingRoom: z.string().min(1).max(10, { message: "livingRoom_validation" }),
+  kitchen: z.string().min(1).max(10, { message: "kitchen_validation" }),
+  typeOfAccommodation: z.string().min(1, { message: "typeOfAccommodation_validation" }),
+  startingDate: z.string().min(1, { message: "startingDate_validation" }),
+  consent: z.boolean().refine((val) => val === true, { message: "consent_validation" }).optional(),
   otherInformation: z.string().optional(),
 });
 
@@ -111,11 +111,11 @@ export default function PartnerContactForm() {
       setIsLoading(false); 
     }
   }
-
+  const t = useTranslations("partnerContactForm");
   return (
     <div className="max-w-[900px] mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C]">
       <h1 className="lg text-center font-bold mb-4 flex justify-center uppercase">
-        Fillup the form be a partner
+      {t("form_heading")}
       </h1>
 
       <FormProvider {...form}>
@@ -123,16 +123,16 @@ export default function PartnerContactForm() {
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="name" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("name_label")}</FormLabel>
                 <FormControl>
-                  <Input {...field} placeholder="John Doe" className="w-full border border-gray-300 rounded-none" />
+                  <Input {...field} placeholder={t("name_placeholder")} className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )} />
             <FormField control={form.control} name="phone" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Phone *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("phone_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="123-456-7890" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -145,7 +145,7 @@ export default function PartnerContactForm() {
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="email" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Email *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("email_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="example@mail.com" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -154,7 +154,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="business" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Business *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("business_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="Your Business" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -167,7 +167,7 @@ export default function PartnerContactForm() {
           <div className="md:flex md:space-x-4">
             <FormField control={form.control} name="streetName" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Street Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("streetName_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="123 Main St" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -176,7 +176,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="zipCode" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Zip Code *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("zipCode_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="12345" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -185,7 +185,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="city" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">City *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("city_label")}</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="City Name" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -198,7 +198,7 @@ export default function PartnerContactForm() {
           <div className="grid grid-cols-3 space-x-4">
             <FormField control={form.control} name="toilets" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Toilets *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("toilets_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -211,7 +211,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="showers" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Showers *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("showers_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none  h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -224,7 +224,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="desiredPrice" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Desired Price (SEK) *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("desiredPrice_label")}*</FormLabel>
                 <FormControl>
                   <Input {...field} placeholder="100" type="number" className="w-full border border-gray-300 rounded-none" />
                 </FormControl>
@@ -237,7 +237,7 @@ export default function PartnerContactForm() {
           <div className="grid grid-cols-2 md:grid-cols-4 space-x-4">
             <FormField control={form.control} name="bedroom" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Bedroom *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("bedroom_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -250,7 +250,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="beds" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Beds *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("beds_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -263,7 +263,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="livingRoom" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Living Room *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("livingRoom_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -276,7 +276,7 @@ export default function PartnerContactForm() {
             )} />
             <FormField control={form.control} name="kitchen" render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel className="uppercase font-bold">Kitchen *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("kitchen_label")}*</FormLabel>
                 <FormControl>
                   <select {...field} className="w-full border border-gray-300 rounded-none h-9">
                     {[...Array(10)].map((_, idx) => (
@@ -292,13 +292,13 @@ export default function PartnerContactForm() {
           {/* Type of Accommodation */}
           <FormField control={form.control} name="typeOfAccommodation" render={({ field }) => (
             <FormItem>
-              <FormLabel className="uppercase font-bold">Type of Accommodation *</FormLabel>
+              <FormLabel className="uppercase font-bold">{t("typeOfAccommodation_label")} *</FormLabel>
               <FormControl>
                 <select {...field} className="w-full border border-gray-300 rounded-none h-9">
-                  <option value="apartment">Apartment</option>
-                  <option value="room">Room</option>
-                  <option value="villa">Villa</option>
-                  <option value="others">Others</option>
+                  <option value="apartment">{t("typeOfAccommodation_apartment")}</option>
+                  <option value="room">{t("typeOfAccommodation_room")}</option>
+                  <option value="villa">{t("typeOfAccommodation_villa")}</option>
+                  <option value="others">{t("typeOfAccommodation_others")}</option>
                 </select>
               </FormControl>
               <FormMessage />
@@ -308,7 +308,7 @@ export default function PartnerContactForm() {
           {/* Starting Date */}
           <FormField control={form.control} name="startingDate" render={({ field }) => (
             <FormItem>
-              <FormLabel className="uppercase font-bold">Starting Date *</FormLabel>
+              <FormLabel className="uppercase font-bold">{t("startingDate_label")}*</FormLabel>
               <FormControl>
                 <Input {...field} type="date" className="w-full border border-gray-300 rounded-none" />
               </FormControl>
@@ -319,7 +319,7 @@ export default function PartnerContactForm() {
           {/* Other Information */}
           <FormField control={form.control} name="otherInformation" render={({ field }) => (
             <FormItem>
-              <FormLabel className="uppercase font-bold">Additional Information</FormLabel>
+              <FormLabel className="uppercase font-bold">{t("otherInformation_label")}</FormLabel>
               <FormControl>
                 <Textarea {...field} placeholder="Additional information..." className="w-full border border-gray-300 rounded-none" />
               </FormControl>
@@ -334,9 +334,7 @@ export default function PartnerContactForm() {
                 <div className="flex items-center space-x-2">
                   <Checkbox checked={field.value === true} onCheckedChange={field.onChange} />
                   <FormLabel className="text-xs text-justify" htmlFor="consent">
-                  I hereby consent to this data being stored and processed
-                      for the purpose of establishing contact. I am aware that I
-                      can withdraw my consent at any time.
+                  {t("consent_text")}
                   </FormLabel>
                 </div>
               </FormControl>
@@ -347,7 +345,7 @@ export default function PartnerContactForm() {
           <div className="flex justify-center items-center">
             <Button type="submit" className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px] w-[150px]" disabled={isLoading}>
               {isLoading ? <Loader2 className="animate-spin mr-2" /> : <MailIcon className="mr-2" />}
-              {isLoading ? "Submitting..." : "Submit"}
+              {isLoading ? t("submitting") : t("submit")}
             </Button>
           </div>
         </form>

@@ -1,5 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, FormProvider } from "react-hook-form"; 
+import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,61 +8,32 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"; 
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MailIcon, Loader2 } from "lucide-react"; // Import the Loader2 icon
+import { MailIcon, Loader2 } from "lucide-react";
 import { useState } from "react";
-
-// Validation schema with zod
-const FormSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  business: z.string().min(2, {
-    message: "Business name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Please enter a valid email.",
-  }),
-  phone: z.string().min(10, {
-    message: "Phone number must be at least 10 characters.",
-  }),
-  message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
-  }),
-  consent: z
-    .boolean()
-    .refine((val) => val === true, {
-      message: "You must consent to the data being stored and processed.",
-    })
-    .optional(),
-});
-
-// Custom Modal component to show the success message and logo
-
-interface CustomAlertProps {
-  message: string;
-  onClose: () => void;
-}
-function CustomAlert({ message, onClose }: CustomAlertProps) {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-gray-200 p-6 rounded-sm shadow-lg text-center w-[320px] md:w-[400px]">
-        <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
-        <p className="text-lg text-[#7B5B4C]">{message}</p>
-        <div className="mt-4">
-          <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
-            Close
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { useTranslations } from "next-intl";
 
 export default function ContactForm() {
+  const t= useTranslations(); // ⬅️ translation function
+
+  // Validation schema with zod
+  const FormSchema = z.object({
+    name: z.string().min(2, { message: t("validation.name") }),
+    business: z.string().min(2, { message: t("validation.business") }),
+    email: z.string().email({ message: t("validation.email") }),
+    phone: z.string().min(10, { message: t("validation.phone") }),
+    message: z.string().min(10, { message: t("validation.message") }),
+    consent: z
+      .boolean()
+      .refine((val) => val === true, {
+        message: t("validation.consent"),
+      })
+      .optional(),
+  });
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -75,18 +46,16 @@ export default function ContactForm() {
     },
   });
 
-  const [isLoading, setIsLoading] = useState(false); // Loading state
-  const [showModal, setShowModal] = useState(false); // To control the modal visibility
-  const [modalMessage, setModalMessage] = useState(""); // Message to show in the modal
+  const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
-  // OnSubmit function to send data to API
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    setIsLoading(true); // Set loading to true when submission starts
+    setIsLoading(true);
     console.log("Form Data:", data);
 
     try {
-      // API call to submit the form data
-      const response = await fetch("/api/contactForm", { // Replace this URL with your domain
+      const response = await fetch("/api/contactForm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,30 +64,29 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        // Show the custom modal with the success message
-        setModalMessage("Thank you for contacting us. We usually respond within 24 hours through your given contact information.");
+        setModalMessage(t("form.successMessage"));
         setShowModal(true);
-        // Optionally, you can reset the form after success
         form.reset();
       } else {
-        // If the response is not OK, show an error message
         const errorData = await response.json();
-        setModalMessage(`Error: ${errorData.message || "Failed to send form data."}`);
+        setModalMessage(
+          `Error: ${errorData.message || t("form.errorGeneric")}`
+        );
         setShowModal(true);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      setModalMessage("Something went wrong. Please try again later.");
+      setModalMessage(t("form.errorGeneric"));
       setShowModal(true);
     } finally {
-      setIsLoading(false); // Reset loading state after submission attempt
+      setIsLoading(false);
     }
   }
 
   return (
     <div className="max-w-xl mx-auto p-6 sm:px-6 lg:px-10 text-[#7B5B4C]">
       <h1 className="lg text-center font-bold mb-4 flex justify-center uppercase">
-        Contact Us
+        {t("form.title")}
       </h1>
 
       <FormProvider {...form}>
@@ -129,10 +97,10 @@ export default function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="uppercase font-bold">Name *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("form.name")} *</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="John Doe"
+                    placeholder={t("form.namePlaceholder")}
                     {...field}
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
@@ -148,10 +116,10 @@ export default function ContactForm() {
             name="business"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="uppercase font-bold">Business *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("form.business")} *</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="Your Business"
+                    placeholder={t("form.businessPlaceholder")}
                     {...field}
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
@@ -167,10 +135,10 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="uppercase font-bold">Email *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("form.email")} *</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="example@mail.com"
+                    placeholder={t("form.emailPlaceholder")}
                     {...field}
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
@@ -186,10 +154,10 @@ export default function ContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="uppercase font-bold">Phone *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("form.phone")} *</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="123-456-7890"
+                    placeholder={t("form.phonePlaceholder")}
                     {...field}
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
                   />
@@ -205,11 +173,11 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="uppercase font-bold">Message *</FormLabel>
+                <FormLabel className="uppercase font-bold">{t("form.message")} *</FormLabel>
                 <FormControl>
                   <Textarea
                     className="w-full border border-gray-300 focus:border-2 focus:outline-none rounded-none"
-                    placeholder="Your message"
+                    placeholder={t("form.messagePlaceholder")}
                     {...field}
                   />
                 </FormControl>
@@ -228,19 +196,12 @@ export default function ContactForm() {
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="consent"
-                      checked={field.value === true} // Only checked if value is true
-                      onCheckedChange={(checked: boolean) =>
-                        field.onChange(checked)
-                      } // Correct onChange handler
+                      checked={field.value === true}
+                      onCheckedChange={(checked: boolean) => field.onChange(checked)}
                       className="rounded-none"
                     />
-                    <FormLabel
-                      htmlFor="consent"
-                      className="text-xs text-justify"
-                    >
-                      I hereby consent to this data being stored and processed
-                      for the purpose of establishing contact. I am aware that I
-                      can withdraw my consent at any time.
+                    <FormLabel htmlFor="consent" className="text-xs text-justify">
+                      {t("form.consentText")}
                     </FormLabel>
                   </div>
                 </FormControl>
@@ -253,21 +214,29 @@ export default function ContactForm() {
             <Button
               type="submit"
               className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px] cursor-pointer w-[150px]"
-              disabled={isLoading} // Disable the button while loading
+              disabled={isLoading}
             >
-              {isLoading ? (
-                <Loader2 className="animate-spin mr-2" /> // Show the spinner if loading
-              ) : (
-                <MailIcon className="mr-2" />
-              )}
-              {isLoading ? "Submitting..." : "Send"} {/* Button text changes while loading */}
+              {isLoading ? <Loader2 className="animate-spin mr-2" /> : <MailIcon className="mr-2" />}
+              {isLoading ? t("form.submitting") : t("form.submit")}
             </Button>
           </div>
         </form>
       </FormProvider>
 
-      {/* Show the custom modal */}
-      {showModal && <CustomAlert message={modalMessage} onClose={() => setShowModal(false)} />}
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-gray-200 p-6 rounded-sm shadow-lg text-center w-[320px] md:w-[400px]">
+            <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
+            <p className="text-lg text-[#7B5B4C]">{modalMessage}</p>
+            <div className="mt-4">
+              <Button onClick={() => setShowModal(false)} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
+                {t("form.close")}
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

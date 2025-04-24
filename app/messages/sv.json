@@ -199,5 +199,71 @@
     "extraLinenTowels": "Extra Sängkläder & Handdukar",
     "extraBed": "Extra Säng",
     "babyCrib": "Babysäng"
-  }
+  },
+
+"form": {
+    "title": "Kontakta Oss",
+    "name": "Namn",
+    "namePlaceholder": "John Doe",
+    "business": "Företag",
+    "businessPlaceholder": "Ditt Företag",
+    "email": "E-post",
+    "emailPlaceholder": "exempel@mail.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "123-456-7890",
+    "message": "Meddelande",
+    "messagePlaceholder": "Ditt meddelande",
+    "consentText": "Jag samtycker till att dessa uppgifter lagras och behandlas i syfte att etablera kontakt. Jag är medveten om att jag kan återkalla mitt samtycke när som helst.",
+    "submit": "Skicka",
+    "submitting": "Skickar...",
+    "successMessage": "Tack för att du kontaktade oss. Vi svarar vanligtvis inom 24 timmar via den kontaktinformation du angav.",
+    "errorGeneric": "Något gick fel. Försök igen senare.",
+    "close": "Stäng"
+  },
+  "validation": {
+    "name": "Namnet måste innehålla minst 2 tecken.",
+    "business": "Företagsnamnet måste innehålla minst 2 tecken.",
+    "email": "Ange en giltig e-postadress.",
+    "phone": "Telefonnumret måste innehålla minst 10 tecken.",
+    "message": "Meddelandet måste innehålla minst 10 tecken.",
+    "consent": "Du måste samtycka till att uppgifterna lagras och behandlas."
+  },
+"partnerContactForm": {
+  "form_heading": "Kontaktformulär för Partner",
+  "name_label": "Namn",
+  "name_placeholder": "Ange ditt namn",
+  "business_label": "Företag",
+  "business_placeholder": "Ange ditt företag",
+  "email_label": "E-post",
+  "email_placeholder": "exempel@mail.com",
+  "phone_label": "Telefon",
+  "phone_placeholder": "123-456-7890",
+  "streetName_label": "Gatuadress",
+  "streetName_placeholder": "Exempelgatan 123",
+  "zipCode_label": "Postnummer",
+  "zipCode_placeholder": "12345",
+  "city_label": "Stad",
+  "city_placeholder": "Stadens namn",
+  "toilets_label": "Toaletter",
+  "showers_label": "Duschutrymmen",
+  "desiredPrice_label": "Önskat pris (SEK)",
+  "desiredPrice_placeholder": "100",
+  "bedroom_label": "Sovrum",
+  "beds_label": "Sängar",
+  "livingRoom_label": "Vardagsrum",
+  "kitchen_label": "Kök",
+  "typeOfAccommodation_label": "Typ av boende",
+  "typeOfAccommodation_apartment": "Lägenhet",
+  "typeOfAccommodation_room": "Rum",
+  "typeOfAccommodation_villa": "Villa",
+  "typeOfAccommodation_others": "Annat",
+  "startingDate_label": "Startdatum",
+  "otherInformation_label": "Ytterligare information",
+  "otherInformation_placeholder": "Ytterligare information...",
+  "consent_text": "Jag samtycker härmed till att dessa uppgifter lagras och behandlas i syfte att etablera kontakt. Jag är medveten om att jag kan återkalla mitt samtycke när som helst.",
+  "submit": "Skicka",
+  "submitting": "Skickar..."
+}
+
+  
 }
