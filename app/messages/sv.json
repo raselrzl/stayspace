@@ -169,6 +169,17 @@
       "phone": "+46 10-333 35 36",
       "email": "kontakt@stayspace.se"
     }
+  },"partnerPage": {
+    "propertyTitle": "Vill du hyra ut din fastighet?",
+    "collaborationText": "StaySpace samarbetar med mark- och fastighetsägare för att skapa ett blomstrande samhälle.",
+    "openToPartnerships": "Vi är alltid öppna för nya partnerskap.",
+    "homesForProfessionals": "Vi erbjuder bostäder för många yrkesverksamma.",
+    "rentingIsEasy": "Att hyra ut din fastighet är säkert, enkelt och anpassningsbart.",
+    "contactUsToStart": "Redo att hyra ut din fastighet? Kontakta oss idag för att komma igång!",
+    "rentalProcessTitle": "Hur fungerar uthyrningsprocessen?",
+    "formDescription": "Fyll i formuläret 'Bli en värd' på vår webbplats med dina fastighetsdetaljer.",
+    "publishListing": "Vi publicerar din annons tillsammans med bilder för potentiella hyresgäster att se.",
+    "contactToDiscuss": "Vi kontaktar dig för att diskutera uthyrningsperioder, gästantal och andra detaljer.",
+    "finalDecision": "Du fattar det slutgiltiga beslutet om att hyra ut din fastighet."
   }
 }
-  

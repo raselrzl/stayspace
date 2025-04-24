@@ -1,18 +1,21 @@
 "use client";
 
+import { useTranslations } from "next-intl"; // Import useTranslations for translations
 import ContactForm from "../components/Form";
 import PartnerContactForm from "../components/PartnerContactForm";
 import { CheckCircle, Users, Handshake, PhoneCall } from "lucide-react";
 import { FileText, Image, MessageCircle, Check } from "lucide-react";
 
 const BecomePartner = () => {
+  const t = useTranslations(); // Access translations
+
   return (
     <>
       <section
         className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center overflow-hidden"
         style={{ backgroundImage: "url('/pa1.jpg')" }}
       >
-        
+        {/* Add any additional content or overlay for this section if needed */}
       </section>
 
       {/* Main Content Section */}
@@ -21,39 +24,29 @@ const BecomePartner = () => {
           <div className="flex flex-col-reverse md:flex-row space-y-8 lg:space-y-0 lg:space-x-8 p-4 rounded-2xl">
             <div className="flex-1 p-6 shadow-md">
               <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
-                Do You Want to Rent Out Your Property?
+                {t("partnerPage.propertyTitle")}
               </h2>
 
               <ul className="space-y-3 text-[#7B5B4C]">
                 <li className="flex items-start">
                   <Handshake className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    StaySpace collaborates with land and property owners to
-                    create a thriving community.
-                  </span>
+                  <span>{t("partnerPage.collaborationText")}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>We are always open to new partnerships.</span>
+                  <span>{t("partnerPage.openToPartnerships")}</span>
                 </li>
                 <li className="flex items-start">
                   <Users className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    We offer homes for a large number of professionals.
-                  </span>
+                  <span>{t("partnerPage.homesForProfessionals")}</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    Renting your property is safe, easy, and customizable.
-                  </span>
+                  <span>{t("partnerPage.rentingIsEasy")}</span>
                 </li>
                 <li className="flex items-start mt-4">
                   <PhoneCall className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    Ready to rent out your property? Contact us today to get
-                    started!
-                  </span>
+                  <span>{t("partnerPage.contactUsToStart")}</span>
                 </li>
               </ul>
             </div>
@@ -77,46 +70,34 @@ const BecomePartner = () => {
             </div>
             <div className="flex-1 p-6 shadow-md">
               <h2 className="text-2xl font-bold text-[#7B5B4C] mb-4">
-                How Does the Rental Process Work?
+                {t("partnerPage.rentalProcessTitle")}
               </h2>
 
               <ul className="space-y-3 text-[#7B5B4C]">
                 <li className="flex items-start">
                   <FileText className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    Fill out the "Become a Host" form on our website with your
-                    property details.
-                  </span>
+                  <span>{t("partnerPage.formDescription")}</span>
                 </li>
                 <li className="flex items-start">
                   <Image className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    We publish your listing along with photos for potential
-                    tenants to view.
-                  </span>
+                  <span>{t("partnerPage.publishListing")}</span>
                 </li>
                 <li className="flex items-start">
                   <MessageCircle className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    We’ll contact you to discuss rental periods, guest count,
-                    and other details.
-                  </span>
+                  <span>{t("partnerPage.contactToDiscuss")}</span>
                 </li>
                 <li className="flex items-start">
                   <Check className="w-5 h-5 mt-1 mr-2 text-[#7B5B4C]" />
-                  <span>
-                    You make the final decision on whether to rent out your
-                    property.
-                  </span>
+                  <span>{t("partnerPage.finalDecision")}</span>
                 </li>
               </ul>
             </div>
           </div>
 
           {/* Partner Contact Form */}
-        </div>
-        <div className="flex-1">
-          <PartnerContactForm />
+          <div className="flex-1 mt-8">
+            <PartnerContactForm />
+          </div>
         </div>
       </section>
     </>

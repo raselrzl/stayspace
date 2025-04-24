@@ -163,5 +163,18 @@
       "phone": "+46 10-333 35 36",
       "email": "kontakt@stayspace.se"
     }
+  },
+  "partnerPage": {
+    "propertyTitle": "Do You Want to Rent Out Your Property?",
+    "collaborationText": "StaySpace collaborates with land and property owners to create a thriving community.",
+    "openToPartnerships": "We are always open to new partnerships.",
+    "homesForProfessionals": "We offer homes for a large number of professionals.",
+    "rentingIsEasy": "Renting your property is safe, easy, and customizable.",
+    "contactUsToStart": "Ready to rent out your property? Contact us today to get started!",
+    "rentalProcessTitle": "How Does the Rental Process Work?",
+    "formDescription": "Fill out the 'Become a Host' form on our website with your property details.",
+    "publishListing": "We publish your listing along with photos for potential tenants to view.",
+    "contactToDiscuss": "We’ll contact you to discuss rental periods, guest count, and other details.",
+    "finalDecision": "You make the final decision on whether to rent out your property."
   }
 }
