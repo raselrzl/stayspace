@@ -1,4 +1,6 @@
+"use client";
 import * as React from "react";
+import { useTranslations } from "next-intl"; // Import useTranslations hook for multi-language support
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -9,6 +11,8 @@ import {
 } from "@/components/ui/carousel";
 
 export function CarouselCompany() {
+  const t = useTranslations(); // Access translations
+
   const images = [
     "/partner/peab.jpg",
     "/partner/eks.webp",
@@ -23,20 +27,16 @@ export function CarouselCompany() {
     <div className="max-w-screen-xl mx-auto text-center py-16 border-t-2 border-t-red-50 px-4 sm:px-8">
       {/* Heading */}
       <h2 className="text-3xl font-bold text-[#7B5B4C] mb-4">
-        Our Trusted Partners
+        {t("carousel_company.heading")}
       </h2>
+
       {/* Description */}
       <p className="text-md text-[#7B5B4C] mb-10 max-w-3xl mx-auto">
-        StaySpace works with some of the best companies in the industry to
-        provide seamless accommodation solutions. Our trusted partners help us
-        deliver top-tier service to tenants and hosts alike.
+        {t("carousel_company.description")}
       </p>
 
       {/* Carousel */}
-      <Carousel
-        opts={{ align: "start" }}
-        className="w-full max-w-6xl mx-auto relative px-6"
-      >
+      <Carousel opts={{ align: "start" }} className="w-full max-w-6xl mx-auto relative px-6">
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem

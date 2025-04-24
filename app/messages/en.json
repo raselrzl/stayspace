@@ -34,7 +34,7 @@
   "footer_company_name": "CENTRALIS GROUP INVEST AB",
   "footer_org_no": "Org No. 5591389597",
   "footer_rights_reserved": "©Copyright. All rights reserved."
-},
+}, 
 "legal_info": {
     "title": "Legal Information",
     "company_name_title": "Company Name",
@@ -90,5 +90,15 @@
       "content": "If you have any questions about our privacy policy or how we handle your personal data, please contact us at",
       "email": "kontakt@stayspace.se"
     }
+  },
+  "carousel_company": {
+    "heading": "Our Trusted Partners",
+    "description": "StaySpace works with some of the best companies in the industry to provide seamless accommodation solutions. Our trusted partners help us deliver top-tier service to tenants and hosts alike."
+  },
+  "hero": {
+    "heading": "Where Business Meets Comfort",
+    "description1": "Specialist in customized accommodation solutions",
+    "description2": "for companies throughout Sweden",
+    "contact_button": "Contact Us"
   }
 }

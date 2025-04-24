@@ -94,5 +94,15 @@
       "content": "Om du har några frågor om vår integritetspolicy eller hur vi hanterar dina personuppgifter, vänligen kontakta oss på",
       "email": "kontakt@stayspace.se"
     }
+  },
+  "carousel_company": {
+    "heading": "Våra Pålitliga Partners",
+    "description": "StaySpace samarbetar med några av de bästa företagen i branschen för att erbjuda sömlösa boendelösningar. Våra pålitliga partners hjälper oss att leverera toppservice till både hyresgäster och värdar."
+  },
+  "hero": {
+    "heading": "Där Affärer Möter Komfort",
+    "description1": "Specialist på skräddarsydda boendelösningar",
+    "description2": "för företag över hela Sverige",
+    "contact_button": "Kontakta Oss"
   }
 }
