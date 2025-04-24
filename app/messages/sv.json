@@ -263,7 +263,49 @@
   "consent_text": "Jag samtycker härmed till att dessa uppgifter lagras och behandlas i syfte att etablera kontakt. Jag är medveten om att jag kan återkalla mitt samtycke när som helst.",
   "submit": "Skicka",
   "submitting": "Skickar..."
-}
-
-  
+},
+"TenantForm": {
+    "title": "Hyresansökningsformulär",
+    "fields": {
+      "fullName": {
+        "label": "Fullständigt namn *",
+        "placeholder": "John Doe",
+        "error": "Fullständigt namn måste vara minst 2 tecken."
+      },
+      "email": {
+        "label": "E-post *",
+        "placeholder": "example@mail.com",
+        "error": "Ange en giltig e-postadress."
+      },
+      "companyName": {
+        "label": "Företagsnamn (Valfritt)",
+        "placeholder": "Ditt företagsnamn"
+      },
+      "numberOfPeople": {
+        "label": "Antal personer *",
+        "placeholder": "Antal personer",
+        "error": "Antal personer måste anges."
+      },
+      "leaseStartPeriod": {
+        "label": "Startperiod för hyresavtal *",
+        "error": "Startperiod för hyresavtal måste anges."
+      },
+      "endPeriodForRental": {
+        "label": "Slutperiod för hyra *",
+        "error": "Slutperiod för hyra måste anges."
+      },
+      "message": {
+        "label": "Meddelande *",
+        "placeholder": "Ditt meddelande",
+        "error": "Meddelandet måste vara minst 10 tecken."
+      }
+    },
+    "submit": {
+      "default": "Skicka",
+      "loading": "Skickar..."
+    },
+    "successMessage": "Din hyresansökan har skickats in framgångsrikt.",
+    "errorMessage": "Något gick fel. Vänligen försök igen senare.",
+    "close": "Stäng"
+  }
 }

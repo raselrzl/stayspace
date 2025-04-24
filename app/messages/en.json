@@ -257,5 +257,49 @@
     "consent_text": "I hereby consent to this data being stored and processed for the purpose of establishing contact. I am aware that I can withdraw my consent at any time.",
     "submit": "Submit",
     "submitting": "Submitting..."
+  },
+"TenantForm": {
+    "title": "Tenant Application Form",
+    "fields": {
+      "fullName": {
+        "label": "Full Name *",
+        "placeholder": "John Doe",
+        "error": "Full Name must be at least 2 characters."
+      },
+      "email": {
+        "label": "Email *",
+        "placeholder": "example@mail.com",
+        "error": "Please enter a valid email."
+      },
+      "companyName": {
+        "label": "Company Name (Optional)",
+        "placeholder": "Your Company Name"
+      },
+      "numberOfPeople": {
+        "label": "Number of People *",
+        "placeholder": "Number of people",
+        "error": "Number of People must be provided."
+      },
+      "leaseStartPeriod": {
+        "label": "Lease Start Period *",
+        "error": "Lease Start Period must be provided."
+      },
+      "endPeriodForRental": {
+        "label": "End Period for Rental *",
+        "error": "End Period for Rental must be provided."
+      },
+      "message": {
+        "label": "Message *",
+        "placeholder": "Your message",
+        "error": "Message must be at least 10 characters."
+      }
+    },
+    "submit": {
+      "default": "Send",
+      "loading": "Submitting..."
+    },
+    "successMessage": "Your tenant application has been successfully submitted.",
+    "errorMessage": "Something went wrong. Please try again later.",
+    "close": "Close"
   }
 }
