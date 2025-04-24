@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation"; // To get the current route
 import { Navlink } from "./Navlink"; // Import the Navlink component for popover
 import TranslateWidget from "./TranslateWidget";
+import { useTranslations } from "next-intl"; // Import useTranslations for multi-language support
 
 export default function Navbar() {
+  const t = useTranslations(); // Access translations
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false); // State to track if scrolled
   const pathname = usePathname(); // Get the current path to highlight the active link
@@ -41,9 +43,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase ${
-        isScrolled ? "py-1" : "py-4"
-      }`}
+      className={`bg-gray-100 p-4 transition-all duration-300 sticky top-0 z-50 uppercase ${isScrolled ? "py-1" : "py-4"}`}
       style={{
         boxShadow: "0 4px 4px rgb(123, 91, 76)", // Yellow shadow (rgba(253, 109, 21, 0.6))
         borderBottom: "4px solid transparent", // Invisible border to hold the shadow
@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link href="/">
             <img
               src="/stayspace.png"
-              alt="Support Logo"
+              alt={t("navbar.logoAltText")} // Fetch the alt text for the logo from the translations
               className="w-[150px] h-auto md:w-full md:h-15" // Adjust the size as needed
             />
           </Link>
@@ -64,39 +64,24 @@ export default function Navbar() {
         {/* Navbar Links (Desktop) */}
         <div className="hidden md:flex space-x-6 font-bold">
           <Link href="/" className={`py-1 ${isActiveLink("/")}`}>
-            Home
+            {t("navbar.home")}
           </Link>
-          <Link
-            href="/services"
-            className={`py-1 ${isActiveLink("/services")}`}
-          >
-            Our Services
+          <Link href="/services" className={`py-1 ${isActiveLink("/services")}`}>
+            {t("navbar.ourServices")}
           </Link>
-          <Link
-            href="/contact"
-            className={`py-1 ${isActiveLink("/contact")}`}
-          >
-            contact
+          <Link href="/contact" className={`py-1 ${isActiveLink("/contact")}`}>
+            {t("navbar.contact")}
           </Link>
-          <Link
-            href="/partner"
-            className={`py-1 ${isActiveLink("/partner")}`}
-          >
-            Partner
+          <Link href="/partner" className={`py-1 ${isActiveLink("/partner")}`}>
+            {t("navbar.partner")}
           </Link>
-          <Link
-            href="/tenant"
-            className={` py-1 ${isActiveLink("/tenant")}`}
-          >
-            Tenant
+          <Link href="/tenant" className={`py-1 ${isActiveLink("/tenant")}`}>
+            {t("navbar.tenant")}
           </Link>
         </div>
-      
+
         {/* Mobile Menu Toggle */}
-        <div
-          onClick={toggleMenu}
-          className="sm:hidden bg-gray-100 focus:outline-none text-3xl"
-        >
+        <div onClick={toggleMenu} className="sm:hidden bg-gray-100 focus:outline-none text-3xl">
           <Navlink />
         </div>
       </div>

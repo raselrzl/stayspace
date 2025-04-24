@@ -8,8 +8,10 @@ import { Facebook, Linkedin, Mail, SquareMenu, X } from "lucide-react";
 import { useState } from "react"; // Import useState hook
 import Link from "next/link"; // Import Link for navigation
 import { usePathname } from "next/navigation"; // To get the current route
+import { useTranslations } from "next-intl"; // Import useTranslations for multi-language support
 
 export function Navlink() {
+  const t = useTranslations(); // Access translations
   const [isPopoverVisible, setPopoverVisible] = useState(false); // Initially, the popover is hidden
   const pathname = usePathname(); // Get the current path to highlight the active link
 
@@ -49,33 +51,34 @@ export function Navlink() {
           {/* Nav Links */}
           <div className="flex flex-col justify-center items-center space-y-6 uppercase font-bold">
             <Link href="/" className={`py-1 text-xs ${isActiveLink("/")}`}>
-              Home
+              {t("navlink.home")}
             </Link>
             <Link
               href="/services"
               className={`py-1 text-xs ${isActiveLink("/services")}`}
             >
-              Our Services
+              {t("navlink.ourServices")}
             </Link>
             <Link
               href="/contact"
               className={`py-1 text-xs ${isActiveLink("/contact")}`}
             >
-              contact
+              {t("navlink.contact")}
             </Link>
             <Link
               href="/partner"
               className={`py-1 text-xs ${isActiveLink("/partner")}`}
             >
-              Partner
+              {t("navlink.partner")}
             </Link>
             <Link
               href="/tenant"
               className={`py-1 text-xs ${isActiveLink("/tenant")}`}
             >
-              Tenant
+              {t("navlink.tenant")}
             </Link>
 
+            {/* Social Media Links */}
             <div className="flex text-center flex-row mt-8">
               <div className="flex justify-center space-x-4 items-center">
                 <a

@@ -104,5 +104,22 @@
     "description1": "Specialist på skräddarsydda boendelösningar",
     "description2": "för företag över hela Sverige",
     "contact_button": "Kontakta Oss"
+  },
+  
+    "navbar": {
+      "logoAltText": "StaySpace Logotyp",
+      "home": "Hem",
+      "ourServices": "Våra Tjänster",
+      "contact": "Kontakt",
+      "partner": "Partner",
+      "tenant": "Hyresgäst"
+    },
+    "navlink": {
+    "home": "Hem",
+    "ourServices": "Våra Tjänster",
+    "contact": "Kontakt",
+    "partner": "Partner",
+    "tenant": "Hyresgäst"
   }
-}
+  }
+  

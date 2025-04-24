@@ -100,5 +100,20 @@
     "description1": "Specialist in customized accommodation solutions",
     "description2": "for companies throughout Sweden",
     "contact_button": "Contact Us"
+  },
+  "navbar": {
+    "logoAltText": "StaySpace Logo",
+    "home": "Home",
+    "ourServices": "Our Services",
+    "contact": "Contact",
+    "partner": "Partner",
+    "tenant": "Tenant"
+  },
+  "navlink": {
+    "home": "Home",
+    "ourServices": "Our Services",
+    "contact": "Contact",
+    "partner": "Partner",
+    "tenant": "Tenant"
   }
 }
