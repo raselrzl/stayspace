@@ -50,5 +50,45 @@
     "org_number_value": "559138-9597",
     "vat_number_title": "VAT Registration Number",
     "vat_number_value": "SE559138959701"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "intro": "We value your privacy and strive to protect your personal information. This page explains how we collect, use and protect your information when you visit our website.",
+    "section_1": {
+      "title": "1. What information do we collect?",
+      "content": "We collect personal information that you voluntarily provide to us, for example when you fill out contact forms, register for our services or communicate with us. This may include name, email address, phone number and company information."
+    },
+    "section_2": {
+      "title": "2. How do we use your information?",
+      "point_1": "Provide and improve our services",
+      "point_2": "Communicate with you and respond to your inquiries",
+      "point_3": "Send relevant information, such as offers and updates (you can always opt out of marketing messages)",
+      "point_4": "Ensure a smooth user experience on our website"
+    },
+    "section_3": {
+      "title": "3. Sharing of data",
+      "content": "We do not share your personal data with third parties, except if necessary to complete our services (e.g., payment providers or technical services) or if required by law."
+    },
+    "section_4": {
+      "title": "4. Cookies and Tracking Technologies",
+      "content": "We use cookies and similar technologies to improve the user experience on our website. These help us collect information about how you navigate our site and customize content based on your preferences. You can choose to disable cookies in your browser, but some features of the website may be affected."
+    },
+    "section_5": {
+      "title": "5. Security",
+      "content": "We take appropriate technical and organizational measures to protect your personal data against unauthorized access, loss or misuse."
+    },
+    "section_6": {
+      "title": "6. Your rights",
+      "content": "You have the right to request information about what personal data we have about you, as well as the right to correct, erase or request that we restrict the processing of your data. If you wish to exercise these rights or have any questions about our handling of your personal data, please contact us."
+    },
+    "section_7": {
+      "title": "7. Changes to the Privacy Policy",
+      "content": "We may update this Privacy Policy. In the event of major changes, we will inform you by publishing an updated version on our website."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "If you have any questions about our privacy policy or how we handle your personal data, please contact us at",
+      "email": "kontakt@stayspace.se"
+    }
   }
 }

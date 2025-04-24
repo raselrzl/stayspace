@@ -1,13 +1,12 @@
-"use client"
+"use client";
 import { useState } from "react"; // Import useState hook
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { useTranslations } from "next-intl"; // Import useTranslations hook for multi-language support
 import Link from "next/link";
 
 export function PopPrivacyPolicy() {
   const [isPopoverVisible, setPopoverVisible] = useState(true); // State to control visibility
+  const t = useTranslations(); // Access translations
 
   const handleClose = () => {
     setPopoverVisible(false); // Close the popover when the cross button is clicked
@@ -17,7 +16,7 @@ export function PopPrivacyPolicy() {
     <div>
       <Popover open={isPopoverVisible} onOpenChange={setPopoverVisible}>
         <PopoverTrigger asChild>
-          <p className="underline cursor-pointer">Privacy Policy</p>
+          <p className="underline cursor-pointer">{t("privacy_policy.title")}</p>
         </PopoverTrigger>
 
         <PopoverContent className="w-[300px] h-[500px] bg-white overflow-scroll text-justify relative">
@@ -30,55 +29,47 @@ export function PopPrivacyPolicy() {
           </button>
 
           <div className="w-full text-xs">
-            <h2 className="text-xl font-bold mb-4 text-center">Privacy Policy</h2>
-            <p className="mb-4">
-              We value your privacy and strive to protect your personal information. This page explains how we collect, use and protect your information when you visit our website.
-            </p>
+            <h2 className="text-xl font-bold mb-4 text-center">
+              {t("privacy_policy.title")}
+            </h2>
 
-            <h3 className="font-semibold mt-6">1. What information do we collect?</h3>
-            <p className="mb-4">
-              We collect personal information that you voluntarily provide to us, for example when you fill out contact forms, register for our services or communicate with us. This may include name, email address, phone number and company information.
-            </p>
+            <p className="mb-4">{t("privacy_policy.intro")}</p>
 
-            <h3 className="font-semibold">2. How do we use your information?</h3>
+            <h3 className="font-semibold mt-6">{t("privacy_policy.section_1.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_1.content")}</p>
+
+            <h3 className="font-semibold">{t("privacy_policy.section_2.title")}</h3>
             <ul className="list-inside list-disc mb-4">
-              <li>Provide and improve our services</li>
-              <li>Communicate with you and respond to your inquiries</li>
-              <li>Send relevant information, such as offers and updates (you can always opt out of marketing messages)</li>
-              <li>Ensure a smooth user experience on our website</li>
+              <li>{t("privacy_policy.section_2.point_1")}</li>
+              <li>{t("privacy_policy.section_2.point_2")}</li>
+              <li>{t("privacy_policy.section_2.point_3")}</li>
+              <li>{t("privacy_policy.section_2.point_4")}</li>
             </ul>
 
-            <h3 className="font-semibold">3. Sharing of data</h3>
-            <p className="mb-4">
-              We do not share your personal data with third parties, except if necessary to complete our services (eg payment providers or technical services) or if required by law.
-            </p>
+            <h3 className="font-semibold">{t("privacy_policy.section_3.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_3.content")}</p>
 
-            <h3 className="font-semibold">4. Cookies and Tracking Technologies</h3>
-            <p className="mb-4">
-              We use cookies and similar technologies to improve the user experience on our website. These help us collect information about how you navigate our site and customize content based on your preferences. You can choose to disable cookies in your browser, but some features of the website may be affected.
-            </p>
+            <h3 className="font-semibold">{t("privacy_policy.section_4.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_4.content")}</p>
 
-            <h3 className="font-semibold">5. Security</h3>
-            <p className="mb-4">
-              We take appropriate technical and organizational measures to protect your personal data against unauthorized access, loss or misuse.
-            </p>
+            <h3 className="font-semibold">{t("privacy_policy.section_5.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_5.content")}</p>
 
-            <h3 className="font-semibold">6. Your rights</h3>
-            <p className="mb-4">
-              You have the right to request information about what personal data we have about you, as well as the right to correct, erase or request that we restrict the processing of your data. If you wish to exercise these rights or have any questions about our handling of your personal data, please contact us.
-            </p>
+            <h3 className="font-semibold">{t("privacy_policy.section_6.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_6.content")}</p>
 
-            <h3 className="font-semibold">7. Changes to the Privacy Policy</h3>
-            <p className="mb-4">
-              We may update this Privacy Policy. In the event of major changes, we will inform you by publishing an updated version on our website.
-            </p>
+            <h3 className="font-semibold">{t("privacy_policy.section_7.title")}</h3>
+            <p className="mb-4">{t("privacy_policy.section_7.content")}</p>
 
-            <h3 className="font-semibold">Contact</h3>
+            <h3 className="font-semibold">{t("privacy_policy.contact.title")}</h3>
             <p>
-              If you have any questions about our privacy policy or how we handle your personal data, please contact us at{" "}
-              <a href="mailto:kontakt@stayspace.se" className="text-amber-500 underline">
-                kontakt@stayspace.se
-              </a>.
+              {t("privacy_policy.contact.content")}
+              <a
+                href={`mailto:${t("privacy_policy.contact.email")}`}
+                className="text-amber-500 underline"
+              >
+                {t("privacy_policy.contact.email")}
+              </a>
             </p>
           </div>
         </PopoverContent>

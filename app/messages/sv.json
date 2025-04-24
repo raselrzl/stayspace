@@ -54,5 +54,45 @@
     "org_number_value": "559138-9597",
     "vat_number_title": "Momsregistreringsnummer",
     "vat_number_value": "SE559138959701"
+  },
+  "privacy_policy": {
+    "title": "Integritetspolicy",
+    "intro": "Vi värdesätter din integritet och strävar efter att skydda din personliga information. Denna sida förklarar hur vi samlar in, använder och skyddar din information när du besöker vår webbplats.",
+    "section_1": {
+      "title": "1. Vilken information samlar vi in?",
+      "content": "Vi samlar in personlig information som du frivilligt tillhandahåller oss, till exempel när du fyller i kontaktformulär, registrerar dig för våra tjänster eller kommunicerar med oss. Detta kan inkludera namn, e-postadress, telefonnummer och företagsinformation."
+    },
+    "section_2": {
+      "title": "2. Hur använder vi din information?",
+      "point_1": "Tillhandahålla och förbättra våra tjänster",
+      "point_2": "Kommunicera med dig och svara på dina förfrågningar",
+      "point_3": "Skicka relevant information, såsom erbjudanden och uppdateringar (du kan alltid välja bort marknadsföringsmeddelanden)",
+      "point_4": "Säkerställa en smidig användarupplevelse på vår webbplats"
+    },
+    "section_3": {
+      "title": "3. Delning av data",
+      "content": "Vi delar inte din personliga data med tredje part, förutom om det är nödvändigt för att slutföra våra tjänster (t.ex. betalningsleverantörer eller tekniska tjänster) eller om det krävs enligt lag."
+    },
+    "section_4": {
+      "title": "4. Cookies och Spårningsteknologier",
+      "content": "Vi använder cookies och liknande teknologier för att förbättra användarupplevelsen på vår webbplats. Dessa hjälper oss att samla in information om hur du navigerar på vår sida och anpassa innehåll baserat på dina preferenser. Du kan välja att inaktivera cookies i din webbläsare, men vissa funktioner på webbplatsen kan påverkas."
+    },
+    "section_5": {
+      "title": "5. Säkerhet",
+      "content": "Vi vidtar lämpliga tekniska och organisatoriska åtgärder för att skydda din personliga data mot obehörig åtkomst, förlust eller missbruk."
+    },
+    "section_6": {
+      "title": "6. Dina rättigheter",
+      "content": "Du har rätt att begära information om vilken personlig data vi har om dig, samt rätt att rätta, radera eller begära att vi begränsar behandlingen av dina data. Om du vill utöva dessa rättigheter eller har några frågor om vår hantering av dina personuppgifter, vänligen kontakta oss."
+    },
+    "section_7": {
+      "title": "7. Ändringar av Integritetspolicyn",
+      "content": "Vi kan uppdatera denna Integritetspolicy. Vid större ändringar kommer vi att informera dig genom att publicera en uppdaterad version på vår webbplats."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "content": "Om du har några frågor om vår integritetspolicy eller hur vi hanterar dina personuppgifter, vänligen kontakta oss på",
+      "email": "kontakt@stayspace.se"
+    }
   }
 }
