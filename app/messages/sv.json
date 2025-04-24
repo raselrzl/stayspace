@@ -169,7 +169,8 @@
       "phone": "+46 10-333 35 36",
       "email": "kontakt@stayspace.se"
     }
-  },"partnerPage": {
+  },
+  "partnerPage": {
     "propertyTitle": "Vill du hyra ut din fastighet?",
     "collaborationText": "StaySpace samarbetar med mark- och fastighetsägare för att skapa ett blomstrande samhälle.",
     "openToPartnerships": "Vi är alltid öppna för nya partnerskap.",
@@ -181,5 +182,22 @@
     "publishListing": "Vi publicerar din annons tillsammans med bilder för potentiella hyresgäster att se.",
     "contactToDiscuss": "Vi kontaktar dig för att diskutera uthyrningsperioder, gästantal och andra detaljer.",
     "finalDecision": "Du fattar det slutgiltiga beslutet om att hyra ut din fastighet."
+  },"tenantPage": {
+    "alwaysIncluded": "Alltid ingår i din vistelse",
+    "fullAmenities": "Njut av hela sortimentet av moderna bekvämligheter och tjänster som gör din vistelse bekväm, med allt du behöver, inklusive.",
+    "fullyFurnished": "Fullt Möblerad",
+    "fullyEquippedKitchen": "Fullt Utrustat Kök",
+    "wifi": "WiFi",
+    "twentyFourSevenService": "24/7 Service",
+    "extraServices": "Uppgradera din vistelse med våra extra tjänster",
+    "extraServicesDescription": "Ta din vistelse till nästa nivå med våra extra tjänster, designade för din komfort och bekvämlighet.",
+    "cleaning": "Städning",
+    "flexibleCancellation": "Flexibel Avbokning",
+    "damageProtection": "Skadeersättning",
+    "earlyCheckin": "Tidigare Incheckning",
+    "lateCheckout": "Sen Utcheckning",
+    "extraLinenTowels": "Extra Sängkläder & Handdukar",
+    "extraBed": "Extra Säng",
+    "babyCrib": "Babysäng"
   }
 }

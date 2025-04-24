@@ -176,5 +176,23 @@
     "publishListing": "We publish your listing along with photos for potential tenants to view.",
     "contactToDiscuss": "We’ll contact you to discuss rental periods, guest count, and other details.",
     "finalDecision": "You make the final decision on whether to rent out your property."
+  },
+  "tenantPage": {
+    "alwaysIncluded": "Always Included in Your Stay",
+    "fullAmenities": "Enjoy the full range of modern amenities and services that make your stay comfortable, with everything you need, included.",
+    "fullyFurnished": "Fully Furnished",
+    "fullyEquippedKitchen": "Fully Equipped Kitchen",
+    "wifi": "WiFi",
+    "twentyFourSevenService": "24/7 Service",
+    "extraServices": "Up Your Stay with Our Extra Services",
+    "extraServicesDescription": "Take your stay to the next level with our additional services, designed for your comfort and convenience.",
+    "cleaning": "Cleaning",
+    "flexibleCancellation": "Flexible Cancellation",
+    "damageProtection": "Damage Protection",
+    "earlyCheckin": "Early Check-in",
+    "lateCheckout": "Late Checkout",
+    "extraLinenTowels": "Extra Linen & Towels",
+    "extraBed": "Extra Bed",
+    "babyCrib": "Baby Crib"
   }
 }
