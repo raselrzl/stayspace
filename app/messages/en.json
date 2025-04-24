@@ -115,5 +115,38 @@
     "contact": "Contact",
     "partner": "Partner",
     "tenant": "Tenant"
+  },
+"service": {
+    "hero": {
+      "title": "Looking for Flexible, Affordable, and Quality Accommodation for Your Team with StaySpace.",
+      "button": "Contact Us"
+    },
+    "sectionOne": {
+      "title": "Do you have any questions?",
+      "text": "Do you have questions or can't find the right accommodation for you? Our customer service is happy to help you find the right solution."
+    },
+    "buttons": {
+      "contactUs": "Contact Us",
+      "callUs": "Call Us for Direct Conversation"
+    },
+    "sectionTwo": {
+      "title": "Our Services At StaySpace"
+    },
+    "cards": {
+      "cardOne": {
+        "title": "StaySpace",
+        "textOne": "Specializes in providing corporate accommodation, making it easy for you to find the right accommodation for your employees.",
+        "textTwo": "We offer tailor-made solutions for both short and long-term needs, with a wide range of attractive and fully equipped apartments."
+      },
+      "cardTwo": {
+        "title": "At StaySpace",
+        "textOne": "We tailor our solutions to suit the different needs and budgets of companies.",
+        "textTwo": "Whether you are looking for accommodation for a longer project or a shorter stay, we strive to deliver tailor-made solutions."
+      },
+      "cardThree": {
+        "title": "24/7 Support",
+        "text": "We are always available to assist and answer questions, allowing our guests to focus on what really matters during their stay."
+      }
+    }
   }
 }

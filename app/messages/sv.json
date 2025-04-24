@@ -1,4 +1,5 @@
-{"home":{
+{
+    "home":{
     "choose_path_title": "VÄLJ DIN VÄG",
     "choose_path_description": "Bli en hyresgäst hos StaySpace och njut av ett bekvämt boende med moderna bekvämligheter, eller bli en värd och maximera värdet av din fastighet med våra experter inom fastighetsförvaltning. Välj den väg som passar dig och börja din resa med oss idag.",
     "get_in_touch": "Kontakta oss",
@@ -120,6 +121,39 @@
     "contact": "Kontakt",
     "partner": "Partner",
     "tenant": "Hyresgäst"
+  },
+ "service": {
+    "hero": {
+      "title": "Letar du efter flexibel, prisvärd och kvalitativ boende för ditt team med StaySpace.",
+      "button": "Kontakta oss"
+    },
+    "sectionOne": {
+      "title": "Har du några frågor?",
+      "text": "Har du frågor eller hittar du inte rätt boende för dig? Vår kundtjänst hjälper gärna till att hitta rätt lösning."
+    },
+    "buttons": {
+      "contactUs": "Kontakta oss",
+      "callUs": "Ring oss för direkt konversation"
+    },
+    "sectionTwo": {
+      "title": "Våra tjänster på StaySpace"
+    },
+    "cards": {
+      "cardOne": {
+        "title": "StaySpace",
+        "textOne": "Specialiserar sig på att erbjuda företagsboende, vilket gör det enkelt för dig att hitta rätt boende för dina anställda.",
+        "textTwo": "Vi erbjuder skräddarsydda lösningar för både kort- och långsiktiga behov, med ett brett utbud av attraktiva och fullt utrustade lägenheter."
+      },
+      "cardTwo": {
+        "title": "På StaySpace",
+        "textOne": "Vi anpassar våra lösningar för att passa företags olika behov och budgetar.",
+        "textTwo": "Oavsett om du letar efter boende för ett längre projekt eller en kortare vistelse, strävar vi efter att leverera skräddarsydda lösningar."
+      },
+      "cardThree": {
+        "title": "24/7 Support",
+        "text": "Vi finns alltid tillgängliga för att hjälpa till och besvara frågor, så att våra gäster kan fokusera på det som verkligen betyder något under sin vistelse."
+      }
+    }
   }
-  }
+}
   
