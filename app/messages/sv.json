@@ -101,7 +101,10 @@
     "description": "StaySpace samarbetar med några av de bästa företagen i branschen för att erbjuda sömlösa boendelösningar. Våra pålitliga partners hjälper oss att leverera toppservice till både hyresgäster och värdar."
   },
   "hero": {
-    "heading": "Där Affärer Möter Komfort",
+    "heading": "Var",
+"heading1": "Företag",
+"heading2": "Möter Komfort",
+
     "description1": "Specialist på skräddarsydda boendelösningar",
     "description2": "för företag över hela Sverige",
     "contact_button": "Kontakta Oss"

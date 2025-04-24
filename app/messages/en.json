@@ -96,7 +96,9 @@
     "description": "StaySpace works with some of the best companies in the industry to provide seamless accommodation solutions. Our trusted partners help us deliver top-tier service to tenants and hosts alike."
   },
   "hero": {
-    "heading": "Where Business Meets Comfort",
+    "heading": "Where",
+    "heading1": "Business",
+    "heading2": "Meets Comfort",
     "description1": "Specialist in customized accommodation solutions",
     "description2": "for companies throughout Sweden",
     "contact_button": "Contact Us"
