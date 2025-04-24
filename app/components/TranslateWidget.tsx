@@ -2,34 +2,50 @@
 
 import { useState } from "react";
 import setLanguageValue from "../actions/set-language-action";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
-const language = () => {
+const LanguageSelector = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedLanguage(e.target.value);
-    setLanguageValue(e.target.value);
+  const handleLanguageChange = (value: string) => {
+    setSelectedLanguage(value);
+    setLanguageValue(value);
   };
+
+  const flagSrc = selectedLanguage === "en" ? "/english.png" : "/swedish.png";
 
   return (
     <div className="container mx-auto flex items-center">
-      <div className="relative inline-block ml-auto">
-        <select
-          value={selectedLanguage}
-          onChange={handleLanguageChange}
-          className="text-sx cursor-pointer appearance-none rounded-md border border-gray-500 py-1 px-8 outline-none sm:py-2 sm:text-base"
-        >
-          <option value="en">English</option>
-          <option value="sv">Swedish</option>
-        </select>
-        <ChevronDown
-          size={18}
-          className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-gray-600"
-        />
+      <div className="ml-auto">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="flex items-center gap-2 px-2 py-1 bg-gray-600 border-none">
+              <Image src={flagSrc} alt="flag" width={20} height={15} />
+              <ChevronDown size={14} />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="bg-gray-600 border-none">
+            <DropdownMenuItem onClick={() => handleLanguageChange("en")} className="cursor-pointer gap-2">
+              <Image src="/english.png" alt="English" width={20} height={15} />
+              English
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => handleLanguageChange("sv")} className="cursor-pointer gap-2">
+              <Image src="/swedish.png" alt="Swedish" width={20} height={15} />
+              Swedish
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   );
 };
 
-export default language;
+export default LanguageSelector;
