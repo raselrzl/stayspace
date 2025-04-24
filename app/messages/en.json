@@ -196,6 +196,7 @@
     "babyCrib": "Baby Crib"
   },
   "form": {
+    "successMessageContact":"Thank you for contacting us. We’ve received your message and will get back to you within 24 hours. We appreciate your patience. If your inquiry is urgent, please don’t hesitate to call us directly.",
     "title": "Contact Us",
     "name": "Name",
     "namePlaceholder": "John Doe",
@@ -223,6 +224,7 @@
     "consent": "You must consent to the data being stored and processed."
   },
 "partnerContactForm": {
+    "successMessag":"Thank you for your interest in partnering with us. We’ve received your request and will review it promptly. Our team typically responds within 24 hours. We appreciate your patience and look forward to the opportunity of working together. If you have any urgent questions, feel free to contact us directly.",
     "form_heading": "Partner Contact Form",
     "name_label": "Name",
     "name_placeholder": "Enter your name",
@@ -260,6 +262,7 @@
   },
 "TenantForm": {
     "title": "Tenant Application Form",
+    "successMEssageForTannent":"Thank you for reaching out with your tenant inquiry. We aim to respond to all queries within 24 hours, and we kindly ask for your patience as we work to provide you with the best assistance possible. If your matter is urgent, please feel free to contact us directly via phone.",
     "fields": {
       "fullName": {
         "label": "Full Name *",

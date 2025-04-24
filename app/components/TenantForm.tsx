@@ -30,7 +30,7 @@ function CustomAlert({ message, onClose }: CustomAlertProps) {
         <p className="text-lg text-[#7B5B4C]">{message}</p>
         <div className="mt-4">
           <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
-            Close
+            X
           </Button>
         </div>
       </div>
@@ -146,7 +146,7 @@ export default function TenantForm() {
 
       {showModal && (
         <CustomAlert
-          message={modalMessage}
+          message={t("successMEssageForTannent")}
           onClose={() => setShowModal(false)}
         />
       )}

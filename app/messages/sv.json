@@ -202,6 +202,7 @@
   },
 
 "form": {
+    "successMessageContact":"Tack för att du kontaktade oss. Vi har mottagit ditt meddelande och återkommer till dig inom 24 timmar. Vi uppskattar ditt tålamod. Om ditt ärende är brådskande, tveka inte att ringa oss direkt.",
     "title": "Kontakta Oss",
     "name": "Namn",
     "namePlaceholder": "John Doe",
@@ -229,6 +230,7 @@
     "consent": "Du måste samtycka till att uppgifterna lagras och behandlas."
   },
 "partnerContactForm": {
+  "successMessag":"Tack för ditt intresse av att bli vår partner. Vi har mottagit din förfrågan och kommer att granska den snarast. Vårt team svarar vanligtvis inom 24 timmar. Vi uppskattar ditt tålamod och ser fram emot möjligheten att samarbeta. Har du några brådskande frågor, är du välkommen att kontakta oss direkt.",
   "form_heading": "Kontaktformulär för Partner",
   "name_label": "Namn",
   "name_placeholder": "Ange ditt namn",
@@ -266,6 +268,7 @@
 },
 "TenantForm": {
     "title": "Hyresansökningsformulär",
+    "successMEssageForTannent":"Tack för att du kontaktade oss angående din förfrågan som hyresgäst. Vi strävar efter att svara på alla förfrågningar inom 24 timmar och ber om ditt tålamod medan vi arbetar för att ge dig bästa möjliga hjälp. Om ditt ärende är brådskande, vänligen kontakta oss direkt via telefon. Vi uppskattar din förståelse och ser fram emot att hjälpa dig snart!",
     "fields": {
       "fullName": {
         "label": "Fullständigt namn *",
