@@ -154,6 +154,21 @@
         "text": "Vi finns alltid tillgängliga för att hjälpa till och besvara frågor, så att våra gäster kan fokusera på det som verkligen betyder något under sin vistelse."
       }
     }
+  },
+ "contact": {
+    "hero": {
+      "title": "StaySpace",
+      "subtitle": "Din partner för företagsboende"
+    },
+    "directContact": {
+      "title": "Direkt Kontakt",
+      "phoneText": "För direktkontakt, ring oss på ",
+      "emailText": "Vi svarar på e-post inom 24 timmar. Du kan nå oss på ",
+      "address": "Finspångsvägen 497, 605 80 Svärtinge",
+      "supportText": "Vår support är tillgänglig dygnet runt för att hjälpa dig.",
+      "phone": "+46 10-333 35 36",
+      "email": "kontakt@stayspace.se"
+    }
   }
 }
   
