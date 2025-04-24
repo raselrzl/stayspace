@@ -14,7 +14,7 @@ import Image from "next/image";
 import { Separator } from "@/components/ui/separator"
 
 const LanguageSelector = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedLanguage, setSelectedLanguage] = useState("sv");
 
   const handleLanguageChange = (value: string) => {
     setSelectedLanguage(value);
