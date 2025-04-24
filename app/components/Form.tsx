@@ -228,7 +228,7 @@ export default function ContactForm() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-gray-200 p-6 rounded-sm shadow-lg text-center w-[320px] md:w-[400px]">
             <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
-            <p className="text-lg text-[#7B5B4C]">{t("successMessageContact")}</p>
+            <p className="text-lg text-[#7B5B4C]">{t("form.successMessageContact")}</p>
             <div className="mt-4">
               <Button onClick={() => setShowModal(false)} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
                 {t("form.close")}
