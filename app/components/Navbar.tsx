@@ -48,7 +48,7 @@ export default function Navbar() {
         boxShadow: "0 4px 4px rgb(123, 91, 76)", // Yellow shadow (rgba(253, 109, 21, 0.6))
         borderBottom: "4px solid transparent", // Invisible border to hold the shadow
       }}
-    >
+    ><TranslateWidget />
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo on the left */}
         <div className="flex items-center py-1">
@@ -60,6 +60,7 @@ export default function Navbar() {
             />
           </Link>
         </div>
+        
 
         {/* Navbar Links (Desktop) */}
         <div className="hidden md:flex space-x-6 font-bold">
@@ -83,6 +84,7 @@ export default function Navbar() {
         {/* Mobile Menu Toggle */}
         <div onClick={toggleMenu} className="sm:hidden bg-gray-100 focus:outline-none text-3xl">
           <Navlink />
+          
         </div>
       </div>
     </nav>

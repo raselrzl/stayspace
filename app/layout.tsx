@@ -40,9 +40,9 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${quicksand.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="bg-gradient-to-r from-white to-gray-600 flex justify-end items-start py-1 md:pr-24">
+       {/*    <div className="bg-gradient-to-r from-white to-gray-600 flex justify-end items-start py-1 md:pr-24">
             <TranslateWidget />
-          </div>
+          </div> */}
           <Navbar />
           {children}
           <CarouselCompany />
