@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl"; // Import useTranslations for multi-language support
+import { motion } from "framer-motion"; // Import Framer Motion
 
 // ImageSlider for changing background image
 const ImageSlider = () => {
@@ -56,46 +57,66 @@ const Hero = () => {
       {/* Background Image Wrapper */}
       <div className="absolute inset-0 z-0">
         {/* Current background image */}
-        <div
+        <motion.div
           className={`absolute inset-0 bg-cover bg-center ${transitioning ? "z-0" : "z-10"}`}
           style={{
             backgroundImage: `url(${backgroundImage})`,
             transform: transitioning ? "translateX(-100%)" : "translateX(0%)", // Slide out to left
             transition: transitioning ? "transform 1s ease-in-out" : "none", // 1-second slide transition
           }}
-        ></div>
+        ></motion.div>
 
         {/* Next background image behind */}
-        <div
+        <motion.div
           className={`absolute inset-0 bg-cover bg-center ${transitioning ? "z-10" : "z-0"}`}
           style={{
             backgroundImage: `url(${nextUrl})`,
             transform: transitioning ? "translateX(0%)" : "translateX(100%)", // Slide in from right
             transition: transitioning ? "transform 1s ease-in-out" : "none", // 1-second slide transition
           }}
-        ></div>
+        ></motion.div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-gray-100 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
-        <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
-         {t("hero.heading")} <br/>{t("hero.heading1")}<br/>{t("hero.heading2")}
-        </h1>
-        <p className="text-md md:text-lg mb-6 text-left italic">
+      <motion.div
+        className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-gray-100 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1
+          className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          {t("hero.heading")} <br/>{t("hero.heading1")}<br/>{t("hero.heading2")}
+        </motion.h1>
+        <motion.p
+          className="text-md md:text-lg mb-6 text-left italic"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           {t("hero.description1")}
-        </p>
-        <p className="text-md md:text-lg mb-6 text-left italic">
+        </motion.p>
+        <motion.p
+          className="text-md md:text-lg mb-6 text-left italic"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.7 }}
+        >
           {t("hero.description2")}
-        </p>
+        </motion.p>
         <div className="text-center mt-6">
           <Link
             href="/contact#contactus"
             className="uppercase text-sm md:text-md px-5 py-2 bg-[#7B5B4C] hover:bg-[#96705f] text-white font-semibold transition-all rounded-[20px]"
           >
-          {t("hero.contact_button")}
+            {t("hero.contact_button")}
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
