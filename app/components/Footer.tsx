@@ -37,15 +37,15 @@ export default function Footer() {
           </div>
 
           {/* Third Div: Social Media Icons */}
-          <div className="flex justify-center md:justify-end space-x-6 items-center md:items-end">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="border-2 p-1.5 bg-white">
-              <Facebook className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
+          <div className="flex justify-center md:justify-end space-x-6 items-center md:items-end text-white">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="">
+              <Facebook className="w-6 h-6 cursor-pointer text-white hover:text-[#7B5B4C]" />
             </a>
-            <a href="https://www.linkedin.com/in/stay-space-034978358/" target="_blank" rel="noopener noreferrer" className="border-2 p-1.5 bg-white">
-              <Linkedin className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
+            <a href="https://www.linkedin.com/in/stay-space-034978358/" target="_blank" rel="noopener noreferrer" className="">
+              <Linkedin className="w-6 h-6 cursor-pointer text-white hover:text-[#7B5B4C]" />
             </a>
-            <a href="mailto:kontakt@stayspace.se" className="border-2 p-1.5 bg-white">
-              <Mail className="w-6 h-6 cursor-pointer text-black hover:text-[#7B5B4C]" />
+            <a href="mailto:kontakt@stayspace.se" className="">
+              <Mail className="w-6 h-6 cursor-pointer text-white hover:text-[#7B5B4C]" />
             </a>
           </div>
         </div>
