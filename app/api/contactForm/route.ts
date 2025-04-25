@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 interface FormData {
   name: string;
@@ -10,24 +10,27 @@ interface FormData {
 
 export async function POST(req: Request) {
   try {
-    const data: FormData = await req.json(); // Parse the incoming JSON body
+    const data: FormData = await req.json();
 
-    // Create a Nodemailer transporter using your Hostinger SMTP configuration
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465, // Port for secure email sending
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
       secure: true,
       auth: {
-        user: 'contact@zirrah.online', // Your Hostinger email
-        pass: '100%Rasel', // Your email password or SMTP password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
-    // Define the email content
+    console.log("SMTP config:", {
+      host: process.env.SMTP_HOST,
+      user: process.env.SMTP_USER,
+    });
+
     const mailOptions = {
-      from: 'contact@zirrah.online', // Sender email address
-      to: 'contact@zirrah.online', // Recipient email address
-      subject: 'Contact',
+      from: process.env.SMTP_USER,
+      to: process.env.SMTP_USER,
+      subject: "Contact",
       text: `
         Name: ${data.name}
         Business: ${data.business}
@@ -37,17 +40,16 @@ export async function POST(req: Request) {
       `,
     };
 
-    // Send the email
     await transporter.sendMail(mailOptions);
 
     return new Response(
-      JSON.stringify({ message: 'Your message sent successfully!' }),
+      JSON.stringify({ message: "Your message sent successfully!" }),
       { status: 200 }
     );
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return new Response(
-      JSON.stringify({ message: 'Failed to send the email.' }),
+      JSON.stringify({ message: "Failed to send the email." }),
       { status: 500 }
     );
   }

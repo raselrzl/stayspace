@@ -1,4 +1,5 @@
 "use client";
+import { motion } from 'framer-motion';
 import {
   ArrowDownAZ,
   BookCheck,
@@ -164,29 +165,53 @@ export default function Home() {
 
         
           <div className="w-full sm:w-1/2 flex flex-col justify-start mb-8 sm:mb-0">
-            <div className="flex flex-col space-y-6 w-full">
-              <div className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <MapPin size={32} className="text-[#7B5B4C] mb-4" />
-                <p className="font-semibold text-lg">{t('home.map_stat')}</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-6">
-                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                  <Building2 size={32} className="text-[#7B5B4C] mb-4" />
-                  <p className="font-semibold text-lg">{t('home.building_stat')}</p>
-                  <a href="/partner#partnerform" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
-                    {t('home.building_cta')}
-                  </a>
-                </div>
-                <div className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                  <Users size={32} className="text-[#7B5B4C] mb-4" />
-                  <p className="font-semibold text-lg">{t('home.users_stat')}</p>
-                  <a href="contact#contactus" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
-                    {t('home.users_cta')}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="flex flex-col space-y-6 w-full">
+        {/* First box - Right to Left */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+        >
+          <MapPin size={32} className="text-[#7B5B4C] mb-4" />
+          <p className="font-semibold text-lg">{t('home.map_stat')}</p>
+        </motion.div>
+
+        {/* Second row with two boxes */}
+        <div className="flex flex-col sm:flex-row gap-6">
+          {/* Left box - Left to Right */}
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+          >
+            <Building2 size={32} className="text-[#7B5B4C] mb-4" />
+            <p className="font-semibold text-lg">{t('home.building_stat')}</p>
+            <a href="/partner#partnerform" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
+              {t('home.building_cta')}
+            </a>
+          </motion.div>
+
+          {/* Right box - Right to Left */}
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex-1 border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
+          >
+            <Users size={32} className="text-[#7B5B4C] mb-4" />
+            <p className="font-semibold text-lg">{t('home.users_stat')}</p>
+            <a href="contact#contactus" className="text-[#7B5B4C] underline mt-2 cursor-pointer">
+              {t('home.users_cta')}
+            </a>
+          </motion.div>
+        </div>
+      </div>
+    </div>
         </div>
       </section>
 

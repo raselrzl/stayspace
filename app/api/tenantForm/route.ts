@@ -15,20 +15,20 @@ export async function POST(req: Request) {
     const data: TenantFormData = await req.json(); // Parse the incoming JSON body
 
     // Create a Nodemailer transporter using your Hostinger SMTP configuration
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 465, // Port for secure email sending
-      secure: true,
-      auth: {
-        user: 'contact@zirrah.online', // Your Hostinger email
-        pass: '100%Rasel', // Your email password or SMTP password
-      },
-    });
+   const transporter = nodemailer.createTransport({
+         host: process.env.SMTP_HOST,
+         port: Number(process.env.SMTP_PORT),
+         secure: true,
+         auth: {
+           user: process.env.SMTP_USER,
+           pass: process.env.SMTP_PASS,
+         },
+       });
 
     // Define the email content with the updated fields
     const mailOptions = {
-      from: 'contact@zirrah.online', // Sender email address
-      to: 'contact@zirrah.online', // Recipient email address
+      from: process.env.SMTP_USER,
+      to: process.env.SMTP_USER,
       subject: 'Tenant Application Form Submission',
       text: `
         Full Name: ${data.fullName}
