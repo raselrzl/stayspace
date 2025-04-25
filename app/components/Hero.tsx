@@ -77,7 +77,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-rose-100 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
+      <div className="relative z-10 lg:mr-[300px] w-[322px] sm:w-[400px] mx-auto bg-gray-100 opacity-82 p-8 text-[#7B5B4C] h-[450px] sm:h-[484px] rounded-lg">
         <h1 className="text-2xl sm:text-3xl font-bold leading-tight mb-6 text-left">
          {t("hero.heading")} <br/>{t("hero.heading1")}<br/>{t("hero.heading2")}
         </h1>

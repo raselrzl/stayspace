@@ -45,7 +45,7 @@ export default async function RootLayout({
           </div> */}
           <Navbar />
           {children}
-          <CarouselCompany />
+         {/*  <CarouselCompany /> */}
           <Footer />
         </NextIntlClientProvider>
       </body>

@@ -113,7 +113,7 @@ export default function Home() {
         <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row gap-8">
           <div className="w-full sm:w-1/2 flex flex-col justify-between">
             <div className="h-full flex flex-col justify-between">
-              {/* Companies */}
+              
               <div className="mb-8">
                 <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex">
                   <Component className="mr-4 pt-1" /> {t('home.companies_title')}
@@ -122,7 +122,7 @@ export default function Home() {
                   {t('home.companies_description')}
                 </p>
               </div>
-              {/* Location */}
+              
               <div className="mb-8">
                 <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
                   <MapPinPlusInside className="mr-4 pt-1" />
@@ -132,7 +132,7 @@ export default function Home() {
                   {t('home.location_description')}
                 </p>
               </div>
-              {/* Trusted */}
+           
               <div className="mb-8">
                 <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
                   <BookCheck className="mr-4 pt-1" /> {t('home.trusted_title')}
@@ -141,7 +141,7 @@ export default function Home() {
                   {t('home.trusted_description')}
                 </p>
               </div>
-              {/* All in One */}
+              
               <div className="mb-8">
                 <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
                   <ArrowDownAZ className="mr-4 pt-1" /> {t('home.all_in_one_title')}
@@ -150,7 +150,7 @@ export default function Home() {
                   {t('home.all_in_one_description')}
                 </p>
               </div>
-              {/* Guarantee */}
+            
               <div>
                 <p className="text-[#7B5B4C] uppercase text-md sm:text-2xl font-bold flex animate-on-scroll">
                   <Cog className="mr-4 pt-1" /> {t('home.guarantee_title')}
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Stats */}
+        
           <div className="w-full sm:w-1/2 flex flex-col justify-start mb-8 sm:mb-0">
             <div className="flex flex-col space-y-6 w-full">
               <div className="w-full border border-gray-200 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
