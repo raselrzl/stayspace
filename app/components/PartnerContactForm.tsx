@@ -44,7 +44,7 @@ function CustomAlert({ message, onClose }: CustomAlertProps) {
         <img src="/stayspace.png" alt="Stayspace Logo" className="w-32 h-auto mb-4" />
         <p className="text-lg text-[#7B5B4C]">{message}</p>
         <div className="mt-4">
-          <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px]">
+          <Button onClick={onClose} className="bg-[#7B5B4C] hover:bg-[#96705f] text-white rounded-[20px] px-6">
             X
           </Button>
         </div>
